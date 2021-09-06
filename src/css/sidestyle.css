@@ -1,0 +1,108 @@
+.sidebutton {
+	width: 130px;
+	height: 50px;
+	font-size: 18px;
+	background: #4a4788;
+	color: #fbfcfc;
+	box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+	border: none;
+	border-radius: 10px; 
+	position: fixed;
+	top: 82px;
+	left:2px;
+	cursor: pointer;
+	outline: 0;
+	transition: all 0.25s ease;
+
+}
+
+.sidebutton:hover {
+	color: #fbfcfc;
+	 
+	opacity: 0.9;
+	transition: all 0.25s ease;
+}
+
+
+
+.munubutton
+{
+	width: 86px;
+	height: 40px;
+	float: right;
+	cursor: pointer;
+	transition: all 0.25s ease;
+	background:transparent;
+	outline: none;
+	border:0px;
+	margin:5px;
+	 
+}
+
+.munubutton:hover {
+	opacity: 0.8;
+	transition: all 0.25s ease;
+	background: #0f0c56;
+	border-radius:20px;
+}
+
+
+.munubut
+{
+	border-bottom: 0px;
+	height:40px;
+}
+
+.munu {
+	background:#4e4f8f;
+	height: 100vh;
+	width: 250px;
+	opacity: 0;
+	position: fixed;
+	top:80px;
+	visibility: hidden;
+	transition: all 0.25s ease; 
+}
+
+.munu a {
+	text-align: center;
+	color: #a4abb6;
+	text-decoration: none;
+	display: block;
+	padding: 20px;
+}
+
+.munu ul {
+	padding: 0;
+	margin: 0;
+}
+
+.munuli
+{
+	font-size: 16px; 
+	transition: all 0.25s ease;
+	animation: fadeInRight 0.25s ease forwards;
+	opacity: 0;
+}
+
+.munuli:hover {
+	opacity: 0.8;
+	transition: all 0.25s ease;
+	background: #0f0c56;
+	cursor: pointer;
+	border-radius:20px;
+}
+
+.munuli:hover a{
+	color: #fbfcfc;
+	 
+}
+
+.activee {
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.25s ease; 
+}
+ 

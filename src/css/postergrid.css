@@ -1,0 +1,8 @@
+.poster-grid {
+	display: grid;
+	grid-auto-flow: row;
+	row-gap: 60px;
+	margin-top: 50px;
+	margin-bottom: 50px; 
+}
+ 

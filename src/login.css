@@ -1,0 +1,145 @@
+:root {
+	--image-width: 50vw;
+	--card-width: 50vw;
+}
+
+.logo_container {
+	display: grid;
+	grid-auto-flow: row;
+	grid-template-rows: 600px 200px;
+}
+
+.Login {
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: var(--image-width) var(--card-width);
+	align-content: center;
+}
+.loginImg {
+	width: var(--image-width);
+}
+.loginCard {
+	text-align: center;
+	border-radius: 10px 10px 10px 10px;
+	width: 450px;
+	padding-bottom: 70px;
+	margin: 0 auto;
+	background: linear-gradient(#141e30, #243b55);
+	background-color: rgba(0, 0, 0, 0.5);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.loginCard:hover {
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-2 {
+	width: 450px;
+	margin: 20px auto;
+	padding: 10px;
+	border-radius: 10px 10px 10px 10px;
+	text-align: center;
+	background: linear-gradient(#141e30, #243b55);
+	background-color: rgba(0, 0, 0, 0.5);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.card-2:hover {
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.input {
+	height: 35px;
+	width: 300px;
+	border: rgb(39, 185, 204);
+	outline: none;
+	border-radius: 4px;
+	transition: all 0.5s;
+	color: black;
+	font-size: 15px;
+}
+.input:focus,
+.input:active {
+	box-shadow: 1px 1px 18px #3399ff;
+}
+::placeholder {
+	opacity: 0.5;
+}
+
+.companyName {
+	font-family: "Brush Script MT", cursive;
+	font-size: 60px;
+	padding: 20px;
+	color: white;
+}
+.lgn-eye > .eye-img {
+	cursor: pointer;
+	width: 25px;
+	fill: #000;
+}
+.passContainer {
+	position: relative;
+}
+.para {
+	font-size: 20px;
+	color: white;
+}
+a {
+	color: lightblue;
+	text-decoration: none;
+}
+
+.lgn-passwd-container {
+	width: max-content;
+	height: max-content;
+	margin: 40px auto 20px;
+	position: relative;
+}
+.lgn-form {
+	margin-top: 60px;
+}
+
+@media (max-width: 1000px) {
+	.loginImg {
+		display: none;
+	}
+	.loginCard {
+		margin-top: 30px;
+	}
+	.Login {
+		display: block;
+		background: url("/src/img/login.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}
+@media (max-width: 700px) {
+	.Login {
+		background-image: none;
+		background: transparent;
+	}
+	.logo_container {
+		background-image: linear-gradient(#141e30, #243b55);
+	}
+	.loginCard {
+		background: rgba(0, 0, 0, 0.5);
+		box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+	}
+	.card-2 {
+		background: rgba(0, 0, 0, 0.5);
+		box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+	}
+}
+@media (max-width: 500px) {
+	.loginCard {
+		width: 300px;
+	}
+	.input {
+		width: 200px;
+	}
+	.companyName {
+		font-size: 50px;
+	}
+	.card-2 {
+		width: 300px;
+	}
+}

@@ -1,0 +1,145 @@
+/* This is the css for heading only */
+
+/* The css below is used to create the grid */
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+
+#aboutus-mainheading{
+	font-size: 90px;
+}
+.about {
+	width: 100vw;
+	z-index: 0;
+	padding:0;
+	margin:0;
+}
+.content {
+	margin:0;
+	padding: 100px 0px;
+	text-align: center;
+}
+.content > h1 {
+	color: #141a46;
+	font-size: 50px;
+	/* text-decoration: underline; */
+	text-align: center;
+}
+.content p {
+	text-align: center;
+	padding: 0 10px;
+	line-height: 25px;
+	margin: auto;
+}
+.about-para{
+	color: #141a46;
+	font-weight: 600;
+	height:auto;
+	font-size: 20px;
+	word-spacing: 4px;
+}
+ 
+
+ .content {
+	display: grid;
+	grid-auto-flow: row;
+	grid-template-rows: 600px max-content;
+} 
+.content-1{
+background:linear-gradient(180deg, white,#FFFAFA);
+}
+.content-2{
+	background-color:whitesmoke;
+    padding-top: 80px;
+
+}
+.about-boxes{
+	position: relative;
+	z-index:1;
+	width:800px;
+	height:130px;
+	margin:-760px auto 760px auto;
+	background-color:whitesmoke;
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: auto auto auto;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+ 
+.about-box-1 ,.about-box-2{
+	border-right: 1px solid grey;
+}
+
+#our-tagline{
+	font-family: 'Special Elite' ;
+	color: #3f3f5a;
+	font-style: normal;
+	font-weight: 100;
+	font-size: 2.5rem;
+	line-height: 1.4;
+	margin:60px;
+}
+#about-headings{
+	color:black;
+	font-family:'Gill Sans', 'Gill Sans MT' , 'Trebuchet MS', sans-serif;
+	font-style: normal;
+	margin:40px;
+	font-size: 40px;
+}
+@media all and (max-width: 986px) {
+	.content {
+		padding:0;
+		display: grid;
+		grid-auto-flow: row;
+		grid-template-rows: 300px max-content;
+	}
+	.content-2{
+		padding-top: 0;
+	}
+	#aboutus-mainheading{
+		font-size: 45px;
+	}
+
+	#our-tagline{
+		font-weight: 100;
+		font-size: 1rem;
+		line-height: 1.4;
+		margin:30px;
+	}
+
+	#about-headings{
+		margin:20px;
+		font-size: 25px;
+	}
+	
+	.about-boxes{
+		position:inherit;
+	    z-index:0;
+		background-color:whitesmoke;
+		width:100vw;
+		height:400px;
+		margin:0;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		padding:0;
+		display: grid;
+		text-align: center;
+		grid-template-rows: auto auto auto;
+		grid-template-columns: auto;
+		box-shadow: none;
+	}
+	.about-boxes p{
+		color: black;
+	}
+	.about-box-1 ,.about-box-2{
+		align-items: center;
+		border-right:0;
+	}
+	.about-para-2
+	{
+		margin-top:50px;
+	}
+	.about-para-3
+	{
+		margin-top:50px;
+	}
+}
+ 

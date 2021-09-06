@@ -1,0 +1,52 @@
+
+
+.h-image
+{
+    height: 50%;
+    width:50%;
+    float:left;
+}
+
+.h-text
+{
+    font-size:40px;
+    padding-top:120px;
+    text-align:center;
+    color:black;
+}
+
+.h-quote {
+	font-size: 40px;
+	display: inline-block;
+}
+
+@media(max-width:986px){
+
+  /* This resizes the divs that contain your content to fill the width of the page so that they stack vertically */
+  .h-image
+{
+    height: 100%;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    float:none;
+    display:block;
+}
+  
+.h-text
+{
+    font-size:30px;
+    padding-top:10px;
+    text-align:center;
+}
+
+    .h-quote { 
+        font-size: 30px;
+        display: inline-block;
+    }
+    
+  .handd
+  {
+      margin-bottom:30px;
+  }  
+}

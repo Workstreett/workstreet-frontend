@@ -1,0 +1,70 @@
+.nav {
+	text-align: center;
+	background: transparent;
+	color: white;
+	font-size: 30px;
+	height: 70%;
+	z-index: 1;
+	position: absolute;
+	left: 0;
+	width: 100%;
+}
+
+.containingbutton {
+	text-align: right;
+	padding-top: 1rem;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.containingbutton button {
+	text-align: center;
+	max-width: max-content;
+}
+
+.header {
+	text-align: left;
+	font-family: "Roboto", Cambria, Cochin, Georgia, Times, "Times New Roman",
+		serif;
+}
+
+.containbuttonend {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+.main-page {
+	width: 100vw;
+	display: grid;
+	grid-auto-flow: row;
+	grid-template-rows: 100vh max-content max-content max-content max-content 100px;
+}
+
+.four-cards {
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	/*background-color: #f7f7f7;*/
+	/*background-color: black;*/
+	background: #1c1d21;
+	padding-top: 20px;
+	padding-bottom: 70px;
+	background: #1c1d21;
+}
+.para-team {
+	text-align: center;
+	background: #1c1d21;
+}
+#team {
+	color: white;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 40px;
+}
+@media all and (max-width: 986px) {
+	.main-page {
+		grid-template-rows: 320px max-content max-content max-content max-content 100px;
+	}
+}
