@@ -3,6 +3,7 @@ import { getSVGForPassword } from "./Functions";
 import Img from "../img/login.png";
 import "../css/signup.css";
 import Footer from "./Footer";
+import axios from "axios";
 
 class Signup extends React.Component {
 	constructor() {
@@ -33,29 +34,22 @@ class Signup extends React.Component {
 
 	async handleSubmit(event) {
 		event.preventDefault();
-		console.log("Submitted", JSON.stringify(this.state));
+		// console.log("Submitted", JSON.stringify(this.state));
 		try {
-			const response = await fetch(
+			const response = await axios.post(
 				"https://workstreet.herokuapp.com/signup",
-				{
-					method: "POST",
-					mode: "cors",
-					headers: {
-						"Content-Type": "application/json",
-					},
-					body: this.state,
-				}
+				this.state
 			);
 			console.log(response);
-			if (response.body === "u") {
+			if (response.data === "u") {
 				alert("username is in use, Choose something Else");
-			} else if (response.body === "p") {
+			} else if (response.data === "p") {
 				alert(
 					"The password has to contain a 1 Uppercase letter,1 numeral letter, 1 LowerCase letter, and atleast 6 characters"
 				);
-			} else if (response.body === "m") {
+			} else if (response.data === "m") {
 				alert("The mailId provided is not allowed");
-			} else if (response.body === "signedUp") {
+			} else if (response.data === "signedUp") {
 				alert("User has been added, PLease verify your mailId");
 			} else {
 				alert(
