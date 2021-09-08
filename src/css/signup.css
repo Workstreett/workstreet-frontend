@@ -139,11 +139,15 @@ p {
 
 @media (max-width: 550px) {
 	.sgn-form > h1 {
-		font-size: 20px;
+		font-size: 22px;
 	}
 	.sgn-form,
 	.btn-std {
-		font-size: 10px;
+		font-size: 12px;
+	}
+	.sgn-text-box {
+		height: 35px;
+		width: 270px;
 	}
 }
 
@@ -174,6 +178,7 @@ p {
 @media (max-width: 400px) {
 	.sgn-text-box,
 	select {
-		width: 150px;
+		width: 175px;
+		height: 33px;
 	}
 }
