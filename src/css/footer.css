@@ -5,7 +5,8 @@
 		rgb(26, 23, 23) 100%
 	);
 	color: #f0f9ff;
-	margin-bottom: 0px;
+	position: relative;
+	z-index: 1;
 }
 
 .foot-row-first 
