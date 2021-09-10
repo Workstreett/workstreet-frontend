@@ -7,11 +7,13 @@ class AuthContextProvider extends Component {
 		authToken: "",
 	};
 	setToken = (token) => {
+		localStorage.setItem("authToken", token);
 		this.setState({
 			authToken: token,
 		});
 	};
 	render() {
+		this.state.authToken = localStorage.getItem("authToken");
 		return (
 			<AuthContext.Provider
 				value={{ ...this.state, setToken: this.setToken }}

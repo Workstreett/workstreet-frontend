@@ -1,5 +1,7 @@
 .site-footer {
-	background :linear-gradient(
+	position: relative;
+	z-index: 1;
+	background: linear-gradient(
 		90deg,
 		rgb(28, 27, 27) 0%,
 		rgb(26, 23, 23) 100%
@@ -8,11 +10,10 @@
 	margin-bottom: 0px;
 }
 
-.foot-row-first 
-{
-	padding-top:40px;
-	display:flex;
-	justify-content:space-around;
+.foot-row-first {
+	padding-top: 40px;
+	display: flex;
+	justify-content: space-around;
 	flex-flow: row wrap;
 }
 
@@ -21,30 +22,28 @@
 	font-size: 30px;
 	float: left;
 	margin-top: 8px;
-  }
-  .cta-text {
+}
+.cta-text {
 	padding-left: 15px;
 	display: inline-block;
-  }
-  .cta-text h4 {
+}
+.cta-text h4 {
 	color: #fff;
 	font-size: 20px;
 	font-weight: 600;
 	margin-bottom: 2px;
-  }
-  .cta-text span {
+}
+.cta-text span {
 	color: #757575;
 	font-size: 15px;
-  }
+}
 
-.follow-text
-{
+.follow-text {
 	text-align: center;
 	font-size: 30px;
 	color: white;
-	margin-top:40px;
-	
-}  
+	margin-top: 40px;
+}
 
 .social-icons a {
 	width: 40px;
@@ -56,14 +55,13 @@
 .social-icons {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content:center;
+	justify-content: center;
 	list-style: none;
-	margin-top:10px;
+	margin-top: 10px;
 }
 
-.follow-item
-{
-	padding:5px;
+.follow-item {
+	padding: 5px;
 }
 
 .social-icons a {
@@ -80,7 +78,7 @@
 	-webkit-transition: all 0.2s linear;
 	-o-transition: all 0.2s linear;
 	transition: all 0.2s linear;
-} 
+}
 .social-icons a:active,
 .social-icons a:focus,
 .social-icons a:hover {

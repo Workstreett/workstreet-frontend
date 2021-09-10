@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { Component } from "react";
 import { AuthContext } from "../contexts/AuthContext";
+import Img from "../images/loader.gif";
 
 const Authorised = (OrignalComponent) => {
 	class NewComponent extends Component {
@@ -33,9 +34,23 @@ const Authorised = (OrignalComponent) => {
 		render() {
 			if (this.state.isLoading) {
 				return (
-					<h1 style={{ textAlign: "center", height: "70vh" }}>
-						Wait while we are verifying your authorisation
-					</h1>
+					<div
+						style={{
+							position: "relative",
+							height: "70vh",
+							zIndex: "-100",
+						}}
+					>
+						<img
+							src={Img}
+							style={{
+								position: "absolute",
+								top: "50%",
+								left: "50%",
+								transform: "translate(-50%,-50%)",
+							}}
+						/>
+					</div>
 				);
 			}
 			if (this.state.isAllowed === "No") {
