@@ -5,18 +5,18 @@ class Poster extends React.Component {
   constructor() {
     super();
     this.state = {
-      mainame: "poster",
+      mainame: "poster poshift",
     };
     this.pressed = this.pressed.bind(this);
   }
 
   componentDidMount() {
-    document
+    /* document
       .getElementById("sideBarButton")
       .addEventListener("click", this.pressed);
     document
       .getElementById("sideBarButton2")
-      .addEventListener("click", this.pressed);
+   .addEventListener("click", this.pressed);*/
   }
 
   pressed() {

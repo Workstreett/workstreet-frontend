@@ -1,3 +1,5 @@
+
+/*
 .sidebutton {
 	width: 130px;
 	height: 50px;
@@ -53,17 +55,61 @@
 {
 	border-bottom: 0px;
 	height:40px;
+}*/
+
+.side-menu
+{
+	background:#4e4f8f;
+	height: 100vh;
+	width: 17%;
+	opacity: 1;
+	position:  fixed;
+	top:80px;
+}
+.side-menu ul
+{
+	margin-top:5%;
+	margin-right:5%;
+}
+
+.side-menu li
+{
+	margin-bottom: 20%;
+}
+.log-out
+{
+	position: fixed;
+	bottom:5%;	
+}
+.log-out li
+{
+	 margin-bottom: 2%;
+}
+
+.side-icon
+{
+	color: #fff;
+}
+
+.li-text
+{
+	font-size: 20px;
+	color: #fff;
+	margin-left:10%;
+}
+.li-text-out
+{
+	font-size: 20px;
+	color: #fff;  
 }
 
 .munu {
 	background:#4e4f8f;
 	height: 100vh;
-	width: 250px;
-	opacity: 0;
+	width: 20%;
+	opacity: 1;
 	position:  fixed;
 	top:80px;
-	visibility: hidden;
-	transition: all 0.25s ease; 
 }
 
 .munu a {

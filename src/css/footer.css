@@ -10,11 +10,15 @@
 }
 
 .foot-row-first 
-{
-	padding-top:40px;
+{ 
 	display:flex;
 	justify-content:space-around;
 	flex-flow: row wrap;
+}
+
+.single-cta
+{
+	margin:5%;
 }
 
 .single-cta i {
@@ -42,8 +46,7 @@
 {
 	text-align: center;
 	font-size: 30px;
-	color: white;
-	margin-top:40px;
+	color: white; 
 	
 }  
 
@@ -112,4 +115,16 @@
 	margin-bottom: 0px;
 	text-align: center;
 	font-size: 15px;
+}
+
+@media all and (max-width: 430px) {
+	.foot-row-first 
+	{  
+		justify-content:flex-start ;
+	}
+	.single-cta
+	{
+		margin-left: 20%;
+	}
+
 }
