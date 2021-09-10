@@ -1,0 +1,87 @@
+.dashboard-form {
+  width: 50%;
+  height: 100%;
+  padding: 30px;
+}
+
+.dashboard-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.dashboard-form input[type='text'],
+.dashboard-form input[type='email'],
+.dashboard-form input[type='password'],
+.dashboard-form select {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  font-size: 15px;
+  color: #000;
+  font-family: Montserrat, 'Times New Roman', Times, serif;
+}
+
+.dashboard-form input[type='email'] {
+  background-color: #f0f0f0;
+}
+.dashboard-form option {
+  background-color: #fff;
+  font-size: 14px;
+  opacity: 0.5;
+  font-family: Montserrat, 'Times New Roman', Times, serif;
+}
+
+.dashboard-form input[type='submit'] {
+  margin-top: 20px;
+  margin-left: 50%;
+  width: 50%;
+  font-size: 17px;
+}
+
+.dashboard-form div {
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: rgb(172, 5, 172);
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+}
+
+.dashboard-containers {
+  display: flex;
+  flex-direction: row;
+}
+
+.dashboard-name {
+  height: 828px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: auto;
+  text-align: center;
+  font-size: 50px;
+  color: #212121;
+  background-image: url('../images/Dashboard_Background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 960px) {
+  .dashboard-containers {
+    flex-direction: column;
+  }
+  .dashboard-form {
+    width: 100%;
+  }
+  .dashboard-name {
+    width: 100%;
+    height: 100%;
+  }
+}
