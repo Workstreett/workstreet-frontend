@@ -11,11 +11,17 @@
 	z-index: 1;
 }
 
- 
+<<<<<<< HEAD
+.foot-row-first 
+{ 
+	display:flex;
+	justify-content:space-around;
+=======
 .foot-row-first {
 	padding-top: 40px;
 	display: flex;
 	justify-content: space-around;
+>>>>>>> dc7ca6b1272c70edfe25eaa5d21e9e0eb1aa4ef5
 	flex-flow: row wrap;
 }
 
@@ -48,10 +54,15 @@
 .follow-text {
 	text-align: center;
 	font-size: 30px;
+<<<<<<< HEAD
 	color: white; 
 	
 }  
- 
+=======
+	color: white;
+	margin-top: 40px;
+}
+>>>>>>> dc7ca6b1272c70edfe25eaa5d21e9e0eb1aa4ef5
 
 .social-icons a {
 	width: 40px;
