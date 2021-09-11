@@ -7,14 +7,21 @@
 		rgb(26, 23, 23) 100%
 	);
 	color: #f0f9ff;
-	margin-bottom: 0px;
+	position: relative;
+	z-index: 1;
 }
 
+ 
 .foot-row-first {
 	padding-top: 40px;
 	display: flex;
 	justify-content: space-around;
 	flex-flow: row wrap;
+}
+
+.single-cta
+{
+	margin:5%;
 }
 
 .single-cta i {
@@ -41,9 +48,10 @@
 .follow-text {
 	text-align: center;
 	font-size: 30px;
-	color: white;
-	margin-top: 40px;
-}
+	color: white; 
+	
+}  
+ 
 
 .social-icons a {
 	width: 40px;
@@ -109,4 +117,16 @@
 	margin-bottom: 0px;
 	text-align: center;
 	font-size: 15px;
+}
+
+@media all and (max-width: 430px) {
+	.foot-row-first 
+	{  
+		justify-content:flex-start ;
+	}
+	.single-cta
+	{
+		margin-left: 20%;
+	}
+
 }

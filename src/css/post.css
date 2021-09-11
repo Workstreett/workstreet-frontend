@@ -1,123 +1,138 @@
 .poster {
-	/* width: 100vw; */
-	margin-left:100px; 
-	align-items: center;
-	 
+	background-color:white;
+	display:grid;
+	grid-auto-flow: column;
+	grid-template-columns: 5fr 7fr 2fr;
+	margin-left: 25%;
+	margin-right: 5%;
+	border-radius: 20px;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+	/*animation-name: anipospreshift;
+	animation-duration: 0.25s;*/
+	
 }
 
-.pos-name
+.poshift
 {
-	text-align: center;
-	font-size: 26px;
-	font-weight: bold;
+	margin-left: 25%; 
+	margin-right: 5%;
+	animation-name: aniposshift;
+	animation-duration: 0.25s;
 }
 
-.pos-imag {  
-	margin-top: 20px;
-	height: 75vh; 
-	width: 85%;
-	border-radius: 3%;
-	display: block;
-	margin-left: auto;
-	margin-right: 11%;
-	animation-name: imagepreshift;
-	animation-duration: 0.25s;
-  }
-
-.imshift
-{
-	margin-right:1%;
-	animation-name: imageshift;
-	animation-duration: 0.25s;
-}  
-
-@keyframes imageshift {
+@keyframes aniposshift {
 	from {
-		margin-right:11%;
+		margin-left: 15%;
+		margin-right: 15%;
 	}
 }
 
-@keyframes imagepreshift {
+@keyframes anipospreshift {
 	from {
-		margin-right:1%;
+		margin-left: 25%;
+	margin-right: 5%;
 	}
 }
 
-.img-footer
+.post-side-1
+{
+	background-color:#00aced;
+	padding:20px;
+	border-radius: 20px 0 0 20px;
+}
+
+.post-cl-icon
+{
+
+}
+
+.post-icon
+{
+	width:30%;
+	height:30%;
+	border-radius: 50%;
+}
+
+.post-compname
+{
+	margin-top:10px;
+	font-size:35px;
+	font-weight:bold;
+}
+
+.post-comp-desc
+{
+	margin-top:20px;
+	font-size:20px;
+	text-align:left;
+}
+
+.post-side-2
+{
+	padding:20px;
+}
+
+.post-role
+{
+	margin-top:20px;
+	font-size:35px;
+	font-weight:bold;
+}
+
+.post-roledesc
+{
+	margin-top:20px;
+	font-size:15px;
+	text-align:left;
+}
+
+.post-but
 {
 	display:flex;
+	margin-top:10px;
 	flex-flow: row wrap;
-	justify-content:space-between;
+	justify-content:space-around;
+	
 }
 
-.pos-but
+.post-but button
 {
-	 margin-right:12%;
-	 height:50px;
-	 width:100px;
-	 padding: 10px;
-	 margin-top:12px;
-	 cursor: pointer;
-	 background-image: linear-gradient(to right, #232526 0%, #414345  51%, #232526  100%);
-	 color: #fff;
-	 outline: 0;
-	 border: none;
-	 border-radius: 10px; 
-	 animation-name: butpreshift;
-	 animation-duration: 0.25s;
+	height:50px;
+	width:100px;
+	padding: 10px;
+	margin-top:12px;
+	cursor: pointer;
+	color: #fff;
+	outline: 0;
+	border: none;
+	border-radius: 10px; 
 }
 
-.but-shift
+.post-apply
 {
-	margin-right:1%;
-	animation-name: butshift;
-	animation-duration: 0.25s;
+	background: #007BFF;
+	margin:10px;
 }
 
-@keyframes butshift {
-	from {
-		margin-right:12%;
-	}
+.post-info
+{
+	background: #5E6767;
+	margin:10px;
 }
 
-@keyframes butpreshift {
-	from {
-		margin-right:1%;
-	}
+ 
+
+.gd-handles
+{
+	display:block;
+	margin:auto;
 }
 .gd-social-icons {
-	margin-left: 30px;
-	margin-right: auto;
-	margin-bottom: 5px;
-	margin-top:10px;
 	list-style: none; 
-	animation-name: nashift;
-	animation-duration: 0.25s;
-}
-
-.socshift
-{
-	margin-left:155px;
-	animation-name: napreshift;
-	animation-duration: 0.25s
-}
-
-@keyframes nashift {
-	from {
-		margin-left: 155px;
-	}
-	 
-}
-
-@keyframes napreshift {
-	from {
-		margin-left: 30px;
-	}
-	 
 }
 
 .gd-social-icons li {
-	display: inline-block;
+	display:  block;
 	margin-bottom: 15px;
 	padding: 7px;
 }
@@ -187,7 +202,7 @@
 {
   transform-style: flat;
   transition: all 250ms ease-out;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1)  ;
  
 }
 
