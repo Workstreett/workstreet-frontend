@@ -1,6 +1,7 @@
 import React from "react";
 import "../../css/appage.css";
 import PosterGrid from "../PosterGrid.js";
+import PosterSidebar from "../PosterSidebar.js";
 import PosterPhoneGrid from "../PosterPhoneGrid.js";
 
 class Companies extends React.Component {
@@ -32,6 +33,7 @@ class Companies extends React.Component {
       <div>
         {isDesktop ? (
           <div>
+            <PosterSidebar />
             <PosterGrid />
           </div>
         ) : (
