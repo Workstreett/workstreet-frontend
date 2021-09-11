@@ -10,6 +10,7 @@ function Footer() {
           <div class="cta-text">
             <h4>Find us</h4>
             <span>IIT(BHU), Varanasi, Uttar Pradesh</span>
+
           </div>
         </div>
         <div class="single-cta">

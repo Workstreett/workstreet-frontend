@@ -1,5 +1,6 @@
 import React from "react";
 import PosterGrid from "../PosterGrid.js";
+import PosterSidebar from "../PosterSidebar.js";
 import PosterPhoneGrid from "../PosterPhoneGrid.js";
 
 class Consultancy extends React.Component {
@@ -31,6 +32,7 @@ class Consultancy extends React.Component {
       <div>
         {isDesktop ? (
           <div>
+            <PosterSidebar />
             <PosterGrid />
           </div>
         ) : (
