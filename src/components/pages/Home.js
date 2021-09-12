@@ -1,10 +1,10 @@
-import React from "react";
-import "../../css/appage.css";
+import React from 'react'
+import '../../css/appage.css'
 
 export default function Home() {
-  return (
-    <>
-      <h1 className="home">WS</h1>
-    </>
-  );
+    return (
+        <>
+            <h1 className="home">WS</h1>
+        </>
+    )
 }

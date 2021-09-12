@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 export default function Core() {
-  return (
-    <>
-      <h1 className='core'>CORE</h1>
-    </>
-  );
+    return (
+        <>
+            <h1 className="core">CORE</h1>
+        </>
+    )
 }
