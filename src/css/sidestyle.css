@@ -1,154 +1,40 @@
-
-/*
-.sidebutton {
-	width: 130px;
-	height: 50px;
-	font-size: 18px;
-	background: #4a4788;
-	color: #fbfcfc;
-	box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
-	border: none;
-	border-radius: 10px; 
-	position: fixed;
-	top: 82px;
-	left:2px;
-	cursor: pointer;
-	outline: 0;
-	transition: all 0.25s ease;
-
+.side-menu {
+    background: #fff;
+    border-right: #000 1px solid;
+    border-bottom: #000 1px solid;
+    height: 90vh;
+    width: 15vw;
+    min-width: 200px;
+    opacity: 1;
+    position: fixed;
+    top: 10vh;
+    padding: 10px 0 10px 0px;
+    font-size: 18px;
 }
-
-.sidebutton:hover {
-	color: #fbfcfc;
-	 
-	opacity: 0.9;
-	transition: all 0.25s ease;
+.side-menu .text {
+    font-size: 25px;
+    padding-left: 10px;
+    color: #000;
+    opacity: 0.53;
 }
-
-
-
-.munubutton
-{
-	width: 86px;
-	height: 40px;
-	float: right;
-	cursor: pointer;
-	transition: all 0.25s ease;
-	background:transparent;
-	outline: none;
-	border:0px;
-	margin:5px;
-	 
+.side-menu-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
-.munubutton:hover {
-	opacity: 0.8;
-	transition: all 0.25s ease;
-	background: #0f0c56;
-	border-radius:20px;
+.list-ele {
+    padding: 2% 0;
+    padding-left: 10px;
 }
-
-
-.munubut
-{
-	border-bottom: 0px;
-	height:40px;
-}*/
-
-.side-menu
-{
-	background:#4e4f8f;
-	height: 100vh;
-	width: 17%;
-	opacity: 1;
-	position:  fixed;
-	top:80px;
+.active-link .list-ele {
+    background-color: #7784f7;
 }
-.side-menu ul
-{
-	margin-top:5%;
-	margin-right:5%;
+.active-link .side-icon,
+.active-link .text {
+    color: #fff;
+    opacity: 1;
 }
-
-.side-menu li
-{
-	margin-bottom: 20%;
+.side-icon {
+    color: #000;
+    opacity: 0.53;
 }
-.log-out
-{
-	position: fixed;
-	bottom:5%;	
-}
-.log-out li
-{
-	 margin-bottom: 2%;
-}
-
-.side-icon
-{
-	color: #fff;
-}
-
-.li-text
-{
-	font-size: 20px;
-	color: #fff;
-	margin-left:10%;
-}
-.li-text-out
-{
-	font-size: 20px;
-	color: #fff;  
-}
-
-.munu {
-	background:#4e4f8f;
-	height: 100vh;
-	width: 20%;
-	opacity: 1;
-	position:  fixed;
-	top:80px;
-}
-
-.munu a {
-	text-align: center;
-	color: #a4abb6;
-	text-decoration: none;
-	display: block;
-	padding: 20px;
-}
-
-.munu ul {
-	padding: 0;
-	margin: 0;
-}
-
-.munuli
-{
-	font-size: 16px; 
-	transition: all 0.25s ease;
-	animation: fadeInRight 0.25s ease forwards;
-	opacity: 0;
-}
-
-.munuli:hover {
-	opacity: 0.8;
-	transition: all 0.25s ease;
-	background: #0f0c56;
-	cursor: pointer;
-	border-radius:20px;
-}
-
-.munuli:hover a{
-	color: #fbfcfc;
-	 
-}
-
-.activee {
-	opacity: 1;
-	visibility: visible;
-	transition: all 0.25s ease; 
-}
- 

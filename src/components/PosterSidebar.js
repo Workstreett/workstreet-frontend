@@ -1,102 +1,59 @@
 import React from 'react'
 import '../css/sidestyle.css'
-import { Link } from 'react-router-dom'
-
-/* const navLinks = [
-  { url: "#one", name: "Sample Company 1" },
-  { url: "#two", name: "Sample Company 2" },
-  { url: "#three", name: "Sample Company 3" },
-  { url: "#four", name: "Sample Company 4" },
-]; */
+import { NavLink } from 'react-router-dom'
 
 class PosterSidebar extends React.Component {
     render() {
         return (
-            <div className="side-menu">
-                <ul className="fa-ul">
-                    <li>
-                        <Link to="/workstreet">
-                            <span className="fa-li side-icon">
-                                <i className="fas fa-home fa-2x"></i>
-                            </span>
-                            <div className="li-text">Home</div>
-                        </Link>
-                    </li>
-
-                    <li>
-                        <Link to="/workstreet/companies">
-                            <span className="fa-li side-icon">
-                                <i className="fas fa-building fa-2x"></i>
-                            </span>
-                            <div className="li-text">Company</div>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/workstreet/consultancy">
-                            <span className="fa-li side-icon">
-                                <i className="fas fa-th-large fa-2x"></i>
-                            </span>
-                            <div className="li-text">Categories</div>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/workstreet/dashboard">
-                            <span className="fa-li side-icon">
-                                <i className="fas fa-user-circle fa-2x"></i>
-                            </span>
-                            <div className="li-text">Profile</div>
-                        </Link>
-                    </li>
-                </ul>
-                <ul className="fa-ul log-out">
-                    <li>
-                        <Link to="/workstreet/sign-out">
-                            <span className="fa-li side-icon">
-                                <i className="fas fa-sign-out-alt fa-2x"></i>
-                            </span>
-                            <div className="li-text-out">Log-Out</div>
-                        </Link>
-                    </li>
-                </ul>
+            <div className="side-menu side-menu-flex">
+                <div>
+                    <NavLink exact to="/workstreet/" activeClassName="active-link">
+                        <div className="list-ele">
+                            <i className="fas fa-home fa-2x side-icon"></i>
+                            <span className="text">Home</span>
+                        </div>
+                    </NavLink>
+                    <NavLink exact to="/workstreet/companies" activeClassName="active-link">
+                        <div className="list-ele">
+                            <i className="fab fa-cuttlefish fa-2x side-icon"></i>
+                            <span className="text">SDE</span>
+                        </div>
+                    </NavLink>
+                    <NavLink exact to="/workstreet/" activeClassName="active-link">
+                        <div className="list-ele">
+                            <i className="fas fa-database fa-2x side-icon"></i>
+                            <span className="text">Data Science</span>
+                        </div>
+                    </NavLink>
+                    <NavLink exact to="/workstreet/" activeClassName="active-link">
+                        <div className="list-ele">
+                            <i className="fas fa-wrench fa-2x side-icon"></i>
+                            <span className="text">Core</span>
+                        </div>
+                    </NavLink>
+                    <NavLink exact to="/workstreet/" activeClassName="active-link">
+                        <div className="list-ele">
+                            <i className="fas fa-search-dollar fa-2x side-icon"></i>
+                            <span className="text">Marketing</span>
+                        </div>
+                    </NavLink>
+                </div>
+                <div>
+                    <NavLink to="/workstreet/dashboard" activeClassName="active-link">
+                        <div className="list-ele">
+                            <i className="fas fa-user-circle fa-2x side-icon"></i>
+                            <span className="text">Profile</span>
+                        </div>
+                    </NavLink>
+                    <NavLink to="/workstreet/sign-out" activeClassName="active-link">
+                        <div className="list-ele">
+                            <i className="fas fa-sign-out-alt fa-2x side-icon"></i>
+                            <span className="text">Logout</span>
+                        </div>
+                    </NavLink>
+                </div>
             </div>
         )
-
-        /* <button
-          id="sideBarButton"
-          className="sidebutton"
-          onClick={this.handleClick}
-        >
-          Company List
-        </button>
-        <div className={this.state.style}>
-          <ul>
-            <li className="munubut">
-              <button
-                className="munubutton"
-                id="sideBarButton2"
-                onClick={this.handleClick}
-              >
-                <i class="far fa-times fa-3x" style={{ color: "#a4abb6" }}></i>
-              </button>
-            </li>
-            {navLinks.map(({ url, name }) => (
-              <li className="munuli">
-                <HashLink
-                  to={url}
-                  scroll={(el) =>
-                    el.scrollIntoView({
-                      behavior: "smooth",
-                      block: "end",
-                    })
-                  }
-                >
-                  {name}
-                </HashLink>
-              </li>
-            ))}
-          </ul>
-        </div>
-                </div> */
     }
 }
 
