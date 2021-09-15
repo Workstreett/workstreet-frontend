@@ -1,229 +1,183 @@
-.poster {
-	background-color:white;
-	display:grid;
-	grid-auto-flow: column;
-	grid-template-columns: 5fr 7fr 2fr;
-	margin-left: 25%;
-	margin-right: 5%;
-	border-radius: 20px;
-	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-	/*animation-name: anipospreshift;
-	animation-duration: 0.25s;*/
-	
+.compCard {
+    background-color: white;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 5fr 7fr 2fr;
+    margin-left: 25%;
+    margin-right: 5%;
+    border-radius: 20px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
-.poshift
-{
-	margin-left: 25%; 
-	margin-right: 5%;
-	animation-name: aniposshift;
-	animation-duration: 0.25s;
+.comp-side-1 {
+    background-color: #00aced;
+    padding: 20px;
+    border-radius: 20px 0 0 20px;
 }
 
-@keyframes aniposshift {
-	from {
-		margin-left: 15%;
-		margin-right: 15%;
-	}
+.comp-cl-icon {
 }
 
-@keyframes anipospreshift {
-	from {
-		margin-left: 25%;
-	margin-right: 5%;
-	}
+.comp-icon {
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
 }
 
-.post-side-1
-{
-	background-color:#00aced;
-	padding:20px;
-	border-radius: 20px 0 0 20px;
+.comp-compname {
+    margin-top: 10px;
+    font-size: 35px;
+    font-weight: bold;
 }
 
-.post-cl-icon
-{
-
+.comp-comp-desc {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: left;
 }
 
-.post-icon
-{
-	width:30%;
-	height:30%;
-	border-radius: 50%;
+.comp-side-2 {
+    padding: 20px;
 }
 
-.post-compname
-{
-	margin-top:10px;
-	font-size:35px;
-	font-weight:bold;
+.comp-role {
+    margin-top: 20px;
+    font-size: 35px;
+    font-weight: bold;
 }
 
-.post-comp-desc
-{
-	margin-top:20px;
-	font-size:20px;
-	text-align:left;
+.comp-roledesc {
+    margin-top: 20px;
+    font-size: 15px;
+    text-align: left;
 }
 
-.post-side-2
-{
-	padding:20px;
+.compCard-tagall {
+    margin-top: 10px;
 }
 
-.post-role
-{
-	margin-top:20px;
-	font-size:35px;
-	font-weight:bold;
+.compCard-tag {
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    display: inline-block;
+    background-color: #b9fbb9;
+    font-size: 12px;
+    margin-right: 20px;
 }
 
-.post-roledesc
-{
-	margin-top:20px;
-	font-size:15px;
-	text-align:left;
+.comp-apply {
+    height: 50px;
+    width: 100px;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #fff;
+    outline: 0;
+    border: none;
+    border-radius: 4px;
+    background: #7784f7;
 }
 
-.post-but
-{
-	display:flex;
-	margin-top:10px;
-	flex-flow: row wrap;
-	justify-content:space-around;
-	
+.comp-info {
+    background: #5e6767;
+    margin: 10px;
 }
 
-.post-but button
-{
-	height:50px;
-	width:100px;
-	padding: 10px;
-	margin-top:12px;
-	cursor: pointer;
-	color: #fff;
-	outline: 0;
-	border: none;
-	border-radius: 10px; 
+.comp-handles {
+    display: block;
+    margin: auto;
+}
+.comp-social-icons {
+    list-style: none;
 }
 
-.post-apply
-{
-	background: #007BFF;
-	margin:10px;
+.comp-social-icons li {
+    display: block;
+    margin-bottom: 15px;
+    padding: 7px;
+}
+.comp-social-icons li.title {
+    text-transform: uppercase;
+    color: #96a2b2;
+    font-weight: 700;
+    font-size: 13px;
 }
 
-.post-info
-{
-	background: #5E6767;
-	margin:10px;
+.comp-social-icons a {
+    font-size: 16px;
+    background-color: white;
+    display: inline-block;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    border-radius: 100%;
+    border: 2px solid;
+    border-color: grey;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
 }
 
- 
-
-.gd-handles
-{
-	display:block;
-	margin:auto;
+.comp-social-icons a.comp-facebook {
+    color: #3b5998;
 }
-.gd-social-icons {
-	list-style: none; 
+.comp-social-icons a.comp-twitter {
+    color: #00aced;
 }
-
-.gd-social-icons li {
-	display:  block;
-	margin-bottom: 15px;
-	padding: 7px;
+.comp-social-icons a.comp-linkedin {
+    color: #007bb6;
 }
-.gd-social-icons li.title {
-	text-transform: uppercase;
-	color: #96a2b2;
-	font-weight: 700;
-	font-size: 13px;
+.comp-social-icons a.comp-instagram {
+    color: #e95950;
 }
 
-.gd-social-icons a {
-	font-size: 16px;
-	background-color:white;
-	display: inline-block;
-	line-height: 44px;
-	width: 44px;
-	height: 44px;
-	text-align: center;
-	border-radius: 100%;
-	border: 2px solid;
-	border-color: grey;
-	-webkit-transition: all 0.2s linear;
-	-o-transition: all 0.2s linear;
-	transition: all 0.2s linear;
+.comp-social-icons a:active,
+.comp-social-icons a:focus,
+.comp-social-icons a:hover {
+    color: #fff;
+    background-color: #29aafe;
+}
+.comp-social-icons.size-sm a {
+    line-height: 34px;
+    height: 34px;
+    width: 34px;
+    font-size: 14px;
+}
+.comp-social-icons a.comp-facebook:hover {
+    background-color: #3b5998;
+}
+.comp-social-icons a.comp-twitter:hover {
+    background-color: #00aced;
+}
+.comp-social-icons a.comp-linkedin:hover {
+    background-color: #007bb6;
+}
+.comp-social-icons a.comp-instagram:hover {
+    background-color: #e95950;
 }
 
-.gd-social-icons a.gd-facebook  {
-	color: #3b5998;
-}
-.gd-social-icons a.gd-twitter  {
-	 color: #00aced; 
-}
-.gd-social-icons a.gd-linkedin  {
-	color: #007bb6; 
-}
-.gd-social-icons a.gd-instagram {
-	 color: #e95950; 
+.upbut {
+    transform-style: flat;
+    transition: all 250ms ease-out;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1);
 }
 
-.gd-social-icons a:active,
-.gd-social-icons a:focus,
-.gd-social-icons a:hover {
-	color: #fff;
-	background-color: #29aafe;
-	 
-}
-.gd-social-icons.size-sm a {
-	line-height: 34px;
-	height: 34px;
-	width: 34px;
-	font-size: 14px;
-}
-.gd-social-icons a.gd-facebook:hover {
-	background-color: #3b5998;
-}
-.gd-social-icons a.gd-twitter:hover {
-	background-color: #00aced;
-}
-.gd-social-icons a.gd-linkedin:hover {
-	background-color: #007bb6;
-}
-.gd-social-icons a.gd-instagram:hover {
-	background-color: #e95950;
+.upbut::before,
+.upbut::after {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    transition: all 250ms ease-out;
 }
 
-.upbut
-{
-  transform-style: flat;
-  transition: all 250ms ease-out;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1)  ;
- 
-}
-
-.upbut::before, 
-.upbut::after
-{
-	content: "";
-	position: absolute;
-	z-index: -2;
-	transition: all 250ms ease-out;
-}
-
-.upbut::before
-{ 
-	top: 0;
+.upbut::before {
+    top: 0;
     left: 0;
     width: 100%;
-    height: 100%; 
+    height: 100%;
 }
 
-.upbut:hover
-{  
-	box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
+.upbut:hover {
+    box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
 }

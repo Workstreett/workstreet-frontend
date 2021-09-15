@@ -17,37 +17,14 @@ import Dashboard from './pages/Dashboard'
 import PosterSidebar from './PosterSidebar'
 
 class House extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            isDesktop: false
-        }
-
-        this.updatePredicate = this.updatePredicate.bind(this)
-    }
-
-    componentDidMount() {
-        this.updatePredicate()
-        window.addEventListener('resize', this.updatePredicate)
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.updatePredicate)
-    }
-
-    updatePredicate() {
-        this.setState({ isDesktop: window.innerWidth > 850 })
-    }
-
     render() {
-        const isDesktop = this.state.isDesktop
         return (
             <Router>
                 <Switch>
                     <Route exact path="/" component={MainPage} />
                     <Route path="/workstreet">
                         <Navbar />
-                        {isDesktop ? <PosterSidebar /> : <></>}
+                        <PosterSidebar />
                         <Route path="/workstreet" exact component={Authorised(Home)} />
                         <Route
                             path="/workstreet/categories"
