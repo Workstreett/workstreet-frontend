@@ -36,10 +36,12 @@ class Poster extends React.Component {
         return (
             <div className="compCard" id={this.props.id}>
                 <div className="comp-side-1">
-                    <div className="comp-cl-icon">
-                        <img className="comp-icon" src={this.props.icon} alt="icon" />{' '}
+                    <div className="comp-nameImage">
+                        <div className="comp-cl-icon">
+                            <img className="comp-icon" src={this.props.icon} alt="icon" />{' '}
+                        </div>
+                        <div className="comp-compname">{this.props.name}</div>
                     </div>
-                    <div className="comp-compname">{this.props.name}</div>
                     <div className="comp-comp-desc"> {this.props.compdesc}</div>
                 </div>
                 <div className="comp-side-2">
@@ -50,7 +52,6 @@ class Poster extends React.Component {
                         <div className="compCard-tag">2 Months</div>
                         <div className="compCard-tag">June-July</div>
                     </div>
-
                     <button className="comp-apply upbut">Apply</button>
                 </div>
                 <div className="comp-handles">

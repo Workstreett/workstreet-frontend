@@ -5,14 +5,13 @@
     grid-template-columns: 5fr 7fr 2fr;
     margin-left: 25%;
     margin-right: 5%;
-    border-radius: 20px;
-    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    border-radius: 4px;
 }
 
 .comp-side-1 {
-    background-color: #00aced;
+    background-color: #3eccff;
     padding: 20px;
-    border-radius: 20px 0 0 20px;
+    border-radius: 4px 0 0 4px;
 }
 
 .comp-cl-icon {
@@ -26,18 +25,18 @@
 
 .comp-compname {
     margin-top: 10px;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 .comp-comp-desc {
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 25px;
     text-align: left;
 }
 
 .comp-side-2 {
-    padding: 20px;
+    padding: 8%;
 }
 
 .comp-role {
@@ -66,8 +65,8 @@
 }
 
 .comp-apply {
-    height: 50px;
-    width: 100px;
+    height: 45px;
+    width: 140px;
     padding: 10px;
     margin-top: 20px;
     cursor: pointer;
@@ -180,4 +179,76 @@
 
 .upbut:hover {
     box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
+}
+@media all and (max-width: 960px) {
+    .compCard {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .compCard {
+        grid-auto-flow: row;
+        grid-template-rows: auto auto 1fr;
+        grid-template-columns: 1fr;
+        margin-left: 5%;
+        margin-right: 5%;
+        border-radius: 3px;
+    }
+    .comp-side-1 {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 2fr 3fr;
+        padding: 0px;
+        border-radius: 0;
+    }
+    .comp-nameImage {
+        margin-left: 10%;
+        margin-top: 20%;
+        margin-bottom: 20%;
+    }
+    .comp-icon {
+        width: 50%;
+        height: 50%;
+        max-width: 75px;
+        max-height: 75px;
+    }
+    .comp-role {
+        font-size: 30px;
+    }
+
+    .comp-comp-desc {
+        margin-bottom: 20%;
+        margin-left: 5%;
+        margin-right: 2%;
+    }
+    .comp-side-2 {
+        padding-bottom: 4%;
+    }
+    .comp-role {
+        margin-top: 0px;
+    }
+    .comp-handles {
+        display: inline-block;
+        margin-left: 8%;
+    }
+    .comp-social-icons li {
+        display: inline-block;
+        padding-left: 0px;
+        padding-right: 14px;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .comp-role {
+        font-size: 25px;
+    }
+
+    .comp-comp-desc {
+        font-size: 20px;
+    }
+    .comp-compname {
+        font-size: 25px;
+    }
 }
