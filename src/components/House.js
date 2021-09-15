@@ -15,7 +15,7 @@ import Footer from './Footer.js'
 import Authorised from './Authorised'
 import Dashboard from './pages/Dashboard'
 import PosterSidebar from './PosterSidebar'
-
+import '../css/secGrid.css'
 class House extends React.Component {
     render() {
         return (
@@ -24,27 +24,37 @@ class House extends React.Component {
                     <Route exact path="/" component={MainPage} />
                     <Route path="/workstreet">
                         <Navbar />
-                        <PosterSidebar />
-                        <Route path="/workstreet" exact component={Authorised(Home)} />
-                        <Route
-                            path="/workstreet/categories"
-                            exact
-                            component={Authorised(Categories)}
-                        />
-                        <Route
-                            path="/workstreet/companies"
-                            exact
-                            component={Authorised(Companies)}
-                        />
-                        <Route path="/workstreet/about-us" exact component={Authorised(AboutUs)} />
-                        <Route path="/workstreet/sign-out" exact component={Authorised(SignOut)} />
-                        <Route path="/workstreet/core" exact component={Authorised(Core)} />
-                        <Route
-                            path="/workstreet/consultancy"
-                            exact
-                            component={Authorised(Consultancy)}
-                        />
-                        <Route path="/workstreet/dashboard" exact component={Dashboard} />
+                        <div className="sec-grid">
+                            <PosterSidebar />
+                            <Route path="/workstreet" exact component={Authorised(Home)} />
+                            <Route
+                                path="/workstreet/categories"
+                                exact
+                                component={Authorised(Categories)}
+                            />
+                            <Route
+                                path="/workstreet/companies"
+                                exact
+                                component={Authorised(Companies)}
+                            />
+                            <Route
+                                path="/workstreet/about-us"
+                                exact
+                                component={Authorised(AboutUs)}
+                            />
+                            <Route
+                                path="/workstreet/sign-out"
+                                exact
+                                component={Authorised(SignOut)}
+                            />
+                            <Route path="/workstreet/core" exact component={Authorised(Core)} />
+                            <Route
+                                path="/workstreet/consultancy"
+                                exact
+                                component={Authorised(Consultancy)}
+                            />
+                            <Route path="/workstreet/dashboard" exact component={Dashboard} />
+                        </div>
                         <Footer />
                     </Route>
                     <Route exact path="/login" component={Login} />
