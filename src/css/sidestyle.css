@@ -1,6 +1,5 @@
 .side-menu {
     background: #fff;
-    border-right: #000 1px solid;
     border-bottom: #000 1px solid;
     height: 90vh;
     width: 15vw;
@@ -37,4 +36,10 @@
 .side-icon {
     color: #000;
     opacity: 0.53;
+}
+
+@media all and (max-width: 960px) {
+    .side-menu {
+        display: none;
+    }
 }
