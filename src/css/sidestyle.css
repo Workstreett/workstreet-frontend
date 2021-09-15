@@ -2,19 +2,18 @@
     background: #fff;
     border-bottom: #000 1px solid;
     height: 90vh;
-    width: 15vw;
+    width: 17vw;
     min-width: 200px;
     opacity: 1;
     position: sticky;
     top: min(10vh, 70px);
     padding: 10px 0 10px 0px;
-    font-size: 18px;
 }
 .side-menu .text {
     font-size: 25px;
     padding-left: 10px;
     color: #000;
-    opacity: 0.53;
+    opacity: 0.7;
 }
 .side-menu-flex {
     display: flex;
@@ -22,15 +21,14 @@
     justify-content: space-between;
 }
 .list-ele {
-    padding: 2% 0;
-    padding-left: 10px;
-    border-radius: 20px 0 0 20px;
+    padding: 5px 0px 12px 10px;
+    border-radius: 0;
 }
 .list-ele:hover {
     background-color: #7784f7;
-    transition: background-color 2s ease-out;
-    border-bottom: 2px #f7ea77 solid;
-    border-top: 2px #f7ea77 solid;
+
+    border-radius: 20px 0 0 20px;
+    transition: background-color border-radius 2s ease-out;
 }
 .list-ele:hover .text,
 .list-ele:hover .side-icon {
@@ -40,6 +38,8 @@
 }
 .active-link .list-ele {
     background-color: #7784f7;
+
+    border-radius: 20px 0 0 20px;
 }
 .active-link .side-icon,
 .active-link .text {
@@ -47,8 +47,8 @@
     opacity: 1;
 }
 .side-icon {
-    color: #000;
-    opacity: 0.53;
+    color: black;
+    opacity: 0.7;
 }
 @media all and (max-width: 960px) {
     .side-menu {

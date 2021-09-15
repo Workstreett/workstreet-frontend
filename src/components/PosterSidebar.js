@@ -15,26 +15,26 @@ class PosterSidebar extends React.Component {
                     </NavLink>
                     <NavLink exact to="/workstreet/companies" activeClassName="active-link">
                         <div className="list-ele">
-                            <i className="fab fa-cuttlefish fa-2x side-icon"></i>
+                            <i className="fas fa-laptop fa-2x side-icon"></i>
                             <span className="text">SDE</span>
                         </div>
                     </NavLink>
-                    <NavLink exact to="/workstreet/" activeClassName="active-link">
+                    <NavLink exact to="/workstreet/consultancy" activeClassName="active-link">
                         <div className="list-ele">
-                            <i className="fas fa-database fa-2x side-icon"></i>
-                            <span className="text">Data Science</span>
+                            <i className="fas fa-chart-line fa-2x side-icon"></i>
+                            <span className=" text">Data Science</span>
                         </div>
                     </NavLink>
-                    <NavLink exact to="/workstreet/" activeClassName="active-link">
+                    <NavLink exact to="/workstreet/core" activeClassName="active-link">
                         <div className="list-ele">
-                            <i className="fas fa-wrench fa-2x side-icon"></i>
-                            <span className="text">Core</span>
+                            <i className="fas fa-user-hard-hat fa-2x side-icon"></i>
+                            <span className=" text">Core</span>
                         </div>
                     </NavLink>
-                    <NavLink exact to="/workstreet/" activeClassName="active-link">
+                    <NavLink exact to="/workstreet/about-us" activeClassName="active-link">
                         <div className="list-ele">
                             <i className="fas fa-search-dollar fa-2x side-icon"></i>
-                            <span className="text">Marketing</span>
+                            <span className=" text">Marketing</span>
                         </div>
                     </NavLink>
                 </div>
