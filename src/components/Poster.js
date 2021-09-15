@@ -34,42 +34,45 @@ class Poster extends React.Component {
 
     render() {
         return (
-            <div className="poster" id={this.props.id}>
-                <div className="post-side-1">
-                    <div className="post-cl-icon">
-                        <img className="post-icon" src={this.props.icon} alt="icon" />{' '}
+            <div className="compCard" id={this.props.id}>
+                <div className="comp-side-1">
+                    <div className="comp-cl-icon">
+                        <img className="comp-icon" src={this.props.icon} alt="icon" />{' '}
                     </div>
-                    <div className="post-compname">{this.props.name}</div>
-                    <div className="post-comp-desc"> {this.props.compdesc}</div>
+                    <div className="comp-compname">{this.props.name}</div>
+                    <div className="comp-comp-desc"> {this.props.compdesc}</div>
                 </div>
-                <div className="post-side-2">
-                    <div className="post-role">{this.props.role}</div>
-                    <div className="post-roledesc">{this.props.roledesc}</div>
-                    <div className="post-but">
-                        <button className="post-apply upbut">Apply</button>
-                        <button className="post-info upbut">More info</button>
+                <div className="comp-side-2">
+                    <div className="comp-role">{this.props.role}</div>
+                    <div className="comp-roledesc">{this.props.roledesc}</div>
+                    <div className="compCard-tagall">
+                        <div className="compCard-tag">paid</div>
+                        <div className="compCard-tag">2 Months</div>
+                        <div className="compCard-tag">June-July</div>
                     </div>
+
+                    <button className="comp-apply upbut">Apply</button>
                 </div>
-                <div className="gd-handles">
-                    <ul className="gd-social-icons">
+                <div className="comp-handles">
+                    <ul className="comp-social-icons">
                         <li>
-                            <a className="gd-facebook upbut" href="https://www.google.com/">
+                            <a className="comp-facebook upbut" href="https://www.google.com/">
                                 <i className="fa fa-facebook  "></i>
                             </a>
                         </li>
                         <li>
-                            <a className="gd-twitter upbut" href="https://www.google.com/">
+                            <a className="comp-twitter upbut" href="https://www.google.com/">
                                 <i className="fa fa-twitter "></i>
                             </a>
                         </li>
 
                         <li>
-                            <a className="gd-instagram upbut" href="https://www.google.com/">
+                            <a className="comp-instagram upbut" href="https://www.google.com/">
                                 <i className="fab fa-instagram "></i>
                             </a>
                         </li>
                         <li>
-                            <a className="gd-linkedin upbut" href="https://www.google.com/">
+                            <a className="comp-linkedin upbut" href="https://www.google.com/">
                                 <i className="fa fa-linkedin  "></i>
                             </a>
                         </li>
