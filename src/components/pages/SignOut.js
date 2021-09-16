@@ -1,6 +1,15 @@
 import React from 'react'
+import { Redirect } from 'react-router'
+import { AuthContext } from '../../contexts/AuthContext'
 import '../../css/appage.css'
 
-export default function SignOut() {
-    return <h1 className="sign-out">NO WAY OUT</h1>
+class SignOut extends React.Component {
+    static contextType = AuthContext
+    render() {
+        const { setToken } = this.context
+        setToken('')
+        return <Redirect to="/" />
+    }
 }
+
+export default SignOut
