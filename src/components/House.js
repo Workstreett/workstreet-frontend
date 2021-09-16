@@ -42,11 +42,7 @@ class House extends React.Component {
                                 exact
                                 component={Authorised(AboutUs)}
                             />
-                            <Route
-                                path="/workstreet/sign-out"
-                                exact
-                                component={Authorised(SignOut)}
-                            />
+                            <Route path="/workstreet/sign-out" exact component={SignOut} />
                             <Route path="/workstreet/core" exact component={Authorised(Core)} />
                             <Route
                                 path="/workstreet/consultancy"

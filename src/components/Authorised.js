@@ -13,13 +13,11 @@ const Authorised = (OrignalComponent) => {
 
         componentDidMount() {
             const { authToken } = this.context
-            console.log(authToken, 'AuthToken')
             axios
                 .post('https://workstreet.herokuapp.com/auth', {
                     auth_token: authToken
                 })
                 .then((res) => {
-                    console.log(res.data, 'REPONSE Recieved')
                     this.setState({
                         isAllowed: res.data,
                         isLoading: false
