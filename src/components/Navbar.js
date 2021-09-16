@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../css/Navbar.css'
+import sitelogo2 from '../img/sitelogo2.png'
 
 function Navbar() {
     const [click, setClick] = useState(false)
@@ -11,9 +12,8 @@ function Navbar() {
     return (
         <>
             <nav className="navbar">
-                <Link to="/workstreet/" className="navbar-logo" onClick={closeMobileMenu}>
-                    WorkStreet
-                    <i className="fab fa-firstdraft" />
+                <Link to="/workstreet/" className="navbar-logo-div" onClick={closeMobileMenu}>
+                    <img src={sitelogo2} className="navbar-logo-img" />
                 </Link>
                 <div className="menu-icon" onClick={handleClick}>
                     <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -61,10 +61,9 @@ function Navbar() {
                         </Link>
                     </li>
                 </ul>
-                <div className="Welcome">
-                    <i className="fas fa-user fa-x"></i>
-                    Hello User
-                </div>
+                <Link to="/workstreet/dashboard">
+                    <div className="Welcome">Welcome, John Diego</div>
+                </Link>
             </nav>
         </>
     )
