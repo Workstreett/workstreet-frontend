@@ -11,6 +11,7 @@ import Pradeep from '../img/Pradeep.jpeg'
 import { Link } from 'react-router-dom'
 import Hand from './Hand'
 import { AuthContext } from '../contexts/AuthContext'
+import sitelogo2 from '../img/sitelogo2.png'
 
 class MainPage extends React.Component {
     static contextType = AuthContext
@@ -20,23 +21,23 @@ class MainPage extends React.Component {
             <div className="main-page">
                 <div>
                     <header className="nav">
-                        <div className="containbuttonend">
+                        <div className="nav-button">
                             {authToken === undefined || authToken === '' ? (
                                 <>
                                     <Link to="/login">
-                                        <button className="btn-std ">Login</button>
+                                        <button>Login</button>
                                     </Link>
                                     <Link to="/signup">
-                                        <button className="btn-std ">Sign Up</button>
+                                        <button>Sign Up</button>
                                     </Link>
                                 </>
                             ) : (
                                 <>
                                     <Link to="/workstreet">
-                                        <button className="btn-std ">Dashboard</button>
+                                        <button>Dashboard</button>
                                     </Link>
                                     <Link to="/workstreet/sign-out">
-                                        <button className="btn-std"> Sign Out</button>
+                                        <button> Sign Out</button>
                                     </Link>
                                 </>
                             )}
