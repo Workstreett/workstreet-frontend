@@ -7,7 +7,7 @@ class PosterSidebar extends React.Component {
         return (
             <div className="side-menu side-menu-flex">
                 <div>
-                    <NavLink exact to="/workstreet/" activeClassName="active-link">
+                    <NavLink exact to="/" activeClassName="active-link">
                         <div className="list-ele">
                             <i className="fas fa-home fa-2x side-icon"></i>
                             <span className="text">Home</span>

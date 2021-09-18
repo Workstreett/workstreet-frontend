@@ -39,7 +39,7 @@ class Login extends React.Component {
                 this.setState({})
             } else {
                 data.setToken(res.data)
-                history.push('/workstreet')
+                history.push('/workstreet/dashboard')
             }
         } catch (err) {
             console.log(err.message)

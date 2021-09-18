@@ -27,15 +27,21 @@ class MainPage extends React.Component {
                                     <Link to="/login">
                                         <button>Login</button>
                                     </Link>
+                                    <div className="nav-mid-img">
+                                        <img src={sitelogo2} />
+                                    </div>
                                     <Link to="/signup">
                                         <button>Sign Up</button>
                                     </Link>
                                 </>
                             ) : (
                                 <>
-                                    <Link to="/workstreet">
+                                    <Link to="/workstreet/dashboard">
                                         <button>Dashboard</button>
                                     </Link>
+                                    <div className="nav-mid-img">
+                                        <img src={sitelogo2} />
+                                    </div>
                                     <Link to="/workstreet/sign-out">
                                         <button> Sign Out</button>
                                     </Link>

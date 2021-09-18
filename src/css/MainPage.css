@@ -53,6 +53,20 @@
     background: #fff;
     color: #1f1f1f;
 }
+.nav-mid-img {
+    display: visible;
+}
+
+.nav-mid-img img {
+    cursor: pointer;
+    width: 17vw;
+    min-width: 200px;
+    height: 10vh;
+    min-height: 50px;
+    max-height: 70px;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+}
 
 .main-page {
     width: 100vw;
@@ -85,5 +99,17 @@
 @media all and (max-width: 986px) {
     .main-page {
         grid-template-rows: 320px max-content max-content max-content max-content 100px;
+    }
+}
+
+@media all and (max-width: 670px) {
+    .nav-mid-img {
+        display: none;
+    }
+    .nav-button {
+        padding-left: 0;
+        padding-right: 0;
+
+        justify-content: space-around;
     }
 }
