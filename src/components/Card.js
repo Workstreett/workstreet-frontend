@@ -6,7 +6,7 @@ function Card(props) {
     return (
         <div className="card-intro">
             <div className="f-card">
-                <img className="f-image" src={props.path} alt="photu" />
+                <img src={props.path} alt="Founder-Photo" />
                 <div className="f-inner-card">
                     <div className="f-front">
                         <p className="f-name">{props.names}</p>

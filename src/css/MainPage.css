@@ -1,18 +1,10 @@
 .nav {
-    text-align: center;
     background: transparent;
-    color: white;
-    font-size: 30px;
     height: 70%;
-    z-index: 1;
     position: absolute;
     left: 0;
     width: 100%;
-}
-
-.header {
-    text-align: left;
-    font-family: 'Roboto', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    z-index: 2;
 }
 
 .nav-button {
@@ -42,7 +34,6 @@
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     text-align: center;
-    max-width: max-content;
     border: solid 2px #fff;
     background: transparent;
     color: #fff;
@@ -82,18 +73,17 @@
     justify-content: space-evenly;
     /*background-color: #f7f7f7;*/
     /*background-color: black;*/
-    background: #1c1d21;
     padding-top: 20px;
     padding-bottom: 70px;
-    background: #1c1d21;
+    background: #edfbff;
 }
 .para-team {
     text-align: center;
-    background: #1c1d21;
+    background: #edfbff;
 }
 #team {
-    color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-family: cursive;
     font-size: 40px;
 }
 @media all and (max-width: 986px) {

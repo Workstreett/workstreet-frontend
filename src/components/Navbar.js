@@ -26,20 +26,25 @@ function Navbar() {
                     </li>
                     <li className="nav-item">
                         <Link
-                            to="/workstreet/categories"
-                            className="nav-links"
-                            onClick={closeMobileMenu}
-                        >
-                            Categories <i className="fas fa-caret-down" />
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link
                             to="/workstreet/companies"
                             className="nav-links"
                             onClick={closeMobileMenu}
                         >
-                            Companies
+                            SDE
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link
+                            to="/workstreet/consultancy"
+                            className="nav-links"
+                            onClick={closeMobileMenu}
+                        >
+                            Data Science
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/workstreet/core" className="nav-links" onClick={closeMobileMenu}>
+                            Core
                         </Link>
                     </li>
                     <li className="nav-item">
@@ -48,7 +53,7 @@ function Navbar() {
                             className="nav-links"
                             onClick={closeMobileMenu}
                         >
-                            About Us
+                            Marketing
                         </Link>
                     </li>
                     <li>
@@ -61,8 +66,8 @@ function Navbar() {
                         </Link>
                     </li>
                 </ul>
-                <Link to="/workstreet/dashboard">
-                    <div className="Welcome">Welcome, John Diego</div>
+                <Link to="/workstreet/dashboard" className="welcome">
+                    <div>Welcome, John Diego</div>
                 </Link>
             </nav>
         </>
