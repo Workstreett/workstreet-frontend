@@ -7,6 +7,7 @@
     position: sticky;
     top: min(10vh, 70px);
     padding: 0px 0 10px 0px;
+    border-right: 1px solid #edfbff;
 }
 .side-menu .text {
     font-size: 25px;

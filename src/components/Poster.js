@@ -38,7 +38,7 @@ class Poster extends React.Component {
                 <div className="comp-side-1">
                     <div className="comp-nameImage">
                         <div className="comp-cl-icon">
-                            <img className="comp-icon" src={this.props.icon} alt="icon" />{' '}
+                            <img src={this.props.icon} alt="icon" />{' '}
                         </div>
                         <div className="comp-compname">{this.props.name}</div>
                     </div>

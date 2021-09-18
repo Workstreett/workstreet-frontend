@@ -1,10 +1,7 @@
 .site-footer {
     position: relative;
-    z-index: 1;
     background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
     color: #f0f9ff;
-    position: relative;
-    z-index: 1;
 }
 
 .foot-row-first {
