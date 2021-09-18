@@ -26,7 +26,7 @@ class House extends React.Component {
                         <Navbar />
                         <div className="sec-grid">
                             <PosterSidebar />
-                            <Route path="/workstreet" exact component={Authorised(Home)} />
+                            {/* <Route path="/workstreet" exact component={Authorised(Home)} /> */}
                             <Route
                                 path="/workstreet/categories"
                                 exact

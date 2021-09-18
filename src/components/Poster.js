@@ -48,9 +48,9 @@ class Poster extends React.Component {
                     <div className="comp-role">{this.props.role}</div>
                     <div className="comp-roledesc">{this.props.roledesc}</div>
                     <div className="compCard-tagall">
-                        <div className="compCard-tag">paid</div>
+                        <div className="compCard-tag">Paid</div>
                         <div className="compCard-tag">2 Months</div>
-                        <div className="compCard-tag">June-July</div>
+                        <div className="compCard-tag">June-July 21</div>
                     </div>
                     <button className="comp-apply upbut">Apply</button>
                 </div>

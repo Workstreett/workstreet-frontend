@@ -1,5 +1,5 @@
 .side-menu {
-    background: whitesmoke;
+    background: white;
     height: 90vh;
     width: 17vw;
     min-width: 200px;
@@ -7,7 +7,6 @@
     position: sticky;
     top: min(10vh, 70px);
     padding: 0px 0 10px 0px;
-    border-right: 3px solid black;
 }
 .side-menu .text {
     font-size: 25px;
