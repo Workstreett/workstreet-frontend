@@ -1,35 +1,62 @@
 .nav {
-    text-align: center;
     background: transparent;
-    color: white;
-    font-size: 30px;
     height: 70%;
-    z-index: 1;
     position: absolute;
     left: 0;
     width: 100%;
+    z-index: 2;
 }
 
-.containingbutton {
-    text-align: right;
+.nav-button {
     padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
     width: 100%;
     display: flex;
+    background: black;
+    position: fixed;
     justify-content: space-between;
+    z-index: 2;
 }
-.containingbutton button {
+.nav-button button {
+    cursor: pointer;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 12px 18px;
+    font-size: 15px;
+    line-height: 19px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     text-align: center;
-    max-width: max-content;
+    border: solid 2px #fff;
+    background: transparent;
+    color: #fff;
+    z-index: 2;
+}
+.nav-button button:hover {
+    border: solid 2px #fff;
+    background: #fff;
+    color: #1f1f1f;
+}
+.nav-mid-img {
+    display: visible;
 }
 
-.header {
-    text-align: left;
-    font-family: 'Roboto', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.containbuttonend {
-    display: flex;
-    justify-content: flex-end;
+.nav-mid-img img {
+    cursor: pointer;
+    width: 17vw;
+    min-width: 200px;
+    height: 10vh;
+    min-height: 50px;
+    max-height: 70px;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
 }
 
 .main-page {
@@ -46,22 +73,33 @@
     justify-content: space-evenly;
     /*background-color: #f7f7f7;*/
     /*background-color: black;*/
-    background: #1c1d21;
     padding-top: 20px;
     padding-bottom: 70px;
-    background: #1c1d21;
+    background: #edfbff;
 }
 .para-team {
     text-align: center;
-    background: #1c1d21;
+    background: #edfbff;
 }
 #team {
-    color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-family: cursive;
     font-size: 40px;
 }
 @media all and (max-width: 986px) {
     .main-page {
         grid-template-rows: 320px max-content max-content max-content max-content 100px;
+    }
+}
+
+@media all and (max-width: 670px) {
+    .nav-mid-img {
+        display: none;
+    }
+    .nav-button {
+        padding-left: 0;
+        padding-right: 0;
+
+        justify-content: space-around;
     }
 }

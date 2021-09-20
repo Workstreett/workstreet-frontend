@@ -1,32 +1,30 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import AuthContext from '../../contexts/AuthContext'
 import '../../css/dashboard.css'
 
 const Dashboard = () => {
     const [values, setValues] = useState({
-        fullName: '',
-        email: '',
-        password: '',
-        passwordConfirm: '',
-        branch: '',
-        year: '',
-        institute: ''
+        fullName: 'John Doe',
+        email: 'johndoe@itbhu.ac.in',
+        password: 'johndoe',
+        branch: 'Computer Science and Engineering',
+        year: '2020',
+        institute: 'Indian Institute of Technology (BHU), Varanasi'
     })
-
     const handleSubmit = (e) => {
         e.preventDefault()
         const hasEmptyFields = Object.values(values).some((element) => element === '')
 
         if (hasEmptyFields) {
-            console.log('Please fill all fields ')
+            // console.log('Please fill all fields ')
             return
         }
 
         if (values.password !== values.passwordConfirm) {
-            console.log('Password does not match')
-            return
+            // console.log('Password does not match')
         }
 
-        console.log(values)
+        // console.log(values)
     }
 
     const handleInputChange = (e) => {
@@ -35,46 +33,37 @@ const Dashboard = () => {
     }
     return (
         <>
-            <div className="dashboard-containers">
-                <div className="dashboard-name">
-                    <div>Welcome</div>
-                    <div>John Doe</div>
-                </div>
-                <div className="dashboard-form">
-                    <h1>Edit Profile</h1>
+            <div className="form-container">
+                <div className="profile-form">
+                    <h1>Your Profile</h1>
                     <form onSubmit={handleSubmit}>
-                        <div>
-                            <label htmlFor="fullname">Full Name</label>
+                        <div className="form-field">
                             <input
                                 type="text"
                                 id="fullname"
                                 name="fullName"
                                 value={values.fullName}
                                 onChange={handleInputChange}
+                                className="form-field-hover"
                             />
+                            <span className="focus-border">
+                                <i></i>
+                            </span>
                         </div>
-                        <div>
-                            <label htmlFor="password">Password</label>
+                        <div className="form-field">
                             <input
                                 type="password"
                                 id="password"
                                 name="password"
                                 value={values.password}
                                 onChange={handleInputChange}
+                                className="form-field-hover"
                             />
+                            <span className="focus-border">
+                                <i></i>
+                            </span>
                         </div>
                         <div>
-                            <label htmlFor="passwordConfirm">Confirm Password</label>
-                            <input
-                                type="password"
-                                id="passwordConfirm"
-                                name="passwordConfirm"
-                                value={values.passwordConfirm}
-                                onChange={handleInputChange}
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="email">Email Address</label>
                             <input
                                 type="email"
                                 id="email"
@@ -84,43 +73,51 @@ const Dashboard = () => {
                                 disabled
                             />
                         </div>
-                        <div>
-                            <label htmlFor="branch">Branch</label>
-                            <input
-                                type="text"
-                                id="branch"
-                                name="branch"
-                                value={values.branch}
-                                onChange={handleInputChange}
-                            />
+                        <div className="same-row">
+                            <div className="form-field">
+                                <input
+                                    type="text"
+                                    id="branch"
+                                    name="branch"
+                                    value={values.branch}
+                                    onChange={handleInputChange}
+                                    className="form-field-hover"
+                                />
+                                <span className="focus-border">
+                                    <i></i>
+                                </span>
+                            </div>
+                            <div className="form-select">
+                                <select
+                                    id="year"
+                                    name="year"
+                                    value={values.year}
+                                    onChange={handleInputChange}
+                                    style={{ outline: 'none' }}
+                                >
+                                    <option value="First Year">Freshman</option>
+                                    <option value="Second Year">Sophomore</option>
+                                    <option value="Third Year">Junior</option>
+                                    <option value="Fourth Year">Senior</option>
+                                    <option value="Fifth Year">Super Senior</option>
+                                </select>
+                            </div>
                         </div>
-                        <div>
-                            <label htmlFor="year">Year</label>
-                            <select
-                                id="year"
-                                name="year"
-                                value={values.year}
-                                onChange={handleInputChange}
-                            >
-                                <option value="First Year">Freshman</option>
-                                <option value="Second Year">Sophomore</option>
-                                <option value="Third Year">Junior</option>
-                                <option value="Fourth Year">Senior</option>
-                                <option value="Fifth Year">Super Senior</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label htmlFor="institute">Institute</label>
+                        <div className="form-field">
                             <input
                                 type="text"
                                 id="institute"
                                 name="institute"
                                 value={values.institute}
                                 onChange={handleInputChange}
+                                className="form-field-hover"
                             />
+                            <span className="focus-border">
+                                <i></i>
+                            </span>
                         </div>
-                        <input type="submit" value="Save Changes" className="btn" />
+
+                        <input type="submit" value="Save Changes" />
                     </form>
                 </div>
             </div>
