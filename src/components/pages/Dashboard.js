@@ -1,128 +1,123 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { AuthContext } from '../../contexts/AuthContext'
+import axios from 'axios'
 import '../../css/dashboard.css'
 
-const Dashboard = () => {
-    const [values, setValues] = useState({
-        fullName: 'John Doe',
-        email: 'johndoe@itbhu.ac.in',
-        password: 'johndoe',
-        branch: 'Computer Science and Engineering',
-        year: '2020',
-        institute: 'Indian Institute of Technology (BHU), Varanasi'
-    })
+class Dashboard extends React.Component {
+    static contextType = AuthContext
 
-    const handleSubmit = (e) => {
+    handleSubmit = (e) => {
         e.preventDefault()
-        const hasEmptyFields = Object.values(values).some((element) => element === '')
-
-        if (hasEmptyFields) {
-            // console.log('Please fill all fields ')
-            return
-        }
-
-        if (values.password !== values.passwordConfirm) {
-            // console.log('Password does not match')
-        }
-
-        // console.log(values)
+        axios
+            .post('https://workstreet.herokuapp.com/user', this.context)
+            .then((res) => {
+                this.context.setUserDetails({ ...this.context })
+                alert('User has been updated')
+            })
+            .catch((err) => {
+                alert(err.message)
+            })
     }
 
-    const handleInputChange = (e) => {
+    handleInputChange = (e) => {
         const { name, value } = e.target
-        setValues({ ...values, [name]: value })
+        this.context.setDetail(name, value)
     }
-    return (
-        <>
-            <div className="form-container">
-                <div className="profile-form">
-                    <h1>Your Profile</h1>
-                    <form onSubmit={handleSubmit}>
-                        <div className="form-field">
-                            <input
-                                type="text"
-                                id="fullname"
-                                name="fullName"
-                                value={values.fullName}
-                                onChange={handleInputChange}
-                                className="form-field-hover"
-                            />
-                            <span className="focus-border">
-                                <i></i>
-                            </span>
-                        </div>
-                        <div className="form-field">
-                            <input
-                                type="password"
-                                id="password"
-                                name="password"
-                                value={values.password}
-                                onChange={handleInputChange}
-                                className="form-field-hover"
-                            />
-                            <span className="focus-border">
-                                <i></i>
-                            </span>
-                        </div>
-                        <div>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                value={values.email}
-                                onChange={handleInputChange}
-                                disabled
-                            />
-                        </div>
-                        <div className="same-row">
+
+    render() {
+        return (
+            <>
+                <div className="form-container">
+                    <div className="profile-form">
+                        <h1>Your Profile</h1>
+                        <form onSubmit={this.handleSubmit}>
                             <div className="form-field">
                                 <input
                                     type="text"
-                                    id="branch"
-                                    name="branch"
-                                    value={values.branch}
-                                    onChange={handleInputChange}
+                                    id="fullname"
+                                    name="fullname"
+                                    value={this.context.fullname}
+                                    onChange={this.handleInputChange}
                                     className="form-field-hover"
                                 />
                                 <span className="focus-border">
                                     <i></i>
                                 </span>
                             </div>
-                            <div className="form-select">
-                                <select
-                                    id="year"
-                                    name="year"
-                                    value={values.year}
-                                    onChange={handleInputChange}
-                                    style={{ outline: 'none' }}
-                                >
-                                    <option value="First Year">Freshman</option>
-                                    <option value="Second Year">Sophomore</option>
-                                    <option value="Third Year">Junior</option>
-                                    <option value="Fourth Year">Senior</option>
-                                    <option value="Fifth Year">Super Senior</option>
-                                </select>
+                            <div className="form-field">
+                                <input
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    value={this.context.password}
+                                    onChange={this.handleInputChange}
+                                    className="form-field-hover"
+                                />
+                                <span className="focus-border">
+                                    <i></i>
+                                </span>
                             </div>
-                        </div>
-                        <div className="form-field">
-                            <input
-                                type="text"
-                                id="institute"
-                                name="institute"
-                                value={values.institute}
-                                onChange={handleInputChange}
-                                className="form-field-hover"
-                            />
-                            <span className="focus-border">
-                                <i></i>
-                            </span>
-                        </div>
+                            <div>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="officialmailid"
+                                    value={this.context.officialmailid}
+                                    onChange={this.handleInputChange}
+                                    disabled
+                                />
+                            </div>
+                            <div className="same-row">
+                                <div className="form-field">
+                                    <input
+                                        type="text"
+                                        id="branch"
+                                        name="branch"
+                                        value={this.context.branch}
+                                        onChange={this.handleInputChange}
+                                        className="form-field-hover"
+                                    />
+                                    <span className="focus-border">
+                                        <i></i>
+                                    </span>
+                                </div>
+                                <div className="form-select">
+                                    <select
+                                        id="year"
+                                        name="year"
+                                        value={this.context.year}
+                                        onChange={this.handleInputChange}
+                                        style={{ outline: 'none' }}
+                                    >
+                                        <option value="First Year">Freshman</option>
+                                        <option value="Second Year">Sophomore</option>
+                                        <option value="Third Year">Junior</option>
+                                        <option value="Fourth Year">Senior</option>
+                                        <option value="Fifth Year">Super Senior</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div className="form-field">
+                                <input
+                                    type="text"
+                                    id="institute"
+                                    name="institute"
+                                    value={this.context.institute}
+                                    onChange={this.handleInputChange}
+                                    className="form-field-hover"
+                                />
+                                <span className="focus-border">
+                                    <i></i>
+                                </span>
+                            </div>
 
-                        <input type="submit" value="Save Changes" />
-                    </form>
+                            <input type="submit" value="Save Changes" />
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </>
-    )
+            </>
+        )
+    }
 }
 
 export default Dashboard

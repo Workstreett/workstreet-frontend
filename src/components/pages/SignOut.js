@@ -6,8 +6,8 @@ import '../../css/appage.css'
 class SignOut extends React.Component {
     static contextType = AuthContext
     render() {
-        const { setToken } = this.context
-        setToken('')
+        const { setUserDetails } = this.context
+        setUserDetails({})
         return <Redirect to="/" />
     }
 }
