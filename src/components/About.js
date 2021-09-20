@@ -29,7 +29,7 @@ function About() {
                             Here at <b>WORKSTREET</b> , the best companies and the best students of
                             the nation are brought together. <b>WORKSTREET</b> is a platform
                             exclusively for students who are currently enrolled in any if the
-                            <b>IITs</b> ,<b>NITs</b>,<b>IIITs</b> or <b>BITS</b>. Students are
+                            <b> IITs</b> ,<b> NITs</b>,<b> IIITs</b> and <b>BITS</b>. Students are
                             constantly in search of work or experience opportunities whereas the
                             companies are in constant search for the best interns and employees. So
                             at <b>WORKSTREET</b> we aim at reducing the buffer between the companies
