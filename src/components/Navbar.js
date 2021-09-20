@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { AuthContext } from './../contexts/AuthContext'
 import { Link } from 'react-router-dom'
 import '../css/Navbar.css'
 import sitelogo2 from '../img/sitelogo2.png'
 
 function Navbar() {
+    const { username } = useContext(AuthContext)
     const [click, setClick] = useState(false)
 
     const handleClick = () => setClick(!click)
@@ -67,7 +69,7 @@ function Navbar() {
                     </li>
                 </ul>
                 <Link to="/workstreet/dashboard" className="welcome">
-                    <div>Welcome, John Diego</div>
+                    <div>Welcome, {username}</div>
                 </Link>
             </nav>
         </>
