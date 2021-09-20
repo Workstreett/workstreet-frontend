@@ -31,7 +31,7 @@
 }
 .about-para {
     color: #141a46;
-    font-weight: 600;
+    font-weight: 100;
     height: auto;
     font-size: 20px;
     word-spacing: 4px;
@@ -101,12 +101,18 @@
         font-weight: 100;
         font-size: 1rem;
         line-height: 1.4;
-        margin: 30px;
+        margin: 5px;
     }
 
     #about-headings {
         margin: 20px;
         font-size: 25px;
+    }
+    .about-para {
+        height: auto;
+        font-weight: 100;
+        font-size: 16px;
+        word-spacing: 4px;
     }
 
     .about-boxes {

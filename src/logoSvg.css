@@ -17,9 +17,10 @@
 }
 #logo {
     position: absolute;
+    transform-origin: center center;
     top: 40%;
     left: 25%;
-    transform-origin: center center;
+    
     animation: upDown 3s linear infinite 7s;
     width: 50%;
     animation: fill 5s ease forwards 4s;
@@ -198,6 +199,17 @@
         width: 65%;
         height: 50%;
         top: 30%;
+    }
+    .divSvg {
+        height: 50%;
+    }
+}
+@media all and (max-width: 990px) {
+    #logo {
+        width: 65%;
+        height: 50%;
+        top: 10%;
+        left: 17%;
     }
     .divSvg {
         height: 50%;
