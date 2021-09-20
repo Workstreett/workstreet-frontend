@@ -35,6 +35,12 @@ class AuthContextProvider extends Component {
         })
     }
 
+    setDetail = (name, value) => {
+        this.setState({
+            [name]: value
+        })
+    }
+
     componentDidMount() {
         this.setState({
             authToken: localStorage.getItem('authToken'),
@@ -54,7 +60,8 @@ class AuthContextProvider extends Component {
             <AuthContext.Provider
                 value={{
                     ...this.state,
-                    setUserDetails: this.setUserDetails
+                    setUserDetails: this.setUserDetails,
+                    setDetail: this.setDetail
                 }}
             >
                 {this.props.children}
