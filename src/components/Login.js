@@ -26,20 +26,21 @@ class Login extends React.Component {
         })
     }
 
-    async handleSubmit(event, data, history) {
+    async handleSubmit(event, temp, history) {
         event.preventDefault()
-        console.log('Trying Login!!')
         try {
             const res = await axios.post('https://workstreet.herokuapp.com/login', this.state)
+            // console.log(res.data)
+            if (res.data.user_id !== undefined) {
+                temp.setUserDetails(res.data)
+                history.push('/workstreet')
+            }
             if (res.data === 'V') {
                 alert('You are not verfied, first verify your account')
                 this.setState({})
             } else if (res.data === 'U') {
                 alert('The username and password are not correct')
                 this.setState({})
-            } else {
-                data.setToken(res.data)
-                history.push('/workstreet')
             }
         } catch (err) {
             console.log(err.message)
