@@ -12,20 +12,14 @@ class Hand extends React.Component {
         return (
             <div className="handd">
                 <div className="h-hand">
-                    <img
-                        className="h-image"
-                        src={Imghand}
-                        alt="Shake your hand with the corporate world"
-                    />
+                    <img src={Imghand} alt="Shake your hand with the corporate world" />
                     <p
-                        className="h-text"
                         data-aos="slide-up"
                         data-aos-duration="1000"
                         // data-aos-delay="300"
                     >
-                        <h1 className="h-quote">&ldquo;</h1>A Street Making perfect Student-Company
-                        Match
-                        <h1 className="h-quote">&rdquo;</h1>
+                        <h1>&ldquo;</h1>A Street Making perfect Student-Company Match
+                        <h1>&rdquo;</h1>
                     </p>
                 </div>
             </div>

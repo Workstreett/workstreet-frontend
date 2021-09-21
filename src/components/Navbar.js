@@ -58,6 +58,15 @@ function Navbar() {
                             Marketing
                         </Link>
                     </li>
+                    <li className="nav-item">
+                        <Link
+                            to="/workstreet/dashboard"
+                            className="nav-links"
+                            onClick={closeMobileMenu}
+                        >
+                            Profile
+                        </Link>
+                    </li>
                     <li>
                         <Link
                             to="/workstreet/sign-out"
