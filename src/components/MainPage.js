@@ -24,7 +24,8 @@ class MainPage extends React.Component {
                         <div className="nav-button">
                             {authToken === null ||
                             authToken === '' ||
-                            typeof authToken === 'undefined' ? (
+                            typeof authToken === 'undefined' ||
+                            authToken === 'undefined' ? (
                                 <>
                                     <Link to="/login">
                                         <button>Login</button>

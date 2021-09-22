@@ -4,14 +4,14 @@ export const AuthContext = createContext()
 
 class AuthContextProvider extends Component {
     state = {
-        authToken: '',
-        user_id: '',
-        fullname: '',
-        branch: '',
-        year: '',
-        institute: '',
-        officialmailid: '',
-        username: ''
+        authToken: localStorage.getItem('authToken'),
+        user_id: localStorage.getItem('user_id'),
+        fullname: localStorage.getItem('fullname'),
+        branch: localStorage.getItem('branch'),
+        year: localStorage.getItem('year'),
+        institute: localStorage.getItem('institute'),
+        officialmailid: localStorage.getItem('officialmailid'),
+        username: localStorage.getItem('username')
     }
 
     setUserDetails = (details) => {
@@ -38,19 +38,6 @@ class AuthContextProvider extends Component {
     setDetail = (name, value) => {
         this.setState({
             [name]: value
-        })
-    }
-
-    componentDidMount() {
-        this.setState({
-            authToken: localStorage.getItem('authToken'),
-            user_id: localStorage.getItem('user_id'),
-            fullname: localStorage.getItem('fullname'),
-            branch: localStorage.getItem('branch'),
-            year: localStorage.getItem('year'),
-            institute: localStorage.getItem('institute'),
-            officialmailid: localStorage.getItem('officialmailid'),
-            username: localStorage.getItem('username')
         })
     }
 
