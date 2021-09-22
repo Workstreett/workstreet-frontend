@@ -1,6 +1,15 @@
 import React from 'react'
 import '../css/sidestyle.css'
 import { NavLink } from 'react-router-dom'
+import {
+    HomeIcon,
+    DesktopComputerIcon,
+    ChartBarIcon,
+    ChipIcon,
+    CurrencyDollarIcon,
+    UserIcon,
+    LogoutIcon
+} from '@heroicons/react/outline'
 
 class PosterSidebar extends React.Component {
     render() {
@@ -9,31 +18,31 @@ class PosterSidebar extends React.Component {
                 <div>
                     <NavLink exact to="/" activeClassName="active-link">
                         <div className="list-ele">
-                            <i className="fas fa-home fa-2x side-icon"></i>
+                            <HomeIcon className="side-icon" />
                             <span className="text">Home</span>
                         </div>
                     </NavLink>
                     <NavLink exact to="/workstreet/companies" activeClassName="active-link">
                         <div className="list-ele">
-                            <i className="fas fa-laptop fa-2x side-icon"></i>
+                            <DesktopComputerIcon className="side-icon" />
                             <span className="text">SDE</span>
                         </div>
                     </NavLink>
                     <NavLink exact to="/workstreet/consultancy" activeClassName="active-link">
                         <div className="list-ele">
-                            <i className="fas fa-chart-line fa-2x side-icon"></i>
+                            <ChartBarIcon className="side-icon" />
                             <span className=" text">Data Science</span>
                         </div>
                     </NavLink>
                     <NavLink exact to="/workstreet/core" activeClassName="active-link">
                         <div className="list-ele">
-                            <i className="fas fa-user-hard-hat fa-2x side-icon"></i>
+                            <ChipIcon className="side-icon" />
                             <span className=" text">Core</span>
                         </div>
                     </NavLink>
                     <NavLink exact to="/workstreet/about-us" activeClassName="active-link">
                         <div className="list-ele">
-                            <i className="fas fa-search-dollar fa-2x side-icon"></i>
+                            <CurrencyDollarIcon className="side-icon" />
                             <span className=" text">Marketing</span>
                         </div>
                     </NavLink>
@@ -41,13 +50,13 @@ class PosterSidebar extends React.Component {
                 <div>
                     <NavLink to="/workstreet/dashboard" activeClassName="active-link">
                         <div className="list-ele">
-                            <i className="fas fa-user-circle fa-2x side-icon"></i>
+                            <UserIcon className="side-icon" />
                             <span className="text">Profile</span>
                         </div>
                     </NavLink>
                     <NavLink to="/workstreet/sign-out" activeClassName="active-link">
                         <div className="list-ele">
-                            <i className="fas fa-sign-out-alt fa-2x side-icon"></i>
+                            <LogoutIcon className="side-icon" />
                             <span className="text">Logout</span>
                         </div>
                     </NavLink>
