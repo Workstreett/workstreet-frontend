@@ -3,6 +3,15 @@ import { AuthContext } from './../contexts/AuthContext'
 import { Link } from 'react-router-dom'
 import '../css/Navbar.css'
 import sitelogo2 from '../img/sitelogo2.png'
+import {
+    HomeIcon,
+    DesktopComputerIcon,
+    ChartBarIcon,
+    ChipIcon,
+    CurrencyDollarIcon,
+    UserIcon,
+    LogoutIcon
+} from '@heroicons/react/outline'
 
 function Navbar() {
     const { username } = useContext(AuthContext)
@@ -23,7 +32,8 @@ function Navbar() {
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                     <li className="nav-item">
                         <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                            Home
+                            <HomeIcon className="nav-icon" />
+                            <span className="text">Home</span>
                         </Link>
                     </li>
                     <li className="nav-item">
@@ -32,7 +42,8 @@ function Navbar() {
                             className="nav-links"
                             onClick={closeMobileMenu}
                         >
-                            SDE
+                            <DesktopComputerIcon className="nav-icon" />
+                            <span className="text">SDE</span>
                         </Link>
                     </li>
                     <li className="nav-item">
@@ -41,12 +52,14 @@ function Navbar() {
                             className="nav-links"
                             onClick={closeMobileMenu}
                         >
-                            Data Science
+                            <ChartBarIcon className="nav-icon" />
+                            <span className="text">Data Science</span>
                         </Link>
                     </li>
                     <li className="nav-item">
                         <Link to="/workstreet/core" className="nav-links" onClick={closeMobileMenu}>
-                            Core
+                            <ChipIcon className="nav-icon" />
+                            <span className="text">Core</span>
                         </Link>
                     </li>
                     <li className="nav-item">
@@ -55,7 +68,8 @@ function Navbar() {
                             className="nav-links"
                             onClick={closeMobileMenu}
                         >
-                            Marketing
+                            <CurrencyDollarIcon className="nav-icon" />
+                            <span className="text">Marketing</span>
                         </Link>
                     </li>
                     <li className="nav-item">
@@ -64,7 +78,8 @@ function Navbar() {
                             className="nav-links"
                             onClick={closeMobileMenu}
                         >
-                            Profile
+                            <UserIcon className="nav-icon" />
+                            <span className="text">Profile</span>
                         </Link>
                     </li>
                     <li>
@@ -73,7 +88,8 @@ function Navbar() {
                             className="nav-links-mobile"
                             onClick={closeMobileMenu}
                         >
-                            Sign Out
+                            <LogoutIcon className="nav-icon" />
+                            <span className="text">Logout</span>
                         </Link>
                     </li>
                 </ul>
