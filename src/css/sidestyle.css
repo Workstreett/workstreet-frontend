@@ -23,26 +23,28 @@
 }
 .list-ele {
     display: flex;
+    margin: 6px 5px 6px 5px;
     padding: 10px 10px;
     border-radius: 0;
     align-items: center;
 }
 .list-ele:hover {
-    background-color: #3498db;
-    transition: background-color border-radius 2s ease-out;
+    background-color: rgba(191, 241, 255, 0.6);
+    border-radius: 10px;
+    transition: border-radius 0.1s ease;
 }
 .list-ele:hover .text,
 .list-ele:hover .side-icon {
-    color: #fff;
+    color: #026cb3;
     opacity: 1;
-    transition: color opacity 2s ease-out;
 }
 .active-link .list-ele {
-    background-color: #3498db;
+    border-radius: 10px;
+    background-color: rgba(191, 241, 255, 0.6);
 }
 .active-link .side-icon,
 .active-link .text {
-    color: #fff;
+    color: #026cb3;
     opacity: 1;
 }
 .side-icon {
