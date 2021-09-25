@@ -20,8 +20,11 @@
 }
 
 .comp-nameImage {
-    padding: 5%;
-    padding-left: 0%;
+    display: block;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: auto;
+    margin-bottom: auto;
     margin-left: 10px;
 }
 

@@ -39,11 +39,31 @@
     margin-bottom: auto;
 }
 
-.welcome div {
+.welcome span {
     display: block;
     color: black;
     font-size: 1.7rem;
     margin-right: 20px;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+
+.welcome span:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 2;
+    content: '';
+    display: block;
+    height: 3px;
+    left: 50%;
+    position: absolute;
+    background: #3498db;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.welcome span:hover:after {
+    width: 100%;
+    left: 0;
 }
 
 .fa-firstdraft {
@@ -72,7 +92,7 @@
     padding-left: 8px;
 }
 @media screen and (max-width: 960px) {
-    .welcome div {
+    .welcome span {
         margin-right: 70px;
     }
     .navbar-logo {
@@ -156,7 +176,7 @@
 }
 
 @media screen and (max-width: 660px) {
-    .welcome div {
+    .welcome span {
         display: none;
     }
 }
