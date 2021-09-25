@@ -94,7 +94,7 @@ function Navbar() {
                     </li>
                 </ul>
                 <Link to="/workstreet/dashboard" className="welcome">
-                    <div>Welcome, {username}</div>
+                    <span>Welcome, {username}</span>
                 </Link>
             </nav>
         </>
