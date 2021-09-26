@@ -1,6 +1,6 @@
 import React from 'react'
-import '../../css/appage.css'
-import PosterGrid from '../PosterGrid.js'
+import '../css/appage.css'
+import PosterGrid from '../components/PosterGrid'
 
 class Companies extends React.Component {
     render() {

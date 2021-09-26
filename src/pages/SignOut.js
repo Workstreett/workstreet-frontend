@@ -1,7 +1,7 @@
 import React from 'react'
 import { Redirect } from 'react-router'
-import { AuthContext } from '../../contexts/AuthContext'
-import '../../css/appage.css'
+import { AuthContext } from '../contexts/AuthContext'
+import '../css/appage.css'
 
 class SignOut extends React.Component {
     static contextType = AuthContext
