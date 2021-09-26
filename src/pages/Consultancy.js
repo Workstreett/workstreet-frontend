@@ -1,5 +1,5 @@
 import React from 'react'
-import PosterGrid from '../PosterGrid.js'
+import PosterGrid from '../components/PosterGrid.js'
 
 class Consultancy extends React.Component {
     render() {

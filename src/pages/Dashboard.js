@@ -1,7 +1,7 @@
 import React from 'react'
-import { AuthContext } from '../../contexts/AuthContext'
+import { AuthContext } from '../contexts/AuthContext'
 import axios from 'axios'
-import '../../css/dashboard.css'
+import '../css/dashboard.css'
 
 class Dashboard extends React.Component {
     static contextType = AuthContext
