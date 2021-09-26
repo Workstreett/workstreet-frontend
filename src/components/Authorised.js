@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { Component } from 'react'
 import { AuthContext } from '../contexts/AuthContext'
-import Img from '../images/loader.gif'
+import LoaderGif from '../images/loader.gif'
 
 const Authorised = (OrignalComponent) => {
     class NewComponent extends Component {
@@ -42,7 +42,7 @@ const Authorised = (OrignalComponent) => {
                         }}
                     >
                         <img
-                            src={Img}
+                            src={LoaderGif}
                             style={{
                                 position: 'absolute',
                                 top: '50%',
