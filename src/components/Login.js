@@ -1,5 +1,5 @@
 import React from 'react'
-import { getSVGForPassword } from './Functions'
+import { getSVGForPassword } from '../helpers/Functions'
 import login from '../img/login.png'
 import '../login.css'
 import Footer from './Footer'
@@ -43,7 +43,7 @@ class Login extends React.Component {
                 this.setState({})
             }
         } catch (err) {
-            console.log(err.message)
+            // console.log(err.message)
         }
     }
 

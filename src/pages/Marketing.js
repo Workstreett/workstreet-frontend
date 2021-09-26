@@ -2,5 +2,5 @@ import React from 'react'
 import '../css/appage.css'
 
 export default function AboutUs() {
-    return <h1 className="about-us">ABO</h1>
+    return <h1>Marketing Page - To be Designed :(</h1>
 }

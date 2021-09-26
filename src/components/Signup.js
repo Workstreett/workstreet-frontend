@@ -1,5 +1,5 @@
 import React from 'react'
-import { getSVGForPassword } from './Functions'
+import { getSVGForPassword } from '../helpers/Functions'
 import Img from '../img/login.png'
 import '../css/signup.css'
 import Footer from './Footer'
@@ -37,7 +37,7 @@ class Signup extends React.Component {
         // console.log("Submitted", JSON.stringify(this.state));
         try {
             const response = await axios.post('https://workstreet.herokuapp.com/signup', this.state)
-            console.log(response)
+
             if (response.data === 'u') {
                 alert('username is in use, Choose something Else')
             } else if (response.data === 'p') {
@@ -54,7 +54,7 @@ class Signup extends React.Component {
                 )
             }
         } catch (err) {
-            console.log(err)
+            // console.log(err)
         }
     }
 

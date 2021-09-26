@@ -39,7 +39,7 @@ class MainPage extends React.Component {
                                 </>
                             ) : (
                                 <>
-                                    <Link to="/workstreet/dashboard">
+                                    <Link to="/workstreet/profile">
                                         <button>Dashboard</button>
                                     </Link>
                                     <div className="nav-mid-img">

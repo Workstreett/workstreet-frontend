@@ -1,10 +1,10 @@
 import React from 'react'
 import PosterGrid from '../components/PosterGrid.js'
 
-class Consultancy extends React.Component {
+class DataScience extends React.Component {
     render() {
         return <PosterGrid />
     }
 }
 
-export default Consultancy
+export default DataScience

@@ -22,13 +22,13 @@ class PosterSidebar extends React.Component {
                             <span className="text">Home</span>
                         </div>
                     </NavLink>
-                    <NavLink exact to="/workstreet/companies" activeClassName="active-link">
+                    <NavLink exact to="/workstreet/sde" activeClassName="active-link">
                         <div className="list-ele">
                             <DesktopComputerIcon className="side-icon" />
                             <span className="text">SDE</span>
                         </div>
                     </NavLink>
-                    <NavLink exact to="/workstreet/consultancy" activeClassName="active-link">
+                    <NavLink exact to="/workstreet/data-science" activeClassName="active-link">
                         <div className="list-ele">
                             <ChartBarIcon className="side-icon" />
                             <span className=" text">Data Science</span>
@@ -40,7 +40,7 @@ class PosterSidebar extends React.Component {
                             <span className=" text">Core</span>
                         </div>
                     </NavLink>
-                    <NavLink exact to="/workstreet/about-us" activeClassName="active-link">
+                    <NavLink exact to="/workstreet/marketing" activeClassName="active-link">
                         <div className="list-ele">
                             <CurrencyDollarIcon className="side-icon" />
                             <span className=" text">Marketing</span>
@@ -48,7 +48,7 @@ class PosterSidebar extends React.Component {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to="/workstreet/dashboard" activeClassName="active-link">
+                    <NavLink to="/workstreet/profile" activeClassName="active-link">
                         <div className="list-ele">
                             <UserIcon className="side-icon" />
                             <span className="text">Profile</span>
