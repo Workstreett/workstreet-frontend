@@ -5,14 +5,14 @@ import Navbar from './Navbar'
 import Login from './Login'
 import Signup from './Signup'
 import Categories from '../pages/Categories'
-import Companies from '../pages/Companies'
-import AboutUs from '../pages/AboutUs'
+import SDE from '../pages/SDE'
+import Marketing from '../pages/Marketing'
 import SignOut from '../pages/SignOut'
 import Core from '../pages/Core'
-import Consultancy from '../pages/Consultancy'
+import DataScience from '../pages/DataScience'
 import Footer from './Footer.js'
 import Authorised from './Authorised'
-import Dashboard from '../pages/Dashboard'
+import Profile from '../pages/Profile'
 import PosterSidebar from './PosterSidebar'
 import '../css/secGrid.css'
 class House extends React.Component {
@@ -31,24 +31,20 @@ class House extends React.Component {
                                 exact
                                 component={Authorised(Categories)}
                             />
+                            <Route path="/workstreet/sde" exact component={Authorised(SDE)} />
                             <Route
-                                path="/workstreet/companies"
+                                path="/workstreet/marketing"
                                 exact
-                                component={Authorised(Companies)}
-                            />
-                            <Route
-                                path="/workstreet/about-us"
-                                exact
-                                component={Authorised(AboutUs)}
+                                component={Authorised(Marketing)}
                             />
                             <Route path="/workstreet/sign-out" exact component={SignOut} />
                             <Route path="/workstreet/core" exact component={Authorised(Core)} />
                             <Route
-                                path="/workstreet/consultancy"
+                                path="/workstreet/data-science"
                                 exact
-                                component={Authorised(Consultancy)}
+                                component={Authorised(DataScience)}
                             />
-                            <Route path="/workstreet/dashboard" exact component={Dashboard} />
+                            <Route path="/workstreet/profile" exact component={Profile} />
                         </div>
                         <Footer />
                     </Route>

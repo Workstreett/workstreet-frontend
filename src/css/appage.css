@@ -8,10 +8,8 @@
 .home,
 .categories,
 .companies,
-.about-us,
 .sign-out,
-.core,
-.consultancy {
+.data-science {
     display: flex;
     height: 90vh;
     align-items: center;
@@ -45,16 +43,6 @@
     color: #fff;
     font-size: 100px;
 }
-
-.about-us {
-    background-image: url('../images/img-4.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-    font-size: 100px;
-}
-
 .sign-out {
     background-image: url('../images/img-7.jpg');
     background-position: center;
@@ -63,17 +51,7 @@
     color: #fff;
     font-size: 100px;
 }
-
-.core {
-    background-image: url('../images/img-6.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-    font-size: 100px;
-}
-
-.consultancy {
+.data-science {
     background-image: url('../images/img-5.jpg');
     background-position: bottom;
     background-size: cover;

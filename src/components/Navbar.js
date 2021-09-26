@@ -37,18 +37,14 @@ function Navbar() {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link
-                            to="/workstreet/companies"
-                            className="nav-links"
-                            onClick={closeMobileMenu}
-                        >
+                        <Link to="/workstreet/sde" className="nav-links" onClick={closeMobileMenu}>
                             <DesktopComputerIcon className="nav-icon" />
                             <span className="text">SDE</span>
                         </Link>
                     </li>
                     <li className="nav-item">
                         <Link
-                            to="/workstreet/consultancy"
+                            to="/workstreet/data-science"
                             className="nav-links"
                             onClick={closeMobileMenu}
                         >
@@ -64,7 +60,7 @@ function Navbar() {
                     </li>
                     <li className="nav-item">
                         <Link
-                            to="/workstreet/about-us"
+                            to="/workstreet/marketing"
                             className="nav-links"
                             onClick={closeMobileMenu}
                         >
@@ -74,7 +70,7 @@ function Navbar() {
                     </li>
                     <li className="nav-item">
                         <Link
-                            to="/workstreet/dashboard"
+                            to="/workstreet/profile"
                             className="nav-links"
                             onClick={closeMobileMenu}
                         >
@@ -93,7 +89,7 @@ function Navbar() {
                         </Link>
                     </li>
                 </ul>
-                <Link to="/workstreet/dashboard" className="welcome">
+                <Link to="/workstreet/profile" className="welcome">
                     <span>Welcome, {username}</span>
                 </Link>
             </nav>
