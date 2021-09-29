@@ -50,7 +50,8 @@
     font-family: Montserrat, 'Times New Roman', Times, serif;
 }
 
-.profile-form input[type='submit'] {
+.profile-form input[type='submit'],
+button.back {
     width: 100%;
     font-size: 17px;
     font-family: Montserrat, 'Times New Roman', Times, serif;
