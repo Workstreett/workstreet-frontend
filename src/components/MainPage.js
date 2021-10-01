@@ -12,12 +12,13 @@ import { TeamMembers } from '../data/team_members'
 
 class MainPage extends React.Component {
     static contextType = AuthContext
+
     render() {
         const { authToken } = this.context
         return (
             <div className="main-page">
                 <div>
-                    <header className="nav">
+                    <header className="nav" id="main-header">
                         <div className="nav-button">
                             {authToken === null ||
                             authToken === '' ||
@@ -49,9 +50,8 @@ class MainPage extends React.Component {
                             )}
                         </div>
                     </header>
-
-                    <Logo />
                 </div>
+                <Logo />
                 <About />
                 <Hand />
                 <div className="team-section">
