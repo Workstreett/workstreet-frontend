@@ -12,12 +12,35 @@ import { TeamMembers } from '../data/team_members'
 
 class MainPage extends React.Component {
     static contextType = AuthContext
+
+    scrollFunction = (e) => {
+        const screenWidth = window.screen.width
+        const screenHeight = window.screen.height
+        let height = 0.8 * screenHeight
+        if (screenWidth < 670) {
+            height = 0.5 * screenHeight
+        }
+        if (window.scrollY > height) {
+            document.getElementById('main-header').classList.add('active')
+        } else {
+            document.getElementById('main-header').classList.remove('active')
+        }
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.scrollFunction)
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.scrollFunction)
+    }
+
     render() {
         const { authToken } = this.context
         return (
             <div className="main-page">
                 <div>
-                    <header className="nav">
+                    <header className="nav" id="main-header">
                         <div className="nav-button">
                             {authToken === null ||
                             authToken === '' ||
@@ -49,9 +72,8 @@ class MainPage extends React.Component {
                             )}
                         </div>
                     </header>
-
-                    <Logo />
                 </div>
+                <Logo />
                 <About />
                 <Hand />
                 <div className="team-section">
