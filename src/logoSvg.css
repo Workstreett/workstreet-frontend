@@ -194,23 +194,23 @@
         transform: translate(0, -10px);
     }
 }
-@media all and (max-width: 990px) {
+@media all and (max-width: 986px) {
     #logo {
         width: 65%;
-        height: 90vh;
+        height: 100vh;
         top: 10%;
         left: 17%;
     }
     .divSvg {
-        height: 90vh;
+        height: 100vh;
     }
 }
 @media all and (max-width: 670px) {
     #logo {
         width: 65%;
-        height: 55vh;
+        height: 70vh;
     }
     .divSvg {
-        height: 50vh;
+        height: 70vh;
     }
 }
