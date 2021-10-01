@@ -18,7 +18,7 @@ class MainPage extends React.Component {
         const screenHeight = window.screen.height
         let height = 0.8 * screenHeight
         if (screenWidth < 670) {
-            height = 0.5 * screenHeight
+            height = 0.6 * screenHeight
         }
         if (window.scrollY > height) {
             document.getElementById('main-header').classList.add('active')
@@ -50,9 +50,7 @@ class MainPage extends React.Component {
                                     <Link to="/login">
                                         <button>Login</button>
                                     </Link>
-                                    <div className="nav-mid-img">
-                                        <img src={sitelogo2} />
-                                    </div>
+
                                     <Link to="/signup">
                                         <button>Sign Up</button>
                                     </Link>
@@ -62,9 +60,6 @@ class MainPage extends React.Component {
                                     <Link to="/workstreet/profile">
                                         <button>Dashboard</button>
                                     </Link>
-                                    <div className="nav-mid-img">
-                                        <img src={sitelogo2} />
-                                    </div>
                                     <Link to="/workstreet/sign-out">
                                         <button> Sign Out</button>
                                     </Link>
