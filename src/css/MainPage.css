@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+
 .nav {
     background: transparent;
     height: 70%;
@@ -66,26 +68,41 @@
     grid-template-rows: 100vh max-content max-content max-content max-content 100px;
 }
 
-.four-cards {
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    /*background-color: #f7f7f7;*/
-    /*background-color: black;*/
-    padding-top: 20px;
-    padding-bottom: 70px;
-    background: #edfbff;
-}
-.para-team {
+.team-section {
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
-    background: #edfbff;
+    background: #f2f2f2;
 }
-#team {
-    color: black;
-    font-family: cursive;
-    font-size: 40px;
+
+.team-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
+
+.team-section-heading {
+    color: #464646;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 35px;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 20px;
+}
+
+.team-section-about-container {
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.team-section-about {
+    color: #606060;
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+}
+
 @media all and (max-width: 986px) {
     .main-page {
         grid-template-rows: 320px max-content max-content max-content max-content 100px;
