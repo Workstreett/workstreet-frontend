@@ -15,6 +15,8 @@ import Authorised from './Authorised'
 import Profile from '../pages/Profile'
 import PosterSidebar from './PosterSidebar'
 import '../css/secGrid.css'
+import AdminPage from './AdminPage'
+import PostForm from './PostForm'
 class House extends React.Component {
     render() {
         return (
@@ -50,6 +52,8 @@ class House extends React.Component {
                     </Route>
                     <Route exact path="/login" component={Login} />
                     <Route exact path="/signup" component={Signup} />
+                    <Route exact path="/admin" component={AdminPage} />
+                    <Route exact path="/admin/postform" component={PostForm} />
                 </Switch>
             </Router>
         )
