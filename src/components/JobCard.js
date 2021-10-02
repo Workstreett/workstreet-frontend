@@ -1,7 +1,8 @@
 import React from 'react'
-import '../css/post.css'
+import '../css/JobCard.css'
+import { CalendarIcon, CashIcon, CheckIcon } from '@heroicons/react/outline'
 
-class Poster extends React.Component {
+class JobCard extends React.Component {
     /* constructor() {
     super();
     this.state = {
@@ -48,9 +49,18 @@ class Poster extends React.Component {
                     <div className="comp-role">{this.props.role}</div>
                     <div className="comp-roledesc">{this.props.roledesc}</div>
                     <div className="compCard-tagall">
-                        <div className="compCard-tag">Paid</div>
-                        <div className="compCard-tag">2 Months</div>
-                        <div className="compCard-tag">June-July 21</div>
+                        <div className="compCard-tag">
+                            <CashIcon className="tag-icon" />
+                            Paid
+                        </div>
+                        <div className="compCard-tag">
+                            <CalendarIcon className="tag-icon" />
+                            June-July 21
+                        </div>
+                        <div className="compCard-tag">
+                            <CheckIcon className="tag-icon" />
+                            Part time allowed
+                        </div>
                     </div>
                     <button className="comp-apply upbut">Apply</button>
                 </div>
@@ -84,4 +94,4 @@ class Poster extends React.Component {
     }
 }
 
-export default Poster
+export default JobCard

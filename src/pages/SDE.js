@@ -1,12 +1,12 @@
 import React from 'react'
 import '../css/appage.css'
-import PosterGrid from '../components/PosterGrid'
+import JobCardGrid from '../components/JobCardGrid'
 
 class Companies extends React.Component {
     render() {
         return (
             <div>
-                <PosterGrid />
+                <JobCardGrid />
             </div>
         )
     }

@@ -1,13 +1,13 @@
 import React from 'react'
-import Poster from './Poster.js'
-import '../css/postergrid.css'
+import JobCard from './JobCard'
+import '../css/JobCardGrid.css'
 import img1 from '../img/goog.png'
 
-class PosterGrid extends React.Component {
+class JobCardGrid extends React.Component {
     render() {
         return (
             <div className="poster-grid-main">
-                <Poster
+                <JobCard
                     id="one"
                     icon={img1}
                     name="GOOGLE"
@@ -16,7 +16,7 @@ class PosterGrid extends React.Component {
                     roledesc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled"
                 />
 
-                <Poster
+                <JobCard
                     id="one"
                     icon={img1}
                     name="GOOGLE"
@@ -25,7 +25,7 @@ class PosterGrid extends React.Component {
                     roledesc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled"
                 />
 
-                <Poster
+                <JobCard
                     id="one"
                     icon={img1}
                     name="GOOGLE"
@@ -34,7 +34,7 @@ class PosterGrid extends React.Component {
                     roledesc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled"
                 />
 
-                <Poster
+                <JobCard
                     id="one"
                     icon={img1}
                     name="GOOGLE"
@@ -47,4 +47,4 @@ class PosterGrid extends React.Component {
     }
 }
 
-export default PosterGrid
+export default JobCardGrid
