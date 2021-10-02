@@ -33,7 +33,7 @@ class Login extends React.Component {
             // console.log(res.data)
             if (res.data.user_id !== undefined) {
                 temp.setUserDetails(res.data)
-                history.push('/workstreet/dashboard')
+                history.push('/workstreet/profile')
             }
             if (res.data === 'V') {
                 alert('You are not verfied, first verify your account')
