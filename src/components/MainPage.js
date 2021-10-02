@@ -6,11 +6,24 @@ import '../css/MainPage.css'
 import { Link } from 'react-router-dom'
 import Hand from './Hand'
 import { AuthContext } from '../contexts/AuthContext'
-import sitelogo2 from '../img/sitelogo2.png'
 import TeamCard from './TeamCard'
 import { TeamMembers } from '../data/team_members'
 
 class MainPage extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            click: false
+        }
+        this.handleClick = this.handleClick.bind(this)
+    }
+
+    handleClick() {
+        this.setState((prevState) => ({
+            click: !prevState.click
+        }))
+    }
+
     static contextType = AuthContext
 
     scrollFunction = (e) => {
@@ -41,7 +54,62 @@ class MainPage extends React.Component {
             <div className="main-page">
                 <div>
                     <header className="nav" id="main-header">
-                        <div className="nav-button">
+                        <div className="tit">Workstreet</div>
+                        <div className="nav-ico" onClick={this.handleClick}>
+                            <i className={this.state.click ? 'fas fa-times' : 'fas fa-bars'} />
+                        </div>
+                        <div className={this.state.click ? 'navmenu navactive' : 'navmenu'}>
+                            {authToken === null ||
+                            authToken === '' ||
+                            typeof authToken === 'undefined' ||
+                            authToken === 'undefined' ? (
+                                <>
+                                    <Link to="/">
+                                        <div className="ite" onClick={this.handleClick}>
+                                            Home
+                                        </div>
+                                    </Link>
+                                </>
+                            ) : (
+                                <>
+                                    <Link to="/workstreet/profile">
+                                        <div className="ite" onClick={this.handleClick}>
+                                            Dashboard
+                                        </div>
+                                    </Link>
+                                </>
+                            )}
+                            <div className="ite" onClick={this.handleClick}>
+                                About us
+                            </div>
+                            <div className="ite" onClick={this.handleClick}>
+                                Team
+                            </div>
+                            <div className="ite" onClick={this.handleClick}>
+                                Contact Us
+                            </div>
+                            {authToken === null ||
+                            authToken === '' ||
+                            typeof authToken === 'undefined' ||
+                            authToken === 'undefined' ? (
+                                <>
+                                    <Link to="/login">
+                                        <div className="ite" onClick={this.handleClick}>
+                                            Login
+                                        </div>
+                                    </Link>
+                                </>
+                            ) : (
+                                <>
+                                    <Link to="/workstreet/sign-out">
+                                        <div className="ite" onClick={this.handleClick}>
+                                            Sign out
+                                        </div>
+                                    </Link>
+                                </>
+                            )}
+                        </div>
+                        {/* <div className="nav-button">
                             {authToken === null ||
                             authToken === '' ||
                             typeof authToken === 'undefined' ||
@@ -65,7 +133,7 @@ class MainPage extends React.Component {
                                     </Link>
                                 </>
                             )}
-                        </div>
+                            </div> */}
                     </header>
                 </div>
                 <Logo />
