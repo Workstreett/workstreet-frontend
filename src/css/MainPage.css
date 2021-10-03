@@ -213,13 +213,24 @@
     .nav .navmenu .ite {
         color: black;
         margin: 25px;
-        font-size: 44px;
+        font-size: 42px;
     }
 }
 
 @media all and (max-width: 670px) {
     .main-page {
         grid-template-rows: 10vh 57vh max-content max-content max-content;
+    }
+
+    .nav {
+        padding: 25px 30px;
+    }
+
+    .nav .navmenu .ite {
+        font-size: 30px;
+    }
+    .nav .navmenu {
+        padding: 40px 50px;
     }
     .nav-button button {
         font-size: 13px;
