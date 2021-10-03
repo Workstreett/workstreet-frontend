@@ -1,22 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .compCard {
     background-color: white;
     display: grid;
     grid-auto-flow: row;
     grid-template-rows: auto auto 1fr;
-    width: 45%;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    border: solid 2px rgba(191, 241, 255, 0.6);
+    width: 32%;
+    /*margin-bottom: 20px;*/
+    margin-bottom: 10px;
+    /*margin-right: 15px;*/
+    /*border: solid 2px rgba(191, 241, 255, 0.6);*/
     font-family: 'Poppins', sans-serif;
 }
 
 .comp-side-1 {
-    background-color: #619cb8;
+    /*background-color: #619cb8;*/
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 4fr;
     padding: 13px;
 }
 
@@ -45,7 +47,7 @@
 
 .comp-comp-desc {
     margin-top: 28px;
-    font-size: 17px;
+    font-size: 15px;
     text-align: left;
     margin-bottom: 2%;
     margin-left: 5%;
@@ -53,22 +55,23 @@
 }
 
 .comp-side-2 {
-    padding: 13px;
-    padding-left: 0%;
-    margin-left: 10px;
+    padding: 5%;
+    /*padding-left: 0%;*/
+    /*margin-left: 10px;*/
 }
 
 .comp-role {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
     letter-spacing: 1px;
-    color: #4d4d50;
+    font-family: 'Roboto', sans-serif;
 }
 
 .comp-roledesc {
-    margin-top: 1%;
+    margin-top: 10px;
     font-size: 14px;
     text-align: left;
+    color: #4d4d50;
 }
 
 .compCard-tagall {
@@ -82,8 +85,8 @@
     border-radius: 10px;
     display: flex;
     align-items: center;
-    background-color: #b9fbb9;
-    font-size: 12px;
+    background-color: #cfddfa;
+    font-size: 10px;
     margin-right: 20px;
     margin-top: 10px;
 }
@@ -91,7 +94,7 @@
 .comp-apply {
     height: 35px;
     width: 140px;
-    padding: 10px;
+    padding: 5px 10px;
     margin-top: 20px;
     cursor: pointer;
     color: #fff;
@@ -99,7 +102,12 @@
     outline: 0;
     border: none;
     border-radius: 4px;
-    background: #616eb8;
+    background: #2660dd;
+    transition: 0.1s ease-in-out;
+}
+
+.comp-apply:hover {
+    background: rgb(38, 96, 221, 0.9);
 }
 
 .comp-info {
@@ -215,17 +223,21 @@
     margin-right: 2px;
 }
 
-@media all and (max-width: 760px) {
+@media all and (max-width: 768px) {
     .compCard {
         width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
     }
     .compCard-tag {
         padding: 4px 5px;
-        font-size: 8px;
+        font-size: 7px;
     }
     .tag-icon {
-        width: 16px;
+        width: 10px;
+    }
+    .comp-roledesc {
+        font-size: 12px;
+    }
+    .comp-apply {
+        height: 30px;
     }
 }
