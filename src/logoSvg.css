@@ -160,7 +160,7 @@
     40%,
     48%,
     56% {
-        opacity: 0%;
+        opacity: 0;
     }
     4%,
     12%,
@@ -170,16 +170,16 @@
     44%,
     52%,
     60% {
-        opacity: 20%;
+        opacity: 0.2;
     }
     80% {
-        opacity: 23%;
+        opacity: 0.23;
     }
     90% {
-        opacity: 27%;
+        opacity: 0.27;
     }
     100% {
-        opacity: 31%;
+        opacity: 0.31;
     }
 }
 @keyframes divsvg1 {

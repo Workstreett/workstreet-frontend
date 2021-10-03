@@ -6,7 +6,7 @@ function Logo() {
             <div className="divSvg">
                 <div id="layer3"></div>
                 <div id="divContainingShawdow">
-                    <div id="shadow">{}</div>
+                    <div id="shadow"></div>
                 </div>
                 <svg width="1075" height="139" id="logo" viewBox="0 0 1075 139" fill="none">
                     <path
