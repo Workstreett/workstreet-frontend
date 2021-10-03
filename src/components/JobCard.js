@@ -36,7 +36,7 @@ class JobCard extends React.Component {
     render() {
         return (
             <div className="compCard" id={this.props.id}>
-                <div className="comp-side-1">
+                {/* <div className="comp-side-1">
                     <div className="comp-nameImage">
                         <div className="comp-cl-icon">
                             <img src={this.props.icon} alt="icon" />{' '}
@@ -44,8 +44,14 @@ class JobCard extends React.Component {
                         <div className="comp-compname">{this.props.name}</div>
                     </div>
                     <div className="comp-comp-desc"> {this.props.compdesc}</div>
-                </div>
+                </div> */}
                 <div className="comp-side-2">
+                    <div>
+                        <div className="comp-cl-icon">
+                            <img src={this.props.icon} alt="icon" />{' '}
+                        </div>
+                        {/* <div className="comp-compname">{this.props.name}</div> */}
+                    </div>
                     <div className="comp-role">{this.props.role}</div>
                     <div className="comp-roledesc">{this.props.roledesc}</div>
                     <div className="compCard-tagall">
@@ -62,9 +68,9 @@ class JobCard extends React.Component {
                             Part time allowed
                         </div>
                     </div>
-                    <button className="comp-apply upbut">Apply</button>
+                    <button className="comp-apply">Apply</button>
                 </div>
-                <div className="comp-handles">
+                {/* <div className="comp-handles">
                     <ul className="comp-social-icons">
                         <li>
                             <a className="comp-facebook upbut" href="https://www.google.com/">
@@ -88,7 +94,7 @@ class JobCard extends React.Component {
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div> */}
             </div>
         )
     }
