@@ -29,7 +29,7 @@ class Dashboard extends React.Component {
             <>
                 <div className="form-container">
                     <div className="profile-form">
-                        <h1>Your Profile</h1>
+                        <h1 className="profile-heading">Your Profile</h1>
                         <form onSubmit={this.handleSubmit}>
                             <div className="form-field">
                                 <input

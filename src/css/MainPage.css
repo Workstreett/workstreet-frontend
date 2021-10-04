@@ -32,19 +32,50 @@
 .nav .navmenu {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .navmenu .ite {
     position: relative;
     display: inline-block;
-    font-size: 20px;
+    font-size: 17px;
     text-decoration: none;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.747);
     margin: 0 15px;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+}
+
+.auth-button {
+    border: 1px solid #fff;
+    padding: 10px 15px;
+    /*text-transform: none !important;*/
+    font-size: 15px !important;
+    transition: 0.2s ease-in-out;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif !important;
+    color: #fff !important;
+}
+
+.auth-button:hover {
+    background: #fff;
+    color: #000 !important;
 }
 
 .nav.active .navmenu .ite {
     color: black;
+}
+
+.nav.active .navmenu .auth-button {
+    color: black !important;
+    border: 1px solid #000;
+}
+
+.nav.active .navmenu .auth-button:hover {
+    color: #fff !important;
+    border: 1px solid #000;
+    background: #000;
 }
 
 .nav.active {
@@ -213,7 +244,13 @@
     .nav .navmenu .ite {
         color: black;
         margin: 25px;
-        font-size: 42px;
+        font-size: 30px;
+    }
+    .auth-button {
+        width: 50%;
+        margin: 0 auto !important;
+        color: #000 !important;
+        border: 1px solid #000;
     }
 }
 
@@ -227,7 +264,11 @@
     }
 
     .nav .navmenu .ite {
-        font-size: 30px;
+        font-size: 20px;
+    }
+    .auth-button {
+        color: #000 !important;
+        border: 1px solid #000;
     }
     .nav .navmenu {
         padding: 40px 50px;
