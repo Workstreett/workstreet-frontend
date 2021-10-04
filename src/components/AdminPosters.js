@@ -1,37 +1,40 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
-function Jobs(props) {
+function AdminPosters(props) {
+    const [jobs, setJobs] = useState([])
+    useEffect(() => {
+        axios.post('https://workstreet.herokuapp.com/admin/read', { ...props }).then((res) => {
+            setJobs(res.data)
+        })
+    }, [props.section])
+
     return (
-        <div className="jobs-div">
-            <h1>{props.about.company}</h1>
-            <h2>{props.about.title}</h2>
-            <p>{props.about.desc}</p>
-            <button className="admin-update-btn"> Update</button>
+        <div className="adminpage-div-3">
+            {jobs.map((item, i) => {
+                return (
+                    <div className="jobs-div" key={i}>
+                        <h1>{item.company}</h1>
+                        <h2>{item.title}</h2>
+                        <p>{item.desc}</p>
+                        <NavLink
+                            className="admin-update-btn"
+                            to={{
+                                pathname: '/admin/postform',
+                                details: {
+                                    ...jobs[i],
+                                    id: i,
+                                    section: props.section
+                                }
+                            }}
+                        >
+                            Update
+                        </NavLink>
+                    </div>
+                )
+            })}
         </div>
     )
 }
-class Admin extends React.Component {
-    state = {
-        jobs: []
-    }
-
-    componentDidMount() {
-        axios.post('https://workstreet.herokuapp.com/admin/read', this.props).then((res) => {
-            console.log(res)
-            const jobs = res.data
-            this.setState({ jobs })
-        })
-    }
-
-    render() {
-        // eslint-disable-next-line camelcase
-        const jobs_component = this.state.jobs.map((item, i) => {
-            return <Jobs key={i} about={item} />
-        })
-        // eslint-disable-next-line camelcase
-        return <div className="adminpage-div-3">{jobs_component}</div>
-    }
-}
-export default Admin
+export default AdminPosters

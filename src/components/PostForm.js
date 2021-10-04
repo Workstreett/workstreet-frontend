@@ -2,7 +2,7 @@ import React from 'react'
 import '../css/dashboard.css'
 import axios from 'axios'
 import { Sections } from '../data/section'
-// import { withRouter } from 'react-router'
+import { withRouter } from 'react-router'
 
 class PostForm extends React.Component {
     state = {
@@ -17,16 +17,18 @@ class PostForm extends React.Component {
     }
 
     componentDidMount() {
-        if (this.props.oldSection) {
+        const details = this.props.location.details
+        if (details && details.section) {
             this.setState({
-                section: this.props.oldSection
+                ...details,
+                oldSection: details.section
             })
         }
     }
 
     handleSubmit = (event) => {
         event.preventDefault()
-        if (!this.props.id) {
+        if (!this.state.id) {
             axios
                 .post('https://workstreet.herokuapp.com/admin/create', this.state)
                 .then((res) => {
@@ -38,10 +40,7 @@ class PostForm extends React.Component {
                 })
         } else {
             axios
-                .post('https://workstreet.herokuapp.com/admin/update', {
-                    ...this.props,
-                    ...this.state
-                })
+                .post('https://workstreet.herokuapp.com/admin/update', this.state)
                 .then((res) => {
                     alert(res.data)
                 })
@@ -66,9 +65,9 @@ class PostForm extends React.Component {
     }
 
     render() {
-        // const { history } = this.props
+        const { history } = this.props
         return (
-            <div className="form-container">
+            <div className="form-container" style={{ width: '100vw', height: '100vh' }}>
                 <div className="profile-form">
                     <form onSubmit={this.handleSubmit}>
                         <div className="same-row">
@@ -183,7 +182,7 @@ class PostForm extends React.Component {
                                 }}
                                 className="back"
                                 onClick={() => {
-                                    // history.goBack()
+                                    history.push('/admin')
                                 }}
                             >
                                 Back
@@ -197,4 +196,4 @@ class PostForm extends React.Component {
     }
 }
 
-export default PostForm
+export default withRouter(PostForm)

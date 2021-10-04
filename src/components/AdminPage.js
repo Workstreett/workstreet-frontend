@@ -1,53 +1,62 @@
 import React from 'react'
 import { Sections } from '../data/section'
-import '../css/sidestyle.css'
 import '../css/AdminPage.css'
-import { NavLink } from 'react-router-dom'
 import { PlusCircleIcon } from '@heroicons/react/outline'
 import AdminPosters from './AdminPosters'
+import { Link, NavLink } from 'react-router-dom'
 
 class AdminPage extends React.Component {
     state = {
-        section: 'core'
+        section: 'Core',
+        details: {}
     }
 
-    updateSection(val) {
-        this.setState({
-            section: val
-        })
+    updateSection = (event) => {
+        const { name, id, type } = event.target
+        if (type === 'button') {
+            document.getElementById(this.state.section).classList.remove('active-list')
+            event.target.classList.add('active-list')
+            this.setState({ [name]: id })
+        } else {
+            this.setState({ [name]: id })
+        }
     }
 
     render() {
-        console.log(this.state.section)
         return (
             <div className="adminpage-div">
                 <div className="adminpage-div-1">
-                    <NavLink exact to="/admin/postform" activeClassName="active-link">
-                        <div className="plus-icon">
-                            <PlusCircleIcon className="side-icon" />
-                        </div>
+                    <Link to="/">Home</Link>
+                    <NavLink
+                        className="Addform-btn"
+                        to={{
+                            pathname: '/admin/postform',
+                            details: {}
+                        }}
+                        onClick={this.updateSection}
+                    >
+                        Create new Post
+                        <PlusCircleIcon className="icon" />
                     </NavLink>
                 </div>
-                <div className="adminpage-div-2 side-menu side-menu-flex">
-                    <ul>
+                <div className="adminpage-div-2">
+                    <div>
                         {Sections.map((item, i) => {
                             return (
-                                <NavLink
-                                    exact
-                                    to="/admin"
-                                    onClick={() => this.updateSection(item)}
-                                    activeClassName="active-link"
+                                <button
+                                    onClick={this.updateSection}
+                                    type="button"
+                                    name="section"
+                                    id={item}
                                     key={i}
                                 >
-                                    <div className="list-ele">
-                                        <span className="text">{item}</span>
-                                    </div>
-                                </NavLink>
+                                    {item}
+                                </button>
                             )
                         })}
-                    </ul>
+                    </div>
                 </div>
-                <AdminPosters key={this.state.section} section={this.state.section} />
+                <AdminPosters section={this.state.section} />
             </div>
         )
     }

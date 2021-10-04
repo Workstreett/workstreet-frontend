@@ -4,6 +4,7 @@ import Logo from './Logo'
 import About from './About'
 import '../css/MainPage.css'
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import Hand from './Hand'
 import { AuthContext } from '../contexts/AuthContext'
 import TeamCard from './TeamCard'
@@ -48,6 +49,12 @@ class MainPage extends React.Component {
         window.removeEventListener('scroll', this.scrollFunction)
     }
 
+    HashLinkScroll = (el) => {
+        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset
+        const yOffset = -window.screen.height * 0.2
+        window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' })
+    }
+
     render() {
         const { authToken } = this.context
         return (
@@ -79,15 +86,30 @@ class MainPage extends React.Component {
                                     </Link>
                                 </>
                             )}
-                            <div className="ite" onClick={this.handleClick}>
+                            <HashLink
+                                to="#about-us"
+                                className="ite"
+                                onClick={this.handleClick}
+                                scroll={this.HashLinkScroll}
+                            >
                                 About us
-                            </div>
-                            <div className="ite" onClick={this.handleClick}>
+                            </HashLink>
+                            <HashLink
+                                to="#team"
+                                className="ite"
+                                onClick={this.handleClick}
+                                scroll={this.HashLinkScroll}
+                            >
                                 Team
-                            </div>
-                            <div className="ite" onClick={this.handleClick}>
+                            </HashLink>
+                            <HashLink
+                                to="#footer"
+                                className="ite"
+                                onClick={this.handleClick}
+                                scroll={this.HashLinkScroll}
+                            >
                                 Contact Us
-                            </div>
+                            </HashLink>
                             {authToken === null ||
                             authToken === '' ||
                             typeof authToken === 'undefined' ||
@@ -139,7 +161,7 @@ class MainPage extends React.Component {
                 <Logo />
                 <About />
                 <Hand />
-                <div className="team-section">
+                <div className="team-section" id="team">
                     <p className="team-section-heading">Our amazing team</p>
                     <div className="team-section-about-container">
                         <p className="team-section-about">

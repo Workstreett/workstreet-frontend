@@ -3,7 +3,7 @@ import '../css/footer.css'
 
 function Footer() {
     return (
-        <footer className="site-footer">
+        <footer className="site-footer" id="footer">
             <div className="foot-row-first">
                 <div className="single-cta">
                     <i className="fas fa-map-marker-alt"></i>
