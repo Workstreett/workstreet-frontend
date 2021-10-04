@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
 .profile-form {
     margin: auto;
     width: 50%;
@@ -10,10 +11,11 @@
     background-size: cover;
 }
 
-/*.profile-form label {
-  display: block;
-  margin-bottom: 10px;
-}*/
+.profile-heading {
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: 1px;
+    color: #3a3838;
+}
 
 .profile-form h1 {
     width: 100%;

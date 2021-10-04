@@ -116,7 +116,7 @@ class MainPage extends React.Component {
                             authToken === 'undefined' ? (
                                 <>
                                     <Link to="/login">
-                                        <div className="ite" onClick={this.handleClick}>
+                                        <div className="ite auth-button" onClick={this.handleClick}>
                                             Login
                                         </div>
                                     </Link>
@@ -124,7 +124,7 @@ class MainPage extends React.Component {
                             ) : (
                                 <>
                                     <Link to="/workstreet/sign-out">
-                                        <div className="ite" onClick={this.handleClick}>
+                                        <div className="ite auth-button" onClick={this.handleClick}>
                                             Sign out
                                         </div>
                                     </Link>
