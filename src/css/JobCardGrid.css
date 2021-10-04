@@ -1,0 +1,9 @@
+.poster-grid-main {
+    background-color: #ddd;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 10px;
+    /*padding-left: 1%;
+    padding-right: 4%;*/
+}

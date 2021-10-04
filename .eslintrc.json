@@ -20,8 +20,11 @@
         "react/prop-types": "off",
         "no-console": "warn",
         "no-unused-vars": "warn",
-        "prettier/prettier": ["error",{
-            "endOfLine": "auto"}
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
         ]
     },
     "settings": {

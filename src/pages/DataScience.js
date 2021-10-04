@@ -1,9 +1,9 @@
 import React from 'react'
-import PosterGrid from '../components/PosterGrid.js'
+import JobCardGrid from '../components/JobCardGrid'
 
 class DataScience extends React.Component {
     render() {
-        return <PosterGrid />
+        return <JobCardGrid />
     }
 }
 

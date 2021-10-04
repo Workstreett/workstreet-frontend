@@ -1,7 +1,8 @@
 import React from 'react'
-import '../css/post.css'
+import '../css/JobCard.css'
+import { CalendarIcon, CashIcon, CheckIcon } from '@heroicons/react/outline'
 
-class Poster extends React.Component {
+class JobCard extends React.Component {
     /* constructor() {
     super();
     this.state = {
@@ -35,7 +36,7 @@ class Poster extends React.Component {
     render() {
         return (
             <div className="compCard" id={this.props.id}>
-                <div className="comp-side-1">
+                {/* <div className="comp-side-1">
                     <div className="comp-nameImage">
                         <div className="comp-cl-icon">
                             <img src={this.props.icon} alt="icon" />{' '}
@@ -43,18 +44,33 @@ class Poster extends React.Component {
                         <div className="comp-compname">{this.props.name}</div>
                     </div>
                     <div className="comp-comp-desc"> {this.props.compdesc}</div>
-                </div>
+                </div> */}
                 <div className="comp-side-2">
+                    <div>
+                        <div className="comp-cl-icon">
+                            <img src={this.props.icon} alt="icon" />{' '}
+                        </div>
+                        {/* <div className="comp-compname">{this.props.name}</div> */}
+                    </div>
                     <div className="comp-role">{this.props.role}</div>
                     <div className="comp-roledesc">{this.props.roledesc}</div>
                     <div className="compCard-tagall">
-                        <div className="compCard-tag">Paid</div>
-                        <div className="compCard-tag">2 Months</div>
-                        <div className="compCard-tag">June-July 21</div>
+                        <div className="compCard-tag">
+                            <CashIcon className="tag-icon" />
+                            Paid
+                        </div>
+                        <div className="compCard-tag">
+                            <CalendarIcon className="tag-icon" />
+                            June-July 21
+                        </div>
+                        <div className="compCard-tag">
+                            <CheckIcon className="tag-icon" />
+                            Part time allowed
+                        </div>
                     </div>
-                    <button className="comp-apply upbut">Apply</button>
+                    <button className="comp-apply">Apply</button>
                 </div>
-                <div className="comp-handles">
+                {/* <div className="comp-handles">
                     <ul className="comp-social-icons">
                         <li>
                             <a className="comp-facebook upbut" href="https://www.google.com/">
@@ -78,10 +94,10 @@ class Poster extends React.Component {
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div> */}
             </div>
         )
     }
 }
 
-export default Poster
+export default JobCard
