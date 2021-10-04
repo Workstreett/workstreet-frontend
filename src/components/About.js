@@ -6,7 +6,13 @@ import 'aos/dist/aos.css'
 function About() {
     AOS.init()
     return (
-        <div className="about" data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">
+        <div
+            className="about"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="500"
+            id="about-us"
+        >
             <div className="content">
                 <div className="content-1">
                     <h1 id="aboutus-mainheading">About us</h1>
