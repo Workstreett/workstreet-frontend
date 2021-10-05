@@ -10,7 +10,7 @@ class JobCard extends React.Component {
     };
     this.pressed = this.pressed.bind(this);
   }
-
+ 
   componentDidMount() {
     /* document
       .getElementById("sideBarButton")
@@ -49,24 +49,17 @@ class JobCard extends React.Component {
                     <div>
                         <div className="comp-cl-icon">
                             <img src={this.props.icon} alt="icon" />{' '}
+                            <div className="comp-name"> Google</div>
+                            <hr />
                         </div>
                         {/* <div className="comp-compname">{this.props.name}</div> */}
                     </div>
                     <div className="comp-role">{this.props.role}</div>
                     <div className="comp-roledesc">{this.props.roledesc}</div>
                     <div className="compCard-tagall">
-                        <div className="compCard-tag">
-                            <CashIcon className="tag-icon" />
-                            Paid
-                        </div>
-                        <div className="compCard-tag">
-                            <CalendarIcon className="tag-icon" />
-                            June-July 21
-                        </div>
-                        <div className="compCard-tag">
-                            <CheckIcon className="tag-icon" />
-                            Part time allowed
-                        </div>
+                        <div className="compCard-tag">Paid</div>
+                        <div className="compCard-tag">June-July 21</div>
+                        <div className="compCard-tag">Part time allowed</div>
                     </div>
                     <button className="comp-apply">Apply</button>
                 </div>

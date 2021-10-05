@@ -7,7 +7,6 @@
     position: sticky;
     top: min(10vh, 70px);
     padding: 0px 0 10px 0px;
-    border-right: 1px solid #edfbff;
 }
 .side-menu .text {
     font-size: 18px;
@@ -29,22 +28,22 @@
     align-items: center;
 }
 .list-ele:hover {
-    background-color: rgba(191, 241, 255, 0.6);
+    background-color: rgba(153, 209, 255, 0.4);
     border-radius: 10px;
     transition: border-radius 0.1s ease;
 }
 .list-ele:hover .text,
 .list-ele:hover .side-icon {
-    color: #026cb3;
+    color: #3770d4;
     opacity: 1;
 }
 .active-link .list-ele {
     border-radius: 10px;
-    background-color: rgba(191, 241, 255, 0.6);
+    background-color: rgba(153, 209, 255, 0.4);
 }
 .active-link .side-icon,
 .active-link .text {
-    color: #026cb3;
+    color: #3770d4;
     opacity: 1;
 }
 .side-icon {
