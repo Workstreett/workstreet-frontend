@@ -1,4 +1,5 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+/*:root {
     --image-width: 50vw;
     --card-width: 50vw;
 }
@@ -144,5 +145,160 @@ a {
     }
     .card-2 {
         width: 300px;
+    }
+}*/
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.image-section {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.image-section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box {
+    width: 50%;
+}
+
+.form-box-company-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    color: #4957d4;
+}
+
+.form-box-company-name span {
+    font-weight: 800;
+}
+
+.form-box-heading {
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    color: #607d8b;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #7784f7;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.form-box-field {
+    margin-bottom: 20px;
+}
+
+.form-box .form-box-field label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #373738;
+    font-weight: 600;
+}
+
+.form-box-field input {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #607d8b;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #607d8b;
+    background: transparent;
+    border-radius: 30px;
+}
+
+.form-box-field input[type='submit'] {
+    color: #fff;
+    background: #7784f7;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.form-box-field input[type='submit']:hover {
+    background: #6776f7;
+}
+
+.form-box-field p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #000;
+}
+
+.form-box-field p a {
+    color: #7784f7;
+}
+
+a {
+    text-decoration: none;
+}
+
+.lgn-eye > .eye-img {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    cursor: pointer;
+    width: 20px;
+    fill: #576d79;
+}
+
+.form-box-password-field {
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .image-section {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .form-section {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        justify-content: center;
+        align-items: center;
+    }
+    .form-box {
+        width: 100%;
+        padding: 30px 30px;
+        background: rgba(255, 255, 255, 0.8);
+        margin: 30px;
+    }
+    .form-box-field p {
+        font-size: 12px;
+    }
+    .image-section img {
+        object-fit: cover;
     }
 }
