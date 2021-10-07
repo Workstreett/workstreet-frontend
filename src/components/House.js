@@ -10,6 +10,7 @@ import Marketing from '../pages/Marketing'
 import SignOut from '../pages/SignOut'
 import Core from '../pages/Core'
 import DataScience from '../pages/DataScience'
+import Others from '../pages/Others'
 import Footer from './Footer.js'
 import Authorised from './Authorised'
 import Profile from '../pages/Profile'
@@ -39,6 +40,7 @@ class House extends React.Component {
                                 exact
                                 component={Authorised(Marketing)}
                             />
+                            <Route path="/workstreet/others" exact component={Authorised(Others)} />
                             <Route path="/workstreet/sign-out" exact component={SignOut} />
                             <Route path="/workstreet/core" exact component={Authorised(Core)} />
                             <Route
