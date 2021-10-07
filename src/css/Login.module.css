@@ -148,20 +148,20 @@ a {
     }
 }*/
 
-section {
+.login_section {
     position: relative;
     width: 100%;
     height: 100vh;
     display: flex;
 }
 
-.image-section {
+.image_section {
     position: relative;
     width: 50%;
     height: 100%;
 }
 
-.image-section img {
+.image_section img {
     position: absolute;
     top: 0;
     left: 0;
@@ -169,7 +169,7 @@ section {
     height: 100%;
 }
 
-.form-section {
+.form_section {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -178,11 +178,11 @@ section {
     align-items: center;
 }
 
-.form-box {
+.form_box {
     width: 50%;
 }
 
-.form-box-company-name {
+.form_box_company_name {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 2em;
@@ -191,11 +191,11 @@ section {
     color: #4957d4;
 }
 
-.form-box-company-name span {
+.form_box_company_name span {
     font-weight: 800;
 }
 
-.form-box-heading {
+.form_box_heading {
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
     font-size: 1.5em;
@@ -206,11 +206,11 @@ section {
     letter-spacing: 1px;
 }
 
-.form-box-field {
+.form_box_field {
     margin-bottom: 20px;
 }
 
-.form-box .form-box-field label {
+.form_box .form_box_field label {
     font-size: 16px;
     margin-bottom: 5px;
     display: inline-block;
@@ -218,7 +218,7 @@ section {
     font-weight: 600;
 }
 
-.form-box-field input {
+.form_box_field input {
     width: 100%;
     padding: 10px 20px;
     outline: none;
@@ -231,7 +231,7 @@ section {
     border-radius: 30px;
 }
 
-.form-box-field input[type='submit'] {
+.form_box_field input[type='submit'] {
     color: #fff;
     background: #7784f7;
     outline: none;
@@ -241,18 +241,18 @@ section {
     padding: 10px 20px;
 }
 
-.form-box-field input[type='submit']:hover {
+.form_box_field input[type='submit']:hover {
     background: #6776f7;
 }
 
-.form-box-field p {
+.form_box_field p {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-size: 14px;
     color: #000;
 }
 
-.form-box-field p a {
+.form_box_field p a {
     color: #7784f7;
 }
 
@@ -260,28 +260,27 @@ a {
     text-decoration: none;
 }
 
-.lgn-eye > .eye-img {
+.lgn_eye {
     position: absolute;
     top: 4px;
-    right: 10px;
+    right: 15px;
     cursor: pointer;
     width: 20px;
-    fill: #576d79;
 }
 
-.form-box-password-field {
+.form_box_password_field {
     position: relative;
 }
 
 @media (max-width: 768px) {
-    .image-section {
+    .image_section {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
     }
-    .form-section {
+    .form_section {
         display: flex;
         width: 100%;
         height: 100%;
@@ -289,16 +288,16 @@ a {
         justify-content: center;
         align-items: center;
     }
-    .form-box {
+    .form_box {
         width: 100%;
         padding: 30px 30px;
         background: rgba(255, 255, 255, 0.8);
         margin: 30px;
     }
-    .form-box-field p {
+    .form_box_field p {
         font-size: 12px;
     }
-    .image-section img {
+    .image_section img {
         object-fit: cover;
     }
 }

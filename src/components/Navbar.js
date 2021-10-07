@@ -10,7 +10,8 @@ import {
     ChipIcon,
     CurrencyDollarIcon,
     UserIcon,
-    LogoutIcon
+    LogoutIcon,
+    ViewGridAddIcon
 } from '@heroicons/react/outline'
 
 function Navbar() {
@@ -66,6 +67,16 @@ function Navbar() {
                         >
                             <CurrencyDollarIcon className="nav-icon" />
                             <span className="text">Marketing</span>
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link
+                            to="/workstreet/others"
+                            className="nav-links"
+                            onClick={closeMobileMenu}
+                        >
+                            <ViewGridAddIcon className="nav-icon" />
+                            <span className="text">Others</span>
                         </Link>
                     </li>
                     <li className="nav-item">

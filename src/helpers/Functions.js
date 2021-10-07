@@ -12,8 +12,8 @@ function getSVGForPassword(checked) {
             y="0px"
             viewBox="0 0 512.001 512.001"
             space="preserve"
-            fill="skyblue"
-            width="30px"
+            fill="#576d79"
+            width="20px"
             height="30px"
         >
             <g>
