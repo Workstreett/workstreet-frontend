@@ -1,1 +1,1 @@
-export const Sections = ['Core', 'Data Science', 'Marketing', 'SDE']
+export const Sections = ['Core', 'DataScience', 'Marketing', 'SDE']

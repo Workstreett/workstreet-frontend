@@ -4,11 +4,25 @@ import { NavLink } from 'react-router-dom'
 
 function AdminPosters(props) {
     const [jobs, setJobs] = useState([])
+    const [count, setCount] = useState(0)
     useEffect(() => {
         axios.post('https://workstreet.herokuapp.com/admin/read', { ...props }).then((res) => {
             setJobs(res.data)
         })
-    }, [props.section])
+    }, [props.section, count])
+
+    const deletePost = (id) => {
+        if (window.confirm('Are you sure that the post is required to be deleted')) {
+            axios
+                .post('https://workstreet.herokuapp.com/admin/delete', { ...props, id: id })
+                .then((res) => {
+                    setCount(count + 1)
+                })
+                .catch((err) => {
+                    window.alert("Sorry can't delete because,", err.message)
+                })
+        }
+    }
 
     return (
         <div className="adminpage-div-3">
@@ -31,6 +45,14 @@ function AdminPosters(props) {
                         >
                             Update
                         </NavLink>
+                        <button
+                            className="admin-update-btn"
+                            onClick={(e) => {
+                                deletePost(i)
+                            }}
+                        >
+                            Delete
+                        </button>
                     </div>
                 )
             })}

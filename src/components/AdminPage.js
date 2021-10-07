@@ -11,6 +11,10 @@ class AdminPage extends React.Component {
         details: {}
     }
 
+    componentDidMount() {
+        document.getElementById(this.state.section).classList.add('active-list')
+    }
+
     updateSection = (event) => {
         const { name, id, type } = event.target
         if (type === 'button') {

@@ -11,6 +11,7 @@ class PostForm extends React.Component {
         title: '',
         desc: '',
         extra: '',
+        compUrl: '',
         url: '',
         tags: '',
         image: null
@@ -28,11 +29,28 @@ class PostForm extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        if (!this.state.id) {
+        const config = {
+            header: {
+                'Content-Type': 'multipart/form-data'
+            }
+        }
+
+        const formData = new FormData()
+        Object.keys(this.state).forEach((key) => {
+            if (key === 'image') {
+                if (this.state.image !== null)
+                    formData.append(key, this.state[key], this.state[key].name)
+            } else formData.append(key, this.state[key])
+        })
+        // console.log(formData.get('image'))
+
+        if (typeof this.state.id === 'undefined') {
             axios
-                .post('https://workstreet.herokuapp.com/admin/create', this.state)
+                .post('https://workstreet.herokuapp.com/admin/create', formData, config)
                 .then((res) => {
                     alert(res.data)
+                    const { history } = this.props
+                    history.push('/admin')
                 })
                 .catch((err) => {
                     console.log(err.message)
@@ -40,9 +58,11 @@ class PostForm extends React.Component {
                 })
         } else {
             axios
-                .post('https://workstreet.herokuapp.com/admin/update', this.state)
+                .post('https://workstreet.herokuapp.com/admin/update', formData, config)
                 .then((res) => {
                     alert(res.data)
+                    const { history } = this.props
+                    history.push('/admin')
                 })
                 .catch((err) => {
                     console.log(err.message)
@@ -69,7 +89,7 @@ class PostForm extends React.Component {
         return (
             <div className="form-container" style={{ width: '100vw', height: '100vh' }}>
                 <div className="profile-form">
-                    <form onSubmit={this.handleSubmit}>
+                    <form onSubmit={this.handleSubmit} encType="multipart/form-data">
                         <div className="same-row">
                             <div className="form-field">
                                 <input
@@ -133,6 +153,19 @@ class PostForm extends React.Component {
                                 type="text"
                                 value={this.state.extra}
                                 placeholder="Company Description"
+                                onChange={this.handleChange}
+                                className="form-field-hover"
+                            />
+                            <span className="focus-border">
+                                <i></i>
+                            </span>
+                        </div>
+                        <div className="form-field">
+                            <input
+                                name="compUrl"
+                                type="text"
+                                value={this.state.compUrl}
+                                placeholder="Link for the company logo"
                                 onChange={this.handleChange}
                                 className="form-field-hover"
                             />
