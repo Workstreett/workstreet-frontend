@@ -8,7 +8,8 @@ import {
     ChipIcon,
     CurrencyDollarIcon,
     UserIcon,
-    LogoutIcon
+    LogoutIcon,
+    ViewGridAddIcon
 } from '@heroicons/react/outline'
 
 class PosterSidebar extends React.Component {
@@ -44,6 +45,12 @@ class PosterSidebar extends React.Component {
                         <div className="list-ele">
                             <CurrencyDollarIcon className="side-icon" />
                             <span className=" text">Marketing</span>
+                        </div>
+                    </NavLink>
+                    <NavLink exact to="/workstreet/others" activeClassName="active-link">
+                        <div className="list-ele">
+                            <ViewGridAddIcon className="side-icon" />
+                            <span className=" text">Others</span>
                         </div>
                     </NavLink>
                 </div>

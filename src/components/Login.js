@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import { getSVGForPassword } from '../helpers/Functions'
 import login from '../img/login.png'
-import '../css/Login.css'
+import styles from '../css/Login.module.css'
 import axios from 'axios'
 import { AuthContext } from '../contexts/AuthContext'
 import { withRouter } from 'react-router'
@@ -127,9 +127,9 @@ class Login extends Component {
             //                    </div>
             //                </div>
             //            </div>
-            <section>
-                <div className="image-section">
-                    <img className="loginImg" src={login} alt="login page" />
+            <section className={styles.login_section}>
+                <div className={styles.image_section}>
+                    <img src={login} alt="login page" />
                     {/* <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="407"
@@ -210,43 +210,43 @@ class Login extends Component {
                         </g>
                     </svg> */}
                 </div>
-                <div className="form-section">
+                <div className={styles.form_section}>
                     <AuthContext.Consumer>
                         {(context) => {
                             return (
                                 <form
-                                    className="form-box"
+                                    className={styles.form_box}
                                     onSubmit={(event) => {
                                         this.handleSubmit(event, context, history)
                                     }}
                                 >
-                                    <h2 className="form-box-company-name">
+                                    <h2 className={styles.form_box_company_name}>
                                         Workstreet.<span>Tech</span>
                                     </h2>
-                                    <h2 className="form-box-heading">Login</h2>
-                                    <div className="form-box-field">
+                                    <h2 className={styles.form_box_heading}>Login</h2>
+                                    <div className={styles.form_box_field}>
                                         <label htmlFor="username">Username</label>
                                         <input
                                             type="text"
-                                            placeholder="john_doe"
+                                            placeholder="Your username"
                                             name="username"
                                             id="user"
                                             onChange={this.handleChange}
                                             value={this.state.username}
                                         ></input>
                                     </div>
-                                    <div className="form-box-field">
+                                    <div className={styles.form_box_field}>
                                         <label htmlFor="password">Password</label>
-                                        <div className="form-box-password-field">
+                                        <div className={styles.form_box_password_field}>
                                             <input
-                                                placeholder="Min. 8 characters"
+                                                placeholder="Min. length 6"
                                                 type={this.state.showPassword ? 'text' : 'password'}
                                                 name="password"
                                                 id="passwd"
                                                 onChange={this.handleChange}
                                                 value={this.state.password}
                                             ></input>
-                                            <label htmlFor="eye" className="lgn-eye">
+                                            <label htmlFor="eye" className={styles.lgn_eye}>
                                                 {getSVGForPassword(this.state.showPassword)}
                                             </label>
                                             <input
@@ -259,10 +259,10 @@ class Login extends Component {
                                             />
                                         </div>
                                     </div>
-                                    <div className="form-box-field">
+                                    <div className={styles.form_box_field}>
                                         <input type="submit" value="Login"></input>
                                     </div>
-                                    <div className="form-box-field">
+                                    <div className={styles.form_box_field}>
                                         <p>
                                             Don&apos;t have an account?{' '}
                                             <a href="/signup">Sign up</a>
