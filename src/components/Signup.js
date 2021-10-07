@@ -285,7 +285,7 @@ class Signup extends React.Component {
                                 <label htmlFor="branch">Branch</label>
                                 <input
                                     type="text"
-                                    placeholder="CSE/ECE/EEE"
+                                    placeholder="College Branch"
                                     name="branch"
                                     id="branch"
                                     onChange={this.handleChange}
