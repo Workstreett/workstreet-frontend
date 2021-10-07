@@ -5,6 +5,9 @@ import styles from '../css/Login.module.css'
 import axios from 'axios'
 import { AuthContext } from '../contexts/AuthContext'
 import { withRouter } from 'react-router'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 class Login extends Component {
     constructor() {
         super()
@@ -34,14 +37,21 @@ class Login extends Component {
                 history.push('/workstreet/profile')
             }
             if (res.data === 'V') {
-                alert('You are not verfied, first verify your account')
+                toast.warn('You are not verfied, first verify your account', {
+                    position: 'bottom-right'
+                })
                 this.setState({})
             } else if (res.data === 'U') {
-                alert('The username and password are not correct')
+                toast.error('Username or Password incorrect', {
+                    position: 'bottom-right',
+                    theme: 'colored'
+                })
                 this.setState({})
             }
         } catch (err) {
-            // console.log(err.message)
+            toast.error(err.message, {
+                position: 'bottom-right'
+            })
         }
     }
 
@@ -128,6 +138,7 @@ class Login extends Component {
             //                </div>
             //            </div>
             <section className={styles.login_section}>
+                <ToastContainer />
                 <div className={styles.image_section}>
                     <img src={login} alt="login page" />
                     {/* <svg

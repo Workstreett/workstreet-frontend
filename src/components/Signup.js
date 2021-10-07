@@ -3,6 +3,8 @@ import { getSVGForPassword } from '../helpers/Functions'
 import Img from '../img/login.png'
 import styles from '../css/Signup.module.css'
 import axios from 'axios'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 class Signup extends React.Component {
     constructor() {
@@ -38,22 +40,42 @@ class Signup extends React.Component {
             const response = await axios.post('https://workstreet.herokuapp.com/signup', this.state)
 
             if (response.data === 'u') {
-                alert('username is in use, Choose something Else')
+                toast.error('Username already exists', {
+                    position: 'bottom-right',
+                    theme: 'colored'
+                })
             } else if (response.data === 'p') {
-                alert(
-                    'The password has to contain a 1 Uppercase letter,1 numeral letter, 1 LowerCase letter, and atleast 6 characters'
+                toast.error(
+                    'Password must contain 1 Uppercase letter, 1 Numeral letter,1 Lowercase letter and 6 characters',
+                    {
+                        position: 'bottom-right',
+                        theme: 'colored'
+                    }
                 )
             } else if (response.data === 'm') {
-                alert('The mailId provided is not allowed')
+                toast.error('Email Address not allowed', {
+                    position: 'bottom-right',
+                    theme: 'colored'
+                })
             } else if (response.data === 'signedUp') {
-                alert('User has been added, PLease verify your mailId')
+                toast.success('User has been added, pLease verify your mailId', {
+                    position: 'bottom-right',
+                    theme: 'colored'
+                })
             } else {
-                alert(
-                    'Some Error occured while connecting the server please try again. After some time'
+                toast.error(
+                    'Some error occured while connecting the server, please try again later',
+                    {
+                        position: 'bottom-right',
+                        theme: 'colored'
+                    }
                 )
             }
         } catch (err) {
-            // console.log(err)
+            toast.error(err.message, {
+                position: 'bottom-right',
+                theme: 'colored'
+            })
         }
     }
 
@@ -175,6 +197,7 @@ class Signup extends React.Component {
             //    </div>
             // </div>
             <section className={styles.signup_section}>
+                <ToastContainer />
                 <div className={styles.image_section}>
                     <img src={Img} alt="signup page" />
                 </div>
@@ -262,7 +285,7 @@ class Signup extends React.Component {
                                 <label htmlFor="branch">Branch</label>
                                 <input
                                     type="text"
-                                    placeholder="CSE/ECE/EEE"
+                                    placeholder="Engineering Branch"
                                     name="branch"
                                     id="branch"
                                     onChange={this.handleChange}
