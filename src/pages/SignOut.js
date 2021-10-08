@@ -8,7 +8,7 @@ class SignOut extends React.Component {
     render() {
         const { setUserDetails } = this.context
         setUserDetails({})
-        return <Redirect to="/" />
+        return <Redirect to="/login" />
     }
 }
 

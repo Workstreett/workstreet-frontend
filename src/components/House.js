@@ -48,7 +48,11 @@ class House extends React.Component {
                                 exact
                                 component={Authorised(DataScience)}
                             />
-                            <Route path="/workstreet/profile" exact component={Profile} />
+                            <Route
+                                path="/workstreet/profile"
+                                exact
+                                component={Authorised(Profile)}
+                            />
                         </div>
                         <Footer />
                     </Route>

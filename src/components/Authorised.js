@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { Component } from 'react'
 import { AuthContext } from '../contexts/AuthContext'
 import LoaderGif from '../images/loader.gif'
+import { Redirect } from 'react-router'
 
 const Authorised = (OrignalComponent) => {
     class NewComponent extends Component {
@@ -55,11 +56,7 @@ const Authorised = (OrignalComponent) => {
                 )
             }
             if (this.state.isAllowed === 'No') {
-                return (
-                    <h1 style={{ textAlign: 'center', height: '70vh' }}>
-                        Error: Your are not Authorised
-                    </h1>
-                )
+                return <Redirect to="/login" />
             }
             return <OrignalComponent />
         }
