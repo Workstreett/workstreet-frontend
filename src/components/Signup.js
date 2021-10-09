@@ -203,9 +203,11 @@ class Signup extends React.Component {
                 </div>
                 <div className={styles.form_section}>
                     <form className={styles.form_box} onSubmit={this.handleSubmit}>
-                        <h2 className={styles.form_box_company_name}>
-                            Workstreet.<span>Tech</span>
-                        </h2>
+                        <a href="/">
+                            <h2 className={styles.form_box_company_name}>
+                                Workstreet.<span>Tech</span>
+                            </h2>
+                        </a>
                         <h2 className={styles.form_box_heading}>SignUp</h2>
                         <div className={styles.form_box_field}>
                             <label htmlFor="username">Username</label>

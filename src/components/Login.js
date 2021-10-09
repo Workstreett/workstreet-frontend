@@ -231,15 +231,17 @@ class Login extends Component {
                                         this.handleSubmit(event, context, history)
                                     }}
                                 >
-                                    <h2 className={styles.form_box_company_name}>
-                                        Workstreet.<span>Tech</span>
-                                    </h2>
+                                    <a href="/">
+                                        <h2 className={styles.form_box_company_name}>
+                                            Workstreet.<span>Tech</span>
+                                        </h2>
+                                    </a>
                                     <h2 className={styles.form_box_heading}>Login</h2>
                                     <div className={styles.form_box_field}>
                                         <label htmlFor="username">Username</label>
                                         <input
                                             type="text"
-                                            placeholder="Your username"
+                                            placeholder="Enter username"
                                             name="username"
                                             id="user"
                                             onChange={this.handleChange}
@@ -250,7 +252,7 @@ class Login extends Component {
                                         <label htmlFor="password">Password</label>
                                         <div className={styles.form_box_password_field}>
                                             <input
-                                                placeholder="Min. length 6"
+                                                placeholder="Enter password"
                                                 type={this.state.showPassword ? 'text' : 'password'}
                                                 name="password"
                                                 id="passwd"
