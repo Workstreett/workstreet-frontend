@@ -370,11 +370,6 @@ a {
     .image_section img {
         object-fit: cover;
     }
-    .form_box_company_name {
-        display: none;
-        font-size: 1.7em;
-        margin-bottom: 10px;
-    }
     .form_box_field input,
     select {
         font-size: 10px !important;
