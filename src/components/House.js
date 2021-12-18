@@ -18,17 +18,17 @@ import PosterSidebar from './PosterSidebar'
 import '../css/secGrid.css'
 import AdminPage from './AdminPage'
 import PostForm from './PostForm'
+import Landing from '../pages/Landing.js'
 class House extends React.Component {
     render() {
         return (
             <Router>
                 <Switch>
-                    <Route exact path="/" component={MainPage} />
+                    {/* <Route exact path="/" component={MainPage} />
                     <Route path="/workstreet">
                         <Navbar />
                         <div className="sec-grid">
                             <PosterSidebar />
-                            {/* <Route path="/workstreet" exact component={Authorised(Home)} /> */}
                             <Route
                                 path="/workstreet/categories"
                                 exact
@@ -59,7 +59,8 @@ class House extends React.Component {
                     <Route exact path="/login" component={Login} />
                     <Route exact path="/signup" component={Signup} />
                     <Route exact path="/admin" component={AdminPage} />
-                    <Route exact path="/admin/postform" component={PostForm} />
+                    <Route exact path="/admin/postform" component={PostForm} /> */}
+                    <Route path="/" exact component={Landing} />
                 </Switch>
             </Router>
         )
