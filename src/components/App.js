@@ -10,7 +10,6 @@ import SignOut from './pages/SignOut'
 import Core from './pages/Core'
 import Consultancy from './pages/Consultancy'
 import Footer from './Footer.js'
-
 function App() {
     return (
         <div>
