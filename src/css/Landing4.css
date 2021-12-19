@@ -1,6 +1,6 @@
 .l4-flex {
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 12%;
 }
@@ -112,7 +112,7 @@
     z-index: 1;
 }
 .l4-contact {
-    background-color: rgb(245, 245, 245);
+    border: 2px solid rgb(219, 217, 217);
     padding-top: 2%;
     padding-bottom: 2%;
     width: 35%;
@@ -148,9 +148,14 @@
     padding-bottom: 2%;
     margin-top: 2%;
     margin-bottom: 2%;
-    background-color: rgb(219, 217, 217);
+    border: 2px solid rgb(219, 217, 217);
     border-radius: 10px;
-    color: black;
+}
+.l4-handle-item a {
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
 }
 
 .l4-handle-item i {
@@ -160,8 +165,18 @@
 }
 
 .l4-handle-item div {
+    color: black;
     font-size: 1.2rem;
     font-weight: normal;
     font-family: Roboto, serif;
     display: inline-block;
+    justify-content: center;
+}
+
+.fa-linkedin {
+    color: #0e76a8;
+}
+
+.fa-envelope {
+    color: #ea4335;
 }
