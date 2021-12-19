@@ -15,8 +15,8 @@ class Landing1 extends React.Component {
                         pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
                         required
                     />
-                    <button className="suscribe_button" type="button">
-                        Suscribe
+                    <button className="subscribe_button" type="button">
+                        Subscribe
                     </button>
                 </form>
             </div>
