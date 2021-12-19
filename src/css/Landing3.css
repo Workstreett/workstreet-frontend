@@ -1,0 +1,23 @@
+.l3-grid {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 5%;
+    justify-content: center;
+}
+.l3-r1 {
+    text-align: center;
+    margin: 5%;
+}
+.l3-r2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15%;
+}
+
+.l3-f1 {
+    width: 30%;
+}
+.l3-f2 {
+    width: 30%;
+}
