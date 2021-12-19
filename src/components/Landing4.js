@@ -24,42 +24,38 @@ class Landing4 extends React.Component {
 
     render() {
         return (
-            <div>
-                <div>
-                    <div>Subscribe us for amazing feeds!</div>
+            <div className="l4-flex">
+                <div className="l4-subs">
+                    <h6>For amazing Feeds</h6>
+
+                    <h1>Subscribe Us!</h1>
                     <form onSubmit={this.handleSubmit}>
-                        <input
-                            name="submailid"
-                            className=""
-                            id="submailid"
-                            type="email"
-                            onChange={this.handleChange}
-                            value={this.state.mailid}
-                            placeholder="Email address"
-                        />
-                        <br />
-                        <input type="submit" value="Submit" />
+                        <div className="l4-input">
+                            <input
+                                type="email"
+                                id="submailid"
+                                name="submailid"
+                                value={this.state.mailid}
+                                onChange={this.handleChange}
+                                className="l4-input-hover"
+                                placeholder="Email address"
+                            />
+                            <span className="l4-input-border">
+                                <i></i>
+                            </span>
+                        </div>
+                        <button className="l4-but" type="submit" value="Submit">
+                            <span>Subscribe</span>
+                        </button>
                     </form>
                 </div>
-                <div>
-                    <div>
-                        <div>CONTACT US</div>
-                        <div>
-                            <ul className="fa-ul">
-                                <li>
-                                    <span className="fa-li">
-                                        <i className="fas fa-envelope"></i>
-                                    </span>
-                                    careers@workstreet.tech
-                                </li>
-                                <li>
-                                    <span className="fa-li">
-                                        <i className="fas fa-envelope"></i>
-                                    </span>
-                                    head@workstreet.tech
-                                </li>
-                            </ul>
-                        </div>
+                <div className="l4-contact">
+                    <h1>Contact Workstreet</h1>
+                    <div className="l4-handle">
+                        <i className="fas fa-envelope"></i>
+                        <br />
+                        <div>careers@workstreet.tech</div>
+                        <div>head@workstreet.tech</div>
                     </div>
                 </div>
             </div>

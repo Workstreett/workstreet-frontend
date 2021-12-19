@@ -111,15 +111,12 @@ button.back {
 }
 .form-field-hover {
     width: 100%;
+    border: 2px solid rgb(155, 153, 153, 0.5) !important;
+    transition: 0.4s;
 }
 
 .form-field-hover:focus {
     outline: none;
-}
-
-.form-field-hover {
-    border: 2px solid rgb(155, 153, 153, 0.5) !important;
-    transition: 0.4s;
 }
 
 .form-field-hover ~ .focus-border:before,
