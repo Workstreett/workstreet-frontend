@@ -1,0 +1,157 @@
+.l4-flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 15%;
+}
+.l4-subs {
+    width: 30%;
+    text-align: center;
+}
+.l4-subs h6 {
+    font-size: 15px;
+    font-weight: 900;
+    font-family: Consolas, monaco, monospace;
+}
+
+.l4-subs h1 {
+    font-size: 2rem;
+    font-family: Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
+    word-break: break-word;
+}
+.l4-subs input[type='email'] {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 15px;
+    color: #000;
+    font-family: Montserrat, 'Times New Roman', Times, serif;
+    background-color: #fff;
+    border: 2px solid #b621fe;
+    border-radius: 15px;
+}
+
+.l4-input {
+    position: relative;
+    margin: 4%;
+}
+.l4-input-hover {
+    width: 100%;
+    transition: 0.4s;
+}
+
+.l4-input-hover:focus {
+    border: 0px !important;
+    outline: none;
+}
+
+.l4-input-hover ~ .l4-input-border:before,
+.l4-input-hover ~ .l4-input-border:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #663dff;
+    transition: 0.3s;
+}
+.l4-input-hover ~ .l4-input-border:after {
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: 0;
+}
+.l4-input-hover ~ .l4-input-border i:before,
+.l4-input-hover ~ .l4-input-border i:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 0;
+    background-color: #663dff;
+    transition: 0.4s;
+}
+.l4-input-hover ~ .l4-input-border i:after {
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: 0;
+}
+.l4-input-hover:focus ~ .l4-input-border:before,
+.l4-input-hover:focus ~ .l4-input-border:after {
+    width: 100%;
+    transition: 0.3s;
+}
+.l4-input-hover:focus ~ .l4-input-border i:before,
+.l4-input-hover:focus ~ .l4-input-border i:after {
+    height: 100%;
+    transition: 0.4s;
+}
+
+.l4-but {
+    margin: 4%;
+    width: 80%;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+        4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    outline: none;
+    background: #b621fe;
+    border: none;
+    z-index: 1;
+}
+
+.l4-but:after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #663dff;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+        4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.l4-but:hover {
+    color: #fff;
+}
+.l4-but:hover:after {
+    left: 0;
+    width: 100%;
+}
+.l4-but:active {
+    top: 2px;
+}
+.l4-contact {
+    text-align: center;
+}
+.l4-contact h1 {
+    font-size: 2rem;
+    font-family: Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
+    word-break: break-word;
+}
+.l4-handle div {
+    margin-top: 2%;
+    font-size: 15px;
+    font-weight: normal;
+    font-family: Roboto, serif;
+}
+
+.l4-handle i {
+    font-size: 30px;
+    margin-top: 8px;
+}
