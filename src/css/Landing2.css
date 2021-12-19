@@ -16,8 +16,11 @@
     margin: auto;
     text-align: left;
 }
-.landing2 h1 {
-    color: #4e4e50;
+.landing2-1 p{
+     margin-top: 4%;
+}
+.landing2-2 h1 {
+    color: #3f3b3b;
     font-size: 3rem;
     font-family: Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
     word-break: break-word;
@@ -39,4 +42,12 @@
     grid-auto-flow: column;
     grid-template-columns: auto auto;
     grid-column-gap: 10px;
+}
+.landing2-1 h1 {
+    color: #071e3d;
+    font-size: 3rem;
+    font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: normal;
 }
