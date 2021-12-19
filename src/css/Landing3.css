@@ -2,11 +2,16 @@
     display: flex;
     flex-flow: column wrap;
     gap: 5%;
-    justify-content: center;
 }
 .l3-r1 {
+    display: block;
     text-align: center;
+
+    width: 30%;
     margin: 5%;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 .l3-r2 {
     display: flex;
