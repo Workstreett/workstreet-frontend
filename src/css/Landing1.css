@@ -1,0 +1,31 @@
+.landing1{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto auto;
+    text-align: right;
+}
+.input_mail{
+    border-radius: 5em;
+    box-sizing: border-box;
+    background: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    color: #343d48;
+    padding: 5px 15px;
+    border-color: #dadada;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(233, 227, 254);
+    background-color: rgb(243, 242, 250);
+    height: 56px;
+}
+.suscribe_button{
+    border: 0;
+    outline: 0;
+    border-radius: 5em;
+    background-color: blueviolet;
+    color: aliceblue;
+    box-sizing: border-box;
+    width: 8em;
+    height: 100%;
+}
