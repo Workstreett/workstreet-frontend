@@ -7,9 +7,6 @@ class Landing3 extends React.Component {
             <div className="l3-grid">
                 <div className="l3-r1">
                     <h1>Join Us For</h1>
-                    <div className="l3-r1-text">
-                        Many Platform does not Focus on providing culture fit to interns
-                    </div>
                 </div>
                 <div className="l3-r2">
                     <div className="l3-f1">
