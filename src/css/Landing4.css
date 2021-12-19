@@ -5,13 +5,13 @@
     gap: 15%;
 }
 .l4-subs {
-    width: 30%;
+    width: 40%;
     text-align: center;
 }
 .l4-subs h6 {
     font-size: 15px;
-    font-weight: 900;
-    font-family: Consolas, monaco, monospace;
+    font-weight: 500;
+    font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, sans-serif;
 }
 
 .l4-subs h1 {
@@ -93,7 +93,7 @@
 
 .l4-but {
     margin: 4%;
-    width: 80%;
+    width: 50%;
     height: 40px;
     color: #fff;
     border-radius: 5px;
@@ -111,31 +111,6 @@
     border: none;
     z-index: 1;
 }
-
-.l4-but:after {
-    position: absolute;
-    content: '';
-    width: 0;
-    height: 100%;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    background-color: #ffa45c;
-    border-radius: 5px;
-    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
-        4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-.l4-but:hover {
-    color: #fff;
-}
-.l4-but:hover:after {
-    left: 0;
-    width: 100%;
-}
-.l4-but:active {
-    top: 2px;
-}
 .l4-contact {
     text-align: center;
 }
@@ -143,6 +118,7 @@
     font-size: 2rem;
     font-family: Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
     word-break: break-word;
+    margin-bottom: 4%;
 }
 .l4-handle div {
     margin-top: 2%;

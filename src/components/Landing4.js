@@ -26,7 +26,7 @@ class Landing4 extends React.Component {
         return (
             <div className="l4-flex">
                 <div className="l4-subs">
-                    <h6>For amazing Feeds</h6>
+                    <h6>For amazing opportunities & articles</h6>
 
                     <h1>Subscribe Us!</h1>
                     <form onSubmit={this.handleSubmit}>
@@ -38,7 +38,7 @@ class Landing4 extends React.Component {
                                 value={this.state.mailid}
                                 onChange={this.handleChange}
                                 className="l4-input-hover"
-                                placeholder="Email address"
+                                placeholder="Enter Your Email address"
                             />
                             <span className="l4-input-border">
                                 <i></i>
