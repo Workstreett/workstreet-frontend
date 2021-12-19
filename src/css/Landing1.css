@@ -17,15 +17,18 @@
     border-width: 2px;
     border-color: rgb(233, 227, 254);
     background-color: rgb(243, 242, 250);
-    height: 56px;
+    width: 60%;
+    height: 100%;
 }
-.suscribe_button{
+.subscribe_button{
     border: 0;
     outline: 0;
     border-radius: 5em;
-    background-color: blueviolet;
+    background-color: #1f4287;
     color: aliceblue;
     box-sizing: border-box;
-    width: 8em;
+    width: 10em;
     height: 100%;
+    margin-left: 10px;
+    cursor:pointer;
 }

@@ -28,7 +28,7 @@ class Landing2 extends React.Component {
                             <img src={logostryvs} alt="" width="250" height="auto" />
                             <img src={logonblik} alt="" width="200" height="auto" />
                         </div>
-                        <div>
+                        <div className="logo_collage-3">
                             <img src={logobrightchamps} alt="" width="250" height="auto" />
                         </div>
                     </div>
