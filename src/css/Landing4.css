@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 12%;
+    margin-top: 4%;
 }
 .l4-subs {
     width: 35%;
@@ -30,6 +31,7 @@
     background-color: #fff;
     border: 2px solid #ffa45c;
     border-radius: 15px;
+    margin-top: 15%;
 }
 
 .l4-input {
@@ -96,7 +98,7 @@
     width: 50%;
     height: 40px;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px 25px;
     font-family: 'Lato', sans-serif;
     font-weight: 500;
@@ -104,12 +106,14 @@
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
-    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
-        4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 10px 42px 1px rgba(255,164,92,0.37);
+    -webkit-box-shadow: 3px 10px 42px 1px rgba(255,164,92,0.37);
+    -moz-box-shadow: 3px 10px 42px 1px rgba(255,164,92,0.37);
     outline: none;
     background: #ffa45c;
     border: none;
     z-index: 1;
+
 }
 .l4-contact {
     border: 2px solid rgb(219, 217, 217);
