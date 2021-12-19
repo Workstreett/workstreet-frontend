@@ -1,12 +1,23 @@
 import React from 'react'
+import logo from '../images/logo.jpeg'
+import '../css/Landing1.css'
 
 class Landing1 extends React.Component {
     render() {
         return (
-            <div>
+            <div className="landing1">
+                <img src={logo} alt="" width="300" height="50" />
                 <form>
-                    <input type="text" name="Enter Your Email Address" />
-                    <input type="button" value="Suscribe" />
+                    <input
+                        className="input_mail"
+                        placeholder="Enter your email"
+                        type="email"
+                        pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+                        required
+                    />
+                    <button className="suscribe_button" type="button">
+                        Suscribe
+                    </button>
                 </form>
             </div>
         )
