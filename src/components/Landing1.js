@@ -10,7 +10,7 @@ class Landing1 extends React.Component {
                 <form>
                     <input
                         className="input_mail"
-                        placeholder="Enter your email"
+                        placeholder="Enter Your Email Address"
                         type="email"
                         pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
                         required

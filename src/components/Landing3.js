@@ -6,7 +6,7 @@ class Landing3 extends React.Component {
         return (
             <div className="l3-grid">
                 <div className="l3-r1">
-                    <h1>Features</h1>
+                    <h1>Join Us For</h1>
                     <div className="l3-r1-text">
                         Many Platform does not Focus on providing culture fit to interns
                     </div>
@@ -23,11 +23,11 @@ class Landing3 extends React.Component {
                     </div>
                     <div className="l3-f2">
                         <i className="far fa-user-circle"></i>
-                        <div className="l3-title">Internship&nbsp;</div>
+                        <div className="l3-title">Intern/Job&nbsp;</div>
                         <div className="l3-title">Opportunities</div>
                         <div className="l3-text">
-                            Slate helps you see how many more days you need to work to reach your
-                            financial goal.
+                            Notify Interns/Jobs of selective startups having positive culture as
+                            well as an engaging environment.
                         </div>
                     </div>
                 </div>
