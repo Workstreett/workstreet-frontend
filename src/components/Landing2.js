@@ -21,15 +21,15 @@ class Landing2 extends React.Component {
                     <h1>Trusted By Startups</h1>
                     <div className="logo_collage">
                         <div>
-                            <img src={logoenjoyalgo} alt="" width="250" height="50" />
-                            <img src={logozostel} alt="" width="250" height="50" />
+                            <img src={logoenjoyalgo} alt="" width="250" height="auto" />
+                            <img src={logozostel} alt="" width="250" height="auto" />
                         </div>
                         <div>
-                            <img src={logostryvs} alt="" width="250" height="100" />
-                            <img src={logonblik} alt="" width="250" height="50" />
+                            <img src={logostryvs} alt="" width="250" height="auto" />
+                            <img src={logonblik} alt="" width="200" height="auto" />
                         </div>
                         <div>
-                            <img src={logobrightchamps} alt="" width="250" height="50" />
+                            <img src={logobrightchamps} alt="" width="250" height="auto" />
                         </div>
                     </div>
                 </div>
