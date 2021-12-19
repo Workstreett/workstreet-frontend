@@ -15,8 +15,8 @@
     border-color: #dadada;
     border-style: solid;
     border-width: 2px;
-    border-color: #a3a7c7;
-    background-color: #f7f8fd;
+    border-color: #fde0c8;
+    background-color: #fcf0eb;
     width: 60%;
     height: 100%;
 }
@@ -24,11 +24,13 @@
     border: 0;
     outline: 0;
     border-radius: 5em;
-    background-color: #1f4287;
+    background-color:  #ef2779;
     color: aliceblue;
     box-sizing: border-box;
     width: 10em;
     height: 100%;
     margin-left: 10px;
     cursor:pointer;
+    font-weight: 700;
+    font-size: 15px;
 }
