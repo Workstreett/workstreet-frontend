@@ -28,7 +28,7 @@
     color: #000;
     font-family: Montserrat, 'Times New Roman', Times, serif;
     background-color: #fff;
-    border: 2px solid #b621fe;
+    border: 2px solid #ffa45c;
     border-radius: 15px;
 }
 
@@ -54,7 +54,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #663dff;
+    background-color: #ffa45c;
     transition: 0.3s;
 }
 .l4-input-hover ~ .l4-input-border:after {
@@ -71,7 +71,7 @@
     left: 0;
     width: 2px;
     height: 0;
-    background-color: #663dff;
+    background-color: #ffa45c;
     transition: 0.4s;
 }
 .l4-input-hover ~ .l4-input-border i:after {
@@ -107,7 +107,7 @@
     box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
         4px 4px 5px 0px rgba(0, 0, 0, 0.1);
     outline: none;
-    background: #b621fe;
+    background: #ffa45c;
     border: none;
     z-index: 1;
 }
@@ -120,7 +120,7 @@
     top: 0;
     right: 0;
     z-index: -1;
-    background-color: #663dff;
+    background-color: #ffa45c;
     border-radius: 5px;
     box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
         4px 4px 5px 0px rgba(0, 0, 0, 0.1);
