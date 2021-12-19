@@ -1,4 +1,6 @@
 .landing-grid {
     display: grid;
+    margin: 4%;
     grid-auto-flow: row;
+    grid-template-rows: auto auto auto auto;
 }
