@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 import logobrightchamps from '../images/logo-brightchamps.png'
 import logozostel from '../images/logo-zostel.png'
@@ -12,9 +13,9 @@ class Landing2 extends React.Component {
             <div className="landing2">
                 <div className="landing2-1">
                     <p>
-                        Join Workstreet as a platform, is to establish as fluid connection skilled
-                        candidates and upcoming startups with an engaging environment, keeping work
-                        culture as a priority
+                        The motive of <b>Workstreet</b> as a platform, is to establish as fluid
+                        connection between skilled candidates and upcoming startups with an engaging
+                        environment, keeping work culture as a priority.
                     </p>
                 </div>
                 <div>
