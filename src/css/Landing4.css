@@ -2,10 +2,10 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    gap: 15%;
+    gap: 12%;
 }
 .l4-subs {
-    width: 40%;
+    width: 35%;
     text-align: center;
 }
 .l4-subs h6 {
@@ -112,22 +112,56 @@
     z-index: 1;
 }
 .l4-contact {
-    text-align: center;
+    background-color: rgb(245, 245, 245);
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 35%;
+    border-radius: 20px;
 }
 .l4-contact h1 {
+    color: black;
+    text-align: center;
     font-size: 2rem;
     font-family: Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
     word-break: break-word;
-    margin-bottom: 4%;
-}
-.l4-handle div {
-    margin-top: 2%;
-    font-size: 15px;
-    font-weight: normal;
-    font-family: Roboto, serif;
+    margin-bottom: 1%;
 }
 
-.l4-handle i {
-    font-size: 30px;
-    margin-top: 8px;
+.l4-contact-text {
+    color: black;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, sans-serif;
+    margin-bottom: 2%;
+}
+.l4-handle {
+    margin-left: 10%;
+
+    margin-right: 10%;
+}
+
+.l4-handle-item {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: rgb(219, 217, 217);
+    border-radius: 10px;
+    color: black;
+}
+
+.l4-handle-item i {
+    font-size: 35px;
+    margin-right: 4%;
+    display: inline-block;
+}
+
+.l4-handle-item div {
+    font-size: 1.2rem;
+    font-weight: normal;
+    font-family: Roboto, serif;
+    display: inline-block;
 }
