@@ -66,7 +66,7 @@ class Landing4 extends React.Component {
                         </div>
                         <div className="l4-handle-item">
                             <i className="fab fa-linkedin"></i>
-                            <div>careers@workstreet.tech</div>
+                            <div>Linkedin Handle</div>
                         </div>
                         <div className="l4-handle-item">
                             <i className="fas fa-envelope-square"></i>
