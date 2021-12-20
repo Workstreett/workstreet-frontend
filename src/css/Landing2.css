@@ -49,6 +49,7 @@
     font-weight: 500;
     font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, sans-serif;
     margin-bottom: 35px;
+    margin-top: 0;
 }
 .logo_collage {
     display: grid;
@@ -101,12 +102,20 @@
         flex-wrap: wrap;
     }
     .landing2-1 {
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
     .landing2-2 h1 {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
     .landing2-1 div {
         display: inline-block;
+    }
+}
+@media all and (max-width: 500px) {
+    .landing2-1 {
+        font-size: 16px;
+    }
+    .landing2-1 h1 {
+        font-size: 24px;
     }
 }

@@ -13,12 +13,12 @@ class Landing4 extends React.Component {
 
     handleChange(event) {
         this.setState({ mailid: event.target.value })
-        console.log(this.state.mailid)
+        // console.log(this.state.mailid)
     }
 
     handleSubmit(event) {
         alert('email was submitted: ' + this.state.mailid)
-        console.log(this.state.mailid)
+        // console.log(this.state.mailid)
         event.preventDefault()
     }
 

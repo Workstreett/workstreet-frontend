@@ -75,3 +75,18 @@
         flex-wrap: wrap;
     }
 }
+
+@media all and (max-width: 500px) {
+    .l3-r1 h1 {
+        font-size: 30px;
+    }
+    .l3-title {
+        font-size: 24px;
+    }
+    .l3-r1 {
+        margin: 1%;
+    }
+    .l3-text {
+        line-height: 1.25;
+    }
+}

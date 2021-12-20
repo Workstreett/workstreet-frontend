@@ -1,6 +1,6 @@
 import React from 'react'
 import '../css/JobCard.css'
-import { CalendarIcon, CashIcon, CheckIcon } from '@heroicons/react/outline'
+// import { CalendarIcon, CashIcon, CheckIcon } from '@heroicons/react/outline'
 
 class JobCard extends React.Component {
     /* constructor() {

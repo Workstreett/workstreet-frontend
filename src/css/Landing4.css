@@ -16,12 +16,16 @@
     font-size: 15px;
     font-weight: 500;
     font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, sans-serif;
+    margin-bottom: 0%;
+    margin-top: 2%;
 }
 
 .l4-subs h1 {
     font-size: 2rem;
     font-family: Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
     word-break: break-word;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 .l4-subs input[type='email'] {
     display: block;
