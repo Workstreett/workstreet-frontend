@@ -1,10 +1,10 @@
-.landing1{
+.landing1 {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: auto auto;
     text-align: right;
 }
-.input_mail{
+.input_mail {
     border-radius: 5em;
     box-sizing: border-box;
     background: #fff;
@@ -20,20 +20,30 @@
     width: 60%;
     height: 100%;
 }
-.subscribe_button{
+.subscribe_button {
     border: 0;
     outline: 0;
     border-radius: 5em;
-    background-color:  #ffa45c;
+    background-color: #ffa45c;
     color: aliceblue;
     box-sizing: border-box;
     width: 10em;
     height: 100%;
     margin-left: 10px;
-    cursor:pointer;
+    cursor: pointer;
     font-weight: 700;
     font-size: 15px;
-    box-shadow: 3px 10px 42px 1px rgba(255,164,92,0.37);
-    -webkit-box-shadow: 3px 10px 42px 1px rgba(255,164,92,0.37);
-    -moz-box-shadow: 3px 10px 42px 1px rgba(255,164,92,0.37);
+    box-shadow: 3px 10px 42px 1px rgba(255, 164, 92, 0.37);
+    -webkit-box-shadow: 3px 10px 42px 1px rgba(255, 164, 92, 0.37);
+    -moz-box-shadow: 3px 10px 42px 1px rgba(255, 164, 92, 0.37);
+}
+
+@media all and (max-width: 800px) {
+    .landing1-form {
+        display: none;
+    }
+    .landing1 {
+        display: flex;
+        justify-content: center;
+    }
 }

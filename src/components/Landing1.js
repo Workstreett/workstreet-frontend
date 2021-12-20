@@ -7,7 +7,7 @@ class Landing1 extends React.Component {
         return (
             <div className="landing1">
                 <img src={logo} alt="" width="300" height="50" />
-                <form>
+                <form className="landing1-form">
                     <input
                         className="input_mail"
                         placeholder="Enter Your Email Address"
