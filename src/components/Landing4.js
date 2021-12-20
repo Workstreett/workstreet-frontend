@@ -53,12 +53,6 @@ class Landing4 extends React.Component {
                     <h1>Contact Workstreet</h1>
                     <div className="l4-contact-text">We would love to hear from you!</div>
                     <div className="l4-handle">
-                        {/* <ul class="fa-ul">
-  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>List icons can</li>
-  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>be used to</li>
-  <li><span class="fa-li"><i class="fas fa-spinner fa-pulse"></i></span>replace bullets</li>
-
-</ul> */}
                         <div className="l4-handle-item">
                             <a href="mailto:careers@workstreet.tech">
                                 <i className="far fa-envelope"></i>
@@ -73,7 +67,7 @@ class Landing4 extends React.Component {
                             </a>
                         </div>
                         <div className="l4-handle-item">
-                            <a href="mailto:careers@workstreet.tech">
+                            <a href="mailto:head@workstreet.tech">
                                 <i className="far fa-envelope"></i>
                                 <div>head@workstreet.tech</div>
                             </a>

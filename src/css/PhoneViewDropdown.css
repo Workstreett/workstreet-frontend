@@ -1,8 +1,7 @@
-
-.phoneviewcategories{
-    display:none;
+.phoneviewcategories {
+    display: none;
 }
-@media screen and (max-width: 960px) {
+/* @media screen and (max-width: 960px) {
     .phoneviewcategories{
         display:list-item;
     }
@@ -39,4 +38,4 @@
           margin-left: -1.5em;
           color: #0074D9;
         }
-  }
+  } */

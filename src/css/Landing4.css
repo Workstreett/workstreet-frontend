@@ -6,8 +6,11 @@
     margin-top: 4%;
 }
 .l4-subs {
-    width: 35%;
+    width: 90%;
+    max-width: 400px;
+    padding-top: 2%;
     text-align: center;
+    margin-bottom: 5%;
 }
 .l4-subs h6 {
     font-size: 15px;
@@ -106,21 +109,23 @@
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
-    box-shadow: 3px 10px 42px 1px rgba(255,164,92,0.37);
-    -webkit-box-shadow: 3px 10px 42px 1px rgba(255,164,92,0.37);
-    -moz-box-shadow: 3px 10px 42px 1px rgba(255,164,92,0.37);
+    box-shadow: 3px 10px 42px 1px rgba(255, 164, 92, 0.37);
+    -webkit-box-shadow: 3px 10px 42px 1px rgba(255, 164, 92, 0.37);
+    -moz-box-shadow: 3px 10px 42px 1px rgba(255, 164, 92, 0.37);
     outline: none;
     background: #ffa45c;
     border: none;
     z-index: 1;
-
 }
 .l4-contact {
     border: 2px solid rgb(219, 217, 217);
     padding-top: 2%;
     padding-bottom: 2%;
-    width: 35%;
+    width: 90%;
+    max-width: 400px;
     border-radius: 20px;
+
+    margin-bottom: 5%;
 }
 .l4-contact h1 {
     color: black;
@@ -129,6 +134,8 @@
     font-family: Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
     word-break: break-word;
     margin-bottom: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .l4-contact-text {
@@ -163,7 +170,7 @@
 }
 
 .l4-handle-item i {
-    font-size: 35px;
+    font-size: 2rem;
     margin-right: 4%;
     display: inline-block;
 }
@@ -183,4 +190,13 @@
 
 .fa-envelope {
     color: #ea4335;
+}
+
+@media all and (max-width: 500px) {
+    .l4-handle-item div {
+        font-size: 0.8rem;
+    }
+    .l4-handle-item i {
+        font-size: 1.7rem;
+    }
 }
