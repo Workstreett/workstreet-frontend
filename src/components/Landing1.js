@@ -1,10 +1,11 @@
 import React from 'react'
-import logo from '../images/logo.jpeg'
+import logo from '../images/logo.svg'
 import '../css/Landing1.css'
 import axios from 'axios'
+import { toast } from 'react-toastify'
 
 class Landing1 extends React.Component {
-    state = { email: '' }
+    state = { email: '', isLoading: false }
 
     handleChange = (event) => {
         const { value } = event.target
@@ -14,19 +15,43 @@ class Landing1 extends React.Component {
     }
 
     handleSubmit = (event) => {
+        this.setState({
+            isLoading: true
+        })
         axios
             .post('https://workstreet.herokuapp.com/subscribe', { email: this.state.email })
             .then((res) => {
                 // console.log(res)
-                alert(
-                    `The email ${this.state.email} has been added to the subscription list, Thank You`
+                toast.success(
+                    `The email ${this.state.email} has been added in the subscription list.`,
+                    {
+                        position: 'bottom-right',
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: false,
+                        draggable: true,
+                        progress: undefined,
+                        style: { color: '#071e3d' },
+                        progressStyle: { background: '#ffa45c' }
+                    }
                 )
                 this.setState({
-                    email: ''
+                    email: '',
+                    isLoading: false
                 })
             })
             .catch((err) => {
                 console.log(err.message)
+                toast.error("Sorry, Can't add your email right now, Please try again Later", {
+                    position: 'bottom-right',
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                    progress: undefined
+                })
             })
         event.preventDefault()
     }
@@ -34,7 +59,7 @@ class Landing1 extends React.Component {
     render() {
         return (
             <div className="landing1">
-                <img src={logo} alt="" width="300" height="50" />
+                <img src={logo} alt="logo" />
                 <form className="landing1-form" onSubmit={this.handleSubmit}>
                     <input
                         className="input_mail"
@@ -45,7 +70,11 @@ class Landing1 extends React.Component {
                         required
                         onChange={this.handleChange}
                     />
-                    <button className="subscribe_button" type="submit">
+                    <button
+                        className="subscribe_button"
+                        type="submit"
+                        disabled={this.state.isLoading}
+                    >
                         Subscribe
                     </button>
                 </form>

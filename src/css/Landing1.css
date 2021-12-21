@@ -3,6 +3,14 @@
     grid-auto-flow: column;
     grid-template-columns: auto auto;
     text-align: right;
+    height: 50px;
+    align-items: center;
+}
+.landing1 img {
+    height: 30px;
+}
+.landing1-form {
+    height: 100%;
 }
 .input_mail {
     border-radius: 5em;
@@ -20,6 +28,9 @@
     width: 60%;
     height: 100%;
 }
+.input_mail:focus {
+    outline: none;
+}
 .subscribe_button {
     border: 0;
     outline: 0;
@@ -36,6 +47,10 @@
     box-shadow: 3px 10px 42px 1px rgba(255, 164, 92, 0.37);
     -webkit-box-shadow: 3px 10px 42px 1px rgba(255, 164, 92, 0.37);
     -moz-box-shadow: 3px 10px 42px 1px rgba(255, 164, 92, 0.37);
+}
+
+.subscribe_button:disabled {
+    cursor: not-allowed;
 }
 
 @media all and (max-width: 800px) {

@@ -19,11 +19,11 @@ class Landing2 extends React.Component {
                     </p>
                 </div>
                 <div className="landing2-2">
-                    <h1>Finding Gems In The Bush</h1>
-                    <h6>linking skilled candidates and cultured startups</h6>
-                    <div className="logo_collage">
-                        <img src={logo_collage} alt=" " />
+                    <div>
+                        <h1>Finding Gems In The Bush</h1>
+                        <h6>linking skilled candidates and cultured startups</h6>
                     </div>
+                    <img src={logo_collage} alt=" " />
                 </div>
             </div>
         )
