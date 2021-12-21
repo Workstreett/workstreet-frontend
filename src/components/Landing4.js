@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/Landing4.css'
+import axios from 'axios'
 
 class Landing4 extends React.Component {
     constructor() {
@@ -17,7 +18,20 @@ class Landing4 extends React.Component {
     }
 
     handleSubmit(event) {
-        alert('email was submitted: ' + this.state.mailid)
+        axios
+            .post('https://workstreet.herokuapp.com/subscribe', { email: this.state.mailid })
+            .then((res) => {
+                // console.log(res)
+                alert(
+                    `The email ${this.state.mailid} has been added to the subscription list, Thank You`
+                )
+                this.setState({
+                    email: ''
+                })
+            })
+            .catch((err) => {
+                console.log(err.message)
+            })
         // console.log(this.state.mailid)
         event.preventDefault()
     }
