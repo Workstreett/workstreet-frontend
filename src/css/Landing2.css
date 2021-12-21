@@ -5,18 +5,26 @@
     text-align: center;
     column-gap: 50px;
     justify-content: space-around;
+    align-items: stretch;
 }
 .landing2-1 {
     color: #343d48cc;
     font-weight: 400;
     font-size: 1.5rem;
-    line-height: 1.75;
+    line-height: 1.75em;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
         'Open Sans', 'Helvetica Neue', sans-serif;
     margin: auto;
     text-align: left;
-    width: 90%;
-    max-width: 700px;
+    width: 100%;
+    /* max-width: 700px; */
+}
+.landing2-1 h1 {
+    color: #071e3d;
+    font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: normal;
 }
 
 .landing2-1 div {
@@ -24,11 +32,16 @@
 }
 .landing2-1 p {
     margin-top: 4%;
+    width: 100%;
+    max-width: 500px;
 }
 
 .landing2-2 {
-    width: 90%;
-    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    /* max-width: 500px; */
 }
 
 .landing2-2 h1 {
@@ -39,7 +52,7 @@
     margin-top: 30px;
     margin-bottom: 5px;
     font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 2em;
+    font-size: 2.4em;
     font-weight: 700;
 }
 
@@ -51,16 +64,10 @@
     margin-bottom: 35px;
     margin-top: 0;
 }
-.logo_collage {
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-rows: auto auto auto;
-    grid-row-gap: 10px;
-}
 
-.logo_collage img {
+.landing2-2 img {
     width: 100%;
-    max-width: 500px;
+    /* max-width: 500px; */
     height: auto;
 }
 .logo_collage div {
@@ -69,17 +76,13 @@
     grid-template-columns: auto auto;
     grid-column-gap: 10px;
 }
-.landing2-1 h1 {
-    color: #071e3d;
-    font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 2em;
-    font-weight: 700;
-    line-height: normal;
-}
 
 @media all and (max-width: 1200px) {
     .landing2-1 {
-        max-width: 500px;
+        max-width: 100%;
+    }
+    .landing2-1 p {
+        max-width: 100%;
     }
 }
 
@@ -95,17 +98,31 @@
     .landing2-2 h6 {
         margin-bottom: 3%;
     }
+    .landing2-2 h6 {
+        margin: 30px 0;
+    }
+    .landing2-2 img {
+        width: 70%;
+        margin: 0 auto;
+    }
 }
 
 @media all and (max-width: 800px) {
     .landing2 {
         flex-wrap: wrap;
     }
-    .landing2-1 {
-        font-size: 1rem;
+    .landing2-1 h1 {
+        font-size: 1.7em;
+    }
+    .landing2-1 p {
+        font-size: 1em;
     }
     .landing2-2 h1 {
-        font-size: 1.2em;
+        font-size: 2rem;
+    }
+    .landing2-2 h6 {
+        font-size: 1rem;
+        margin: 40px 0;
     }
     .landing2-1 div {
         display: inline-block;
@@ -124,5 +141,6 @@
     }
     .landing2-2 h6 {
         font-size: 13px;
+        margin: 20px 0;
     }
 }

@@ -20,6 +20,9 @@
     width: 60%;
     height: 100%;
 }
+.input_mail:focus {
+    outline: none;
+}
 .subscribe_button {
     border: 0;
     outline: 0;

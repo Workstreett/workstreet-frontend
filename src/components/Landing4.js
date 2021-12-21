@@ -1,6 +1,7 @@
 import React from 'react'
 import '../css/Landing4.css'
 import axios from 'axios'
+import { toast } from 'react-toastify'
 
 class Landing4 extends React.Component {
     constructor() {
@@ -22,8 +23,19 @@ class Landing4 extends React.Component {
             .post('https://workstreet.herokuapp.com/subscribe', { email: this.state.mailid })
             .then((res) => {
                 // console.log(res)
-                alert(
-                    `The email ${this.state.mailid} has been added to the subscription list, Thank You`
+                toast.success(
+                    `The email ${this.state.mailid} has been added in the subscription list.`,
+                    {
+                        position: 'bottom-right',
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: false,
+                        draggable: true,
+                        progress: undefined,
+                        style: { color: '#071e3d' },
+                        progressStyle: { background: '#ffa45c' }
+                    }
                 )
                 this.setState({
                     mailid: ''
@@ -31,6 +43,15 @@ class Landing4 extends React.Component {
             })
             .catch((err) => {
                 console.log(err.message)
+                toast.error("Sorry, Can't add your email right now, Please try again Later", {
+                    position: 'bottom-right',
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                    progress: undefined
+                })
             })
         // console.log(this.state.mailid)
         event.preventDefault()
@@ -40,7 +61,7 @@ class Landing4 extends React.Component {
         return (
             <div className="l4-flex">
                 <div className="l4-subs">
-                    <h6>For amazing opportunities & articles</h6>
+                    <h6>For amazing opportunities &#38; articles</h6>
 
                     <h1>Subscribe Us!</h1>
                     <form onSubmit={this.handleSubmit}>

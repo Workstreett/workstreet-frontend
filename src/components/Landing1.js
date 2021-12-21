@@ -2,6 +2,7 @@ import React from 'react'
 import logo from '../images/logo.jpeg'
 import '../css/Landing1.css'
 import axios from 'axios'
+import { toast } from 'react-toastify'
 
 class Landing1 extends React.Component {
     state = { email: '' }
@@ -18,8 +19,19 @@ class Landing1 extends React.Component {
             .post('https://workstreet.herokuapp.com/subscribe', { email: this.state.email })
             .then((res) => {
                 // console.log(res)
-                alert(
-                    `The email ${this.state.email} has been added to the subscription list, Thank You`
+                toast.success(
+                    `The email ${this.state.email} has been added in the subscription list.`,
+                    {
+                        position: 'bottom-right',
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: false,
+                        draggable: true,
+                        progress: undefined,
+                        style: { color: '#071e3d' },
+                        progressStyle: { background: '#ffa45c' }
+                    }
                 )
                 this.setState({
                     email: ''
@@ -27,6 +39,15 @@ class Landing1 extends React.Component {
             })
             .catch((err) => {
                 console.log(err.message)
+                toast.error("Sorry, Can't add your email right now, Please try again Later", {
+                    position: 'bottom-right',
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                    progress: undefined
+                })
             })
         event.preventDefault()
     }
