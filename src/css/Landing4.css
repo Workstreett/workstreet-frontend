@@ -177,13 +177,14 @@
     font-size: 2rem;
     margin-right: 4%;
     display: inline-block;
+    justify-content: center;
 }
 
 .l4-handle-item div {
     color: black;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: normal;
-    font-family: Roboto, serif;
+    font-family: 'Roboto';
     display: inline-block;
     justify-content: center;
 }
@@ -193,7 +194,7 @@
 }
 
 .fa-envelope {
-    color: #ea4335;
+    color: #ffa45c;
 }
 
 @media all and (max-width: 500px) {

@@ -55,7 +55,7 @@ class Landing4 extends React.Component {
                     <div className="l4-handle">
                         <div className="l4-handle-item">
                             <a href="mailto:careers@workstreet.tech">
-                                <i className="far fa-envelope"></i>
+                                <i className="fas fa-envelope"></i>
 
                                 <div>careers@workstreet.tech</div>
                             </a>
@@ -68,7 +68,7 @@ class Landing4 extends React.Component {
                         </div>
                         <div className="l4-handle-item">
                             <a href="mailto:head@workstreet.tech">
-                                <i className="far fa-envelope"></i>
+                                <i className="fas fa-envelope"></i>
                                 <div>head@workstreet.tech</div>
                             </a>
                         </div>
