@@ -5,7 +5,7 @@ import axios from 'axios'
 import { toast } from 'react-toastify'
 
 class Landing1 extends React.Component {
-    state = { email: '' }
+    state = { email: '', isLoading: false }
 
     handleChange = (event) => {
         const { value } = event.target
@@ -15,6 +15,9 @@ class Landing1 extends React.Component {
     }
 
     handleSubmit = (event) => {
+        this.setState({
+            isLoading: true
+        })
         axios
             .post('https://workstreet.herokuapp.com/subscribe', { email: this.state.email })
             .then((res) => {
@@ -34,7 +37,8 @@ class Landing1 extends React.Component {
                     }
                 )
                 this.setState({
-                    email: ''
+                    email: '',
+                    isLoading: false
                 })
             })
             .catch((err) => {
@@ -66,7 +70,11 @@ class Landing1 extends React.Component {
                         required
                         onChange={this.handleChange}
                     />
-                    <button className="subscribe_button" type="submit">
+                    <button
+                        className="subscribe_button"
+                        type="submit"
+                        disabled={this.state.isLoading}
+                    >
                         Subscribe
                     </button>
                 </form>

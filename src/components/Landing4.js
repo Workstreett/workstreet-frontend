@@ -7,7 +7,8 @@ class Landing4 extends React.Component {
     constructor() {
         super()
         this.state = {
-            mailid: ''
+            mailid: '',
+            isLoading: false
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -19,6 +20,9 @@ class Landing4 extends React.Component {
     }
 
     handleSubmit(event) {
+        this.setState({
+            isLoading: true
+        })
         axios
             .post('https://workstreet.herokuapp.com/subscribe', { email: this.state.mailid })
             .then((res) => {
@@ -38,7 +42,8 @@ class Landing4 extends React.Component {
                     }
                 )
                 this.setState({
-                    mailid: ''
+                    mailid: '',
+                    isLoading: false
                 })
             })
             .catch((err) => {
@@ -80,7 +85,12 @@ class Landing4 extends React.Component {
                                 <i></i>
                             </span>
                         </div>
-                        <button className="l4-but" type="submit" value="Submit">
+                        <button
+                            className="l4-but"
+                            type="submit"
+                            value="Submit"
+                            disabled={this.state.isLoading}
+                        >
                             <span>Subscribe</span>
                         </button>
                     </form>

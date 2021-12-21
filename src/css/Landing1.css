@@ -49,6 +49,10 @@
     -moz-box-shadow: 3px 10px 42px 1px rgba(255, 164, 92, 0.37);
 }
 
+.subscribe_button:disabled {
+    cursor: not-allowed;
+}
+
 @media all and (max-width: 800px) {
     .landing1-form {
         display: none;
