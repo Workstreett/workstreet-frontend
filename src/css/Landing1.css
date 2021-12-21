@@ -3,6 +3,14 @@
     grid-auto-flow: column;
     grid-template-columns: auto auto;
     text-align: right;
+    height: 50px;
+    align-items: center;
+}
+.landing1 img {
+    height: 30px;
+}
+.landing1-form {
+    height: 100%;
 }
 .input_mail {
     border-radius: 5em;

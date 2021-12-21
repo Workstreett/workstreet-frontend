@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../images/logo.jpeg'
+import logo from '../images/logo.svg'
 import '../css/Landing1.css'
 import axios from 'axios'
 import { toast } from 'react-toastify'
@@ -55,7 +55,7 @@ class Landing1 extends React.Component {
     render() {
         return (
             <div className="landing1">
-                <img src={logo} alt="" width="300" height="50" />
+                <img src={logo} alt="logo" />
                 <form className="landing1-form" onSubmit={this.handleSubmit}>
                     <input
                         className="input_mail"
