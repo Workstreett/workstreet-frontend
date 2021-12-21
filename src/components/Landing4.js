@@ -26,7 +26,7 @@ class Landing4 extends React.Component {
                     `The email ${this.state.mailid} has been added to the subscription list, Thank You`
                 )
                 this.setState({
-                    email: ''
+                    mailid: ''
                 })
             })
             .catch((err) => {
@@ -53,6 +53,7 @@ class Landing4 extends React.Component {
                                 onChange={this.handleChange}
                                 className="l4-input-hover"
                                 placeholder="Enter Your Email address"
+                                required
                             />
                             <span className="l4-input-border">
                                 <i></i>
