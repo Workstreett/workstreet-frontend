@@ -15,7 +15,7 @@ class Landing3 extends React.Component {
                         <div className="l3-title"> Article</div>
                         <div className="l3-text">
                             A 2 min. quick-read article on startups in the form of a story. You will
-                            definitely be going to love it. Workstreet doesnt lie.
+                            definitely be going to love it. Workstreet doesn&apos;t lie.
                         </div>
                     </div>
                     <div className="l3-f2">
