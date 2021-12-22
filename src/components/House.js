@@ -19,6 +19,7 @@ import '../css/secGrid.css'
 // import AdminPage from './AdminPage'
 // import PostForm from './PostForm'
 import Landing from '../pages/Landing.js'
+import NotFoundPage from '../pages/NotFoundPage'
 class House extends React.Component {
     render() {
         return (
@@ -61,6 +62,7 @@ class House extends React.Component {
                     <Route exact path="/admin" component={AdminPage} />
                     <Route exact path="/admin/postform" component={PostForm} /> */}
                     <Route path="/" exact component={Landing} />
+                    <Route path="*" exact component={NotFoundPage} />
                 </Switch>
             </Router>
         )
