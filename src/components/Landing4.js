@@ -107,7 +107,7 @@ class Landing4 extends React.Component {
                             </a>
                         </div>
                         <div className="l4-handle-item">
-                            <a href="https://www.linkedin.com/company/wworkstreet">
+                            <a href="https://www.linkedin.com/company/workstreet-tech">
                                 <i className="fab fa-linkedin"></i>
                                 <div>Linkedin Handle</div>
                             </a>

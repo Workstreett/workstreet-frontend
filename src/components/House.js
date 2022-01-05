@@ -19,6 +19,8 @@ import '../css/secGrid.css'
 // import AdminPage from './AdminPage'
 // import PostForm from './PostForm'
 import Landing from '../pages/Landing.js'
+import GoogleLogin from '../pages/GoogleLogin'
+import AppliedCompany from '../pages/AppliedCompany'
 import NotFoundPage from '../pages/NotFoundPage'
 class House extends React.Component {
     render() {
@@ -62,6 +64,8 @@ class House extends React.Component {
                     <Route exact path="/admin" component={AdminPage} />
                     <Route exact path="/admin/postform" component={PostForm} /> */}
                     <Route path="/" exact component={Landing} />
+                    <Route path="/googleauth" exact component={GoogleLogin} />
+                    <Route path="/appliedcompany" exact component={AppliedCompany} />
                     <Route path="*" exact component={NotFoundPage} />
                 </Switch>
             </Router>
