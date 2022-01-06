@@ -27,7 +27,7 @@ class AppliedCompany extends React.Component {
                         <p className="number">Total aplication: 3</p>
                     </div>
                 </div>
-                <h3 className="line-comapany">Your Application</h3>
+                <h3 className="line-comapany">Your Applications</h3>
                 <div className="applied-list">
                     <Company
                         logo={NbliK}

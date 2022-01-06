@@ -16,13 +16,14 @@
 }
 
 .applied-user-info {
-    padding: 20px 20px 20px 0px;
+    padding: 30px 20px 20px 0px;
     margin-left: 3%;
     display: flex;
     align-items: center;
 }
 .applied-user-info img {
     width: 5%;
+    min-width: 40px;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 20px;
@@ -51,6 +52,8 @@
     font-weight: 600;
     font-size: 2rem;
     color: #212121;
+    margin-top: 20px;
+    margin-bottom: 60px;
     margin-left: 15%;
     margin-right: 15%;
 }
@@ -75,5 +78,52 @@
     margin-right: 3%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+@media all and (max-width: 1000px) {
+    .applied-user-info .greeting {
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .applied-user-info .number {
+        font-size: 12px;
+        line-height: 12px;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .line-comapany {
+        font-size: 25px;
+    }
+    .line-comapany:before,
+    .line-comapany:after {
+        border-bottom: 4px #ffa45c solid;
+    }
+    .applied-user-info .greeting {
+        font-size: 22px;
+        line-height: 22px;
+    }
+    .applied-user-info .number {
+        font-size: 10px;
+        line-height: 10px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .line-comapany {
+        font-size: 20px;
+        letter-spacing: 0.05px;
+    }
+    .applied-header img {
+        height: 20px;
+    }
+    .applied-header button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    .applied-user-info img {
+        margin-right: 10px;
+    }
 }

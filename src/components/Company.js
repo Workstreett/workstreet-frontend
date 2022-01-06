@@ -12,13 +12,10 @@ class Company extends React.Component {
 
     componentDidMount() {
         if (this.props.status === 1) {
-            console.log('first')
             this.setState({ status: 'Accepted', color: '#008000' })
         } else if (this.props.status === 0) {
-            console.log('second')
             this.setState({ status: 'Process', color: '#FFBF00' })
         } else {
-            console.log('third')
             this.setState({ status: 'Rejected', color: '#ff0000' })
         }
     }
@@ -28,7 +25,7 @@ class Company extends React.Component {
             <div className="company-card">
                 <img src={this.props.logo} alt="comapny-logo" />
                 <hr />
-                <div className="comapny-info">{this.props.info}</div>
+                <div className="company-info">{this.props.info}</div>
                 <div className="company-shortdetails">
                     <div>
                         <b>Applied Role: </b>
