@@ -6,16 +6,16 @@
     object-fit: cover;
     background-repeat: no-repeat;
     background-position: left bottom;
-    background-size: 100%;
+    background-size: cover;
     justify-content: center;
 }
-
 .Glogin-box {
     align-self: center;
     width: 25%;
+    min-width: 300px;
     height: 60%;
-    background-color: rgba(244, 240, 240, 0.1);
-
+    max-height: 350px;
+    background-color: rgba(255, 255, 255, 0.7);
     border: 2px solid #808080;
     border-radius: 10px;
 }
@@ -63,6 +63,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 20%;
+    cursor: pointer;
 }
 
 .Glogin-box button:hover {
