@@ -3,6 +3,8 @@ import Company from '../components/Company'
 import UserHeader from '../components/UserHeader'
 import '../css/CompanyStatus.css'
 import NbliK from '../images/NbliK.png'
+import RoundStatus from '../components/RoundStatus'
+import Landing4 from '../components/Landing4'
 
 class CompanyStatus extends React.Component {
     render() {
@@ -30,8 +32,40 @@ class CompanyStatus extends React.Component {
                             track={false}
                         />
                     </div>
-                    <div className="compstatus-col2"></div>
+                    <div className="compstatus-c2">
+                        <div className="compstatus-tracktext">Track Status</div>
+                        <hr
+                            style={{
+                                height: '1px',
+                                borderWidth: '0px',
+                                backgroundColor: '#000000'
+                            }}
+                        />
+                        <div className="roundtstatus-portion">
+                            <RoundStatus
+                                name="Resume Round"
+                                date="12/10/2021"
+                                review="Good Resume, you may develop on your python, js and React Skills. Forwarded for next Round"
+                            />
+                            <RoundStatus
+                                name="Resume Round"
+                                date="12/10/2021"
+                                review="Good Resume, you may develop on your python, js and React Skills. Forwarded for next Round"
+                            />
+                            <RoundStatus
+                                name="Resume Round"
+                                date="12/10/2021"
+                                review="Good Resume, you may develop on your python, js and React Skills. Forwarded for next Round"
+                            />
+                            <RoundStatus
+                                name="Resume Round"
+                                date="12/10/2021"
+                                review="Good Resume, you may develop on your python, js and React Skills. Forwarded for next Round"
+                            />
+                        </div>
+                    </div>
                 </div>
+                <Landing4 />
             </div>
         )
     }
