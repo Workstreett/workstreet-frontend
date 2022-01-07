@@ -21,6 +21,7 @@ import '../css/secGrid.css'
 import Landing from '../pages/Landing.js'
 import GoogleLogin from '../pages/GoogleLogin'
 import AppliedCompany from '../pages/AppliedCompany'
+import CompanyStatus from '../pages/CompanyStatus.js'
 import NotFoundPage from '../pages/NotFoundPage'
 class House extends React.Component {
     render() {
@@ -66,6 +67,7 @@ class House extends React.Component {
                     <Route path="/" exact component={Landing} />
                     <Route path="/googleauth" exact component={GoogleLogin} />
                     <Route path="/appliedcompany" exact component={AppliedCompany} />
+                    <Route path="/companystatus" exact component={CompanyStatus} />
                     <Route path="*" exact component={NotFoundPage} />
                 </Switch>
             </Router>

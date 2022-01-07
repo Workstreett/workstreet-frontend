@@ -1,20 +1,14 @@
 import React from 'react'
 import '../css/AppliedCompany.css'
 import Company from '../components/Company'
-import logo from '../images/logo.svg'
+import UserHeader from '../components/UserHeader'
 import NbliK from '../images/NbliK.png'
 
 class AppliedCompany extends React.Component {
     render() {
         return (
             <div>
-                <div className="applied-header">
-                    <img src={logo} alt="Logo" />
-                    <button>
-                        <i className="fas fa-power-off fa-x"></i> Logout
-                    </button>
-                </div>
-                <hr style={{ height: '2px', borderWidth: '0px', backgroundColor: '#000000' }} />
+                <UserHeader />
                 <div className="applied-user-info">
                     <img
                         src="https://lh3.googleusercontent.com/a/AATXAJy3xWOki6DHu_Kh1Ripe8bJQ5f6-70QcKxKMffl=s288-p-rw-no-mo"
@@ -37,6 +31,7 @@ class AppliedCompany extends React.Component {
                         role="Business Development"
                         date="21/10/2021"
                         status={1}
+                        track={true}
                     />
                     <Company
                         logo={NbliK}
@@ -46,6 +41,7 @@ class AppliedCompany extends React.Component {
                         role="Business Development"
                         date="21/10/2021"
                         status={0}
+                        track={true}
                     />
                     <Company
                         logo={NbliK}
@@ -55,6 +51,7 @@ class AppliedCompany extends React.Component {
                         role="Business Development"
                         date="21/10/2021"
                         status={-1}
+                        track={true}
                     />
                 </div>
             </div>
