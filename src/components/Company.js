@@ -6,7 +6,8 @@ class Company extends React.Component {
         super(props)
         this.state = {
             status: 'nothing',
-            color: ''
+            color: '',
+            display: 'none'
         }
     }
 
@@ -18,6 +19,8 @@ class Company extends React.Component {
         } else {
             this.setState({ status: 'Rejected', color: '#ff0000' })
         }
+
+        if (this.props.track) this.setState({ display: 'block' })
     }
 
     render() {
@@ -40,7 +43,9 @@ class Company extends React.Component {
                         <b>{this.state.status}</b>
                     </div>
                 </div>
-                <button className="company-trackbutton">Track Application</button>
+                <button className="company-trackbutton" style={{ display: this.state.display }}>
+                    Track Application
+                </button>
             </div>
         )
     }

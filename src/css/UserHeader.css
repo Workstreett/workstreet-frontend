@@ -1,0 +1,27 @@
+.userheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0px 15px 0px;
+}
+.userheader img {
+    height: 30px;
+    margin-left: 3%;
+}
+.userheader button {
+    padding: 10px 20px 10px 20px;
+    border: 2px solid #071e3d;
+    font-family: Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
+    font-weight: 600;
+    margin-right: 3%;
+}
+
+@media all and (max-width: 600px) {
+    .userheader img {
+        height: 20px;
+    }
+    .userheader button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
