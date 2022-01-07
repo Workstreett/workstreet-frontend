@@ -15,10 +15,12 @@ class GoogleLogin extends React.Component {
                     </div>
                     <div>
                         <GooglePlus
-                            clientId="280638292794-0tr4s9h193pcqejq3i97e205ahjpdpv1.apps.googleusercontent.com"
+                            client_id="280638292794-0tr4s9h193pcqejq3i97e205ahjpdpv1.apps.googleusercontent.com"
                             buttonText="Login"
                             cookiePolicy="single_host_origin"
-                            scope={['profile', 'email']}
+                            scope="profile email"
+                            accessType="online"
+                            responseType="token"
                             render={(renderProps) => {
                                 console.log(renderProps)
                                 return (
