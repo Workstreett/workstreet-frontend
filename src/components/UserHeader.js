@@ -18,7 +18,7 @@ class UserHeader extends React.Component {
                     </button>
                 </div>
 
-                <hr style={{ height: '2px', borderWidth: '0px', backgroundColor: '#000000' }} />
+                <hr style={{ height: '2px', borderWidth: '0px', backgroundColor: '#808080' }} />
             </div>
         )
     }

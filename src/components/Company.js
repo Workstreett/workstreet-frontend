@@ -21,7 +21,7 @@ class Company extends React.Component {
             this.setState({ status: 'Rejected', color: '#ff0000' })
         }
 
-        if (this.props.track) this.setState({ display: 'block' })
+        if (this.props.track) this.setState({ display: 'inline-block' })
     }
 
     render() {
