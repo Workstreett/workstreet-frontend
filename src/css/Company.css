@@ -59,6 +59,9 @@
     cursor: pointer;
     margin: 20px 0 0 0;
 }
+.company-trackbutton:hover {
+    animation: highlight 0.7s forwards ease-in;
+}
 
 @media all and (max-width: 1200px) and (min-width: 1000px) {
     .company-info {
@@ -115,5 +118,11 @@
     .company-trackbutton {
         font-size: 12px;
         margin: 10px 0;
+    }
+}
+
+@keyframes highlight {
+    to {
+        background-color: #ff7609;
     }
 }
