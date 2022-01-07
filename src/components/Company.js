@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/Company.css'
+import { withRouter } from 'react-router-dom'
 
 class Company extends React.Component {
     constructor(props) {
@@ -43,11 +44,15 @@ class Company extends React.Component {
                         <b>{this.state.status}</b>
                     </div>
                 </div>
-                <button className="company-trackbutton" style={{ display: this.state.display }}>
+                <button
+                    className="company-trackbutton"
+                    style={{ display: this.state.display }}
+                    onClick={() => this.props.history.push('/companystatus')}
+                >
                     Track Application
                 </button>
             </div>
         )
     }
 }
-export default Company
+export default withRouter(Company)

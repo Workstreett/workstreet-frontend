@@ -1,4 +1,5 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
 import '../css/UserHeader.css'
 import logo from '../images/logo.svg'
 
@@ -8,7 +9,11 @@ class UserHeader extends React.Component {
             <div>
                 <div className="userheader">
                     <img src={logo} alt="Logo" />
-                    <button>
+                    <button
+                        onClick={() => {
+                            this.props.history.push('/googleauth')
+                        }}
+                    >
                         <i className="fas fa-power-off fa-x"></i> Logout
                     </button>
                 </div>
@@ -19,4 +24,4 @@ class UserHeader extends React.Component {
     }
 }
 
-export default UserHeader
+export default withRouter(UserHeader)
