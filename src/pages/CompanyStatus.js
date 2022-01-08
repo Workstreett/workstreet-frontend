@@ -1,10 +1,10 @@
 import React from 'react'
 import Company from '../components/Company'
 import UserHeader from '../components/UserHeader'
-import '../css/CompanyStatus.css'
 import NbliK from '../images/NbliK.png'
-import RoundStatus from '../components/RoundStatus'
+import { Rounds } from '../components/RoundStatus'
 import Landing4 from '../components/Landing4'
+import '../css/CompanyStatus.css'
 
 class CompanyStatus extends React.Component {
     render() {
@@ -42,26 +42,27 @@ class CompanyStatus extends React.Component {
                             }}
                         />
                         <div className="roundtstatus-portion">
-                            <RoundStatus
-                                name="Resume Round"
-                                date="12/10/2021"
-                                review="Good Resume, you may develop on your python, js and React Skills. Forwarded for next Round"
-                            />
-                            <RoundStatus
-                                name="Resume Round"
-                                date="12/10/2021"
-                                review="Good Resume, you may develop on your python, js and React Skills. Forwarded for next Round"
-                            />
-                            <RoundStatus
-                                name="Resume Round"
-                                date="12/10/2021"
-                                review="Good Resume, you may develop on your python, js and React Skills. Forwarded for next Round"
-                            />
-                            <RoundStatus
-                                name="Resume Round"
-                                date="12/10/2021"
-                                review="Good Resume, you may develop on your python, js and React Skills. Forwarded for next Round"
-                            />
+                            {Rounds.map((round, index) => (
+                                <>
+                                    <div
+                                        className="icon"
+                                        style={{
+                                            position: 'relative'
+                                        }}
+                                    >
+                                        <i className={round.icon}></i>
+                                    </div>
+                                    <div className="roundstatus-text">
+                                        {round.name}
+                                        <div style={{ fontSize: '12px', color: '#6e6d76' }}>
+                                            {round.date}
+                                        </div>
+                                    </div>
+                                    <div className="roundstatus-review">
+                                        &quot;{round.review}&quot;
+                                    </div>
+                                </>
+                            ))}
                         </div>
                     </div>
                 </div>
