@@ -6,8 +6,12 @@
     border-radius: 8px;
     border: 2px solid #fde0b8;
     background-color: rgba(252, 240, 235, 0.3);
-    padding: 2%;
+    padding: 30px;
     min-width: 300px;
+}
+
+.compstatus-c1 .company-card {
+    width: 100%;
 }
 
 .company-card img {
