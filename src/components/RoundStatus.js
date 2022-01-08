@@ -1,6 +1,57 @@
 import React from 'react'
 import '../css/RoundStatus.css'
 
+export const Rounds = [
+    {
+        icon: 'fas fa-circle',
+        name: 'Resume Round',
+        date: '12/10/2021',
+        review: 'Good Resume, you may develop on your python, js and React Skills. Forwarded for next Round blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah '
+    },
+    {
+        icon: 'fas fa-circle-notch',
+        name: 'Resume Round',
+        date: '12/10/2021',
+        review: 'Good Resume, you may develop on your python, js and React Skills. Forwarded for next Round'
+    },
+    {
+        icon: 'fas fa-circle-notch',
+        name: 'Resume Round',
+        date: '12/10/2021',
+        review: 'Good Resume, you may develop on your python, js and React Skills. Forwarded for next Round'
+    },
+    {
+        icon: 'fas fa-circle-notch',
+        name: 'Resume Round',
+        date: '12/10/2021',
+        review: 'Good Resume, you may develop on your python, js and React Skills. Forwarded for next Round'
+    },
+    {
+        icon: 'fas fa-circle-notch',
+        name: 'Resume Round',
+        date: '12/10/2021',
+        review: 'Good Resume, you may develop on your python, js and React Skills. Forwarded for next Round'
+    },
+    {
+        icon: 'fas fa-circle-notch',
+        name: 'Resume Round',
+        date: '12/10/2021',
+        review: 'Good Resume, you may develop on your python, js and React Skills. Forwarded for next Round'
+    },
+    {
+        icon: 'fas fa-circle-notch',
+        name: 'Resume Round',
+        date: '12/10/2021',
+        review: 'Good Resume, you may develop on your python, js and React Skills. Forwarded for next Round'
+    },
+    {
+        icon: 'fas fa-circle-notch',
+        name: 'Resume Round',
+        date: '12/10/2021',
+        review: 'Good Resume, you may develop on your python, js and React Skills. Forwarded for next Round'
+    }
+]
+
 class RoundStatus extends React.Component {
     render() {
         return (
