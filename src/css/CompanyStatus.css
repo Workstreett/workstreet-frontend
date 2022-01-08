@@ -1,5 +1,5 @@
 .compStatus-flex {
-    margin-top: 1%;
+    margin-top: 110px;
     display: flex;
     margin-left: 3%;
     margin-right: 3%;
@@ -11,7 +11,7 @@
     width: 30%;
 }
 .compstatus-user {
-    margin-bottom: 2%;
+    margin-bottom: 20px;
 }
 .compstatus-user img {
     display: block;
