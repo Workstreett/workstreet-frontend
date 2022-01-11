@@ -10,18 +10,25 @@ class AppliedCompany extends React.Component {
             <div>
                 <UserHeader />
                 <div className="applied-user-info">
-                    <img
-                        src="https://lh3.googleusercontent.com/a/AATXAJy3xWOki6DHu_Kh1Ripe8bJQ5f6-70QcKxKMffl=s288-p-rw-no-mo"
-                        alt="user-dp"
-                    />
-                    <div>
-                        <p className="greeting">
-                            Welcome, <span style={{ color: '#FFA45C' }}>Jhon Doe</span>
-                        </p>
-                        <p className="number">Total aplication: 3</p>
+                    <div className="applied-user-info-upper">
+                        <img
+                            src="https://lh3.googleusercontent.com/a/AATXAJy3xWOki6DHu_Kh1Ripe8bJQ5f6-70QcKxKMffl=s288-p-rw-no-mo"
+                            alt="user-dp"
+                        />
+                        <div>
+                            <p className="greeting">
+                                Welcome, <span style={{ color: '#FFA45C' }}>Jhon Doe</span>
+                            </p>
+                            <hr />
+                        </div>
                     </div>
                 </div>
-                <h3 className="line-comapany">Your Applications</h3>
+                <div className="your-application-line">
+                    <h3>Your Applications</h3>
+                    <p>Total aplication: 3</p>
+                    <hr />
+                </div>
+
                 <div className="applied-list">
                     <Company
                         logo={NbliK}

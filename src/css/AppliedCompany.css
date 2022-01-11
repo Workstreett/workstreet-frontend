@@ -1,68 +1,97 @@
 .applied-user-info {
-    padding: 110px 20px 20px 0px;
+    margin: 140px 0px 20px 0px;
+    padding: 60px 0px 95px 15px;
+    height: 100%;
     margin-left: 3%;
+    background-image: url('../images/orange_blo.svg');
+    background-position: left;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 500px;
+}
+.applied-user-info-upper {
     display: flex;
     align-items: center;
 }
-.applied-user-info img {
-    width: 5%;
+.applied-user-info-upper img {
+    width: 15%;
     min-width: 40px;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
-.applied-user-info .greeting {
+.applied-user-info-upper .greeting {
     font-family: Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
     font-size: 30px;
     font-weight: 700;
     color: #212121;
     line-height: 30px;
+    margin-left: 5px;
 }
-.applied-user-info .number {
+
+.applied-user-info hr {
+    height: 5px;
+    border-width: 0;
+    color: #ffa45c;
+    background-color: #ffa45c;
+    width: 60%;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.your-application-line {
+    padding: 50px 0px 100px 20px;
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 400px;
+    background-image: url('../images/orange_blo.svg');
+    background-position: left;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+.your-application-line h3 {
+    font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    word-break: break-word;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #212121;
+}
+
+.your-application-line p {
+    margin-top: 10px;
     font-family: Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
     font-size: 15px;
     font-weight: 600;
     color: #545454;
     line-height: 15px;
-}
-
-.line-comapany {
-    display: flex;
-    flex-direction: row;
-    font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    word-break: break-word;
-    font-weight: 600;
-    font-size: 2rem;
-    color: #212121;
-    margin-top: 20px;
-    margin-bottom: 60px;
-    margin-left: 15%;
-    margin-right: 15%;
-}
-.line-comapany:before,
-.line-comapany:after {
-    content: ' ';
-    flex: 1 1;
-    border-bottom: 7px #ffa45c solid;
-    margin: auto;
-}
-.line-comapany:before {
-    margin-right: 10px;
-}
-.line-comapany:after {
     margin-left: 10px;
 }
 
+.your-application-line hr {
+    height: 7px;
+    border-width: 0;
+    color: #ffa45c;
+    background-color: #ffa45c;
+    width: 60%;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
 .applied-list {
-    margin-top: 3%;
+    margin-top: 30px;
     margin-bottom: 3%;
     margin-left: 3%;
     margin-right: 3%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
-    gap: 20px;
+    justify-content: space-around;
+    gap: 80px;
 }
 
 @media all and (max-width: 1000px) {
