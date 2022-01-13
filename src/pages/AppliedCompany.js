@@ -3,9 +3,51 @@ import '../css/AppliedCompany.css'
 import Company from '../components/Company'
 import UserHeader from '../components/UserHeader'
 import NbliK from '../images/NbliK.png'
+import ApplySection from '../images/apply.svg'
 
 class AppliedCompany extends React.Component {
+    state = {
+        numOfApplications: 0
+    }
+
     render() {
+        const message = (
+            <div className="applied-message">
+                {!this.state.numOfApplications ? (
+                    <>
+                        <p>
+                            Hello, user, you have&apos;t applied to any companies yet. Subscribe to
+                            our newsletter and receive amazing opportunities straight to your email.
+                        </p>
+                        <p>
+                            Why Workstreet ? Workstreet help you locate the finest opportunity, one
+                            that is both culturally appropriate and provides an engaging environment
+                            in which you can grow and develop to your full potential.
+                        </p>
+                        <p>
+                            You work on your skills while let Workstreet take care of the rest. Best
+                            wishes!!
+                        </p>
+                    </>
+                ) : (
+                    <>
+                        <p>
+                            Hello, user, you&apos;ve applied to {this.state.numOfApplications}{' '}
+                            companies thus far.
+                        </p>
+                        <p>
+                            You now have Workstreet to help you locate the finest opportunity, one
+                            that is both culturally appropriate and provides an engaging environment
+                            in which you can grow and develop to your full potential.
+                        </p>
+                        <p>
+                            You work on your skills while let Workstreet take care of the rest. Best
+                            wishes!!
+                        </p>
+                    </>
+                )}
+            </div>
+        )
         return (
             <div>
                 <UserHeader />
@@ -23,12 +65,15 @@ class AppliedCompany extends React.Component {
                         </div>
                     </div>
                 </div> */}
-                <div className="your-application-line">
-                    <h3>Your Applications</h3>
-                    <p>Total aplication: 3</p>
-                    <hr />
+                <div className="applied-side-container">
+                    <img className="applied-side-banner" src={ApplySection} href="Side banner" />
+                    <div className="your-application-line">
+                        <h3>Your Applications</h3>
+                        <p>Total aplication: 3</p>
+                        <hr />
+                    </div>
+                    {message}
                 </div>
-
                 <div className="applied-list">
                     <Company
                         logo={NbliK}
