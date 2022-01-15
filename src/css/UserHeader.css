@@ -12,7 +12,7 @@
 }
 .userheader-logo {
     height: 30px;
-    margin-left: 4%;
+    margin-left: 3%;
 }
 
 .userheader-innerflex {
@@ -62,6 +62,7 @@
     .userheader-innerflex {
         justify-content: flex-end;
         width: 80%;
+        column-gap: 10px;
     }
 
     .userheader-innerflex button {
@@ -79,12 +80,24 @@
 }
 
 @media all and (max-width: 450px) {
+    .userheader {
+        padding: 20px 0;
+    }
+
     .userheader-logo {
-        height: 20px;
+        height: 18px;
     }
 
     .userheader-innerflex p {
         font-size: 20px;
+    }
+    .userheader-innerflex {
+        column-gap: 7px;
+        padding: 0 3px;
+    }
+
+    .userheader-innerflex button {
+        margin-right: 0;
     }
 }
 
