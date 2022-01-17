@@ -1,51 +1,6 @@
-.applied-user-info {
-    margin: 140px 0px 20px 0px;
-    padding: 60px 0px 95px 15px;
-    height: 100%;
-    margin-left: 3%;
-    background-image: url('../images/orange_blo.svg');
-    background-position: left;
-    background-size: 65%;
-    background-repeat: no-repeat;
-    /* width: 10%; */
-    max-width: 500px;
-}
-
-.applied-user-info-upper {
-    display: flex;
-    align-items: center;
-}
-
-.applied-user-info-upper img {
-    width: 15%;
-    min-width: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
-}
-
-.applied-user-info-upper .greeting {
-    font-family: Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    color: #212121;
-    line-height: 30px;
-    margin-left: 5px;
-}
-
-.applied-user-info hr {
-    height: 5px;
-    border-width: 0;
-    color: #ffa45c;
-    background-color: #ffa45c;
-    width: 60%;
-    margin-top: 10px;
-    margin-left: 5px;
-}
-
 .applied-side-container {
-    margin-top: 120px;
-    margin-left: calc(4% - 40px);
+    margin-top: 140px;
+    margin-left: 3%;
     display: grid;
     grid-template-columns: 40% 50%;
     grid-template-rows: 220px max-content;
@@ -65,7 +20,7 @@
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
-    padding: 50px 0px 20px 40px;
+    padding: 40px 0px 20px 30px;
     display: block;
     width: max-content;
     max-width: 400px;
@@ -79,7 +34,7 @@
     font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     word-break: break-word;
     font-weight: 600;
-    font-size: 2.5rem;
+    font-size: 40px;
     color: #212121;
 }
 
@@ -118,60 +73,70 @@
 
 .applied-message {
     /* width: 40%; */
-    padding-left: 40px;
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
 .applied-message p {
     font-family: Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
-    font-style: italic;
+
     font-weight: 600;
     color: #515151;
     margin: 15px 0;
 }
 
-@media all and (max-width: 1000px) {
-    .applied-user-info .greeting {
-        font-size: 25px;
-        line-height: 25px;
-    }
-    .applied-user-info .number {
-        font-size: 12px;
-        line-height: 12px;
-    }
-}
-
 @media all and (max-width: 800px) {
     .applied-side-container {
         display: block;
+        margin-right: 3%;
     }
     .applied-side-banner {
         display: none;
     }
-    .line-comapany {
-        font-size: 25px;
+
+    .your-application-line {
+        padding-bottom: 50px;
+        padding-top: 40px;
+        padding-left: 32px;
+        background-size: 65%;
     }
-    .line-comapany:before,
-    .line-comapany:after {
-        border-bottom: 4px #ffa45c solid;
+    .your-application-line h3 {
+        font-size: 32px;
     }
-    .applied-user-info .greeting {
-        font-size: 22px;
-        line-height: 22px;
+
+    .your-application-line hr {
+        height: 6px;
     }
-    .applied-user-info .number {
-        font-size: 10px;
-        line-height: 10px;
+
+    .your-application-line p {
+        margin-top: 6px;
+        margin-left: 6px;
+    }
+
+    .applied-message {
+        margin-top: 10px;
+        margin-bottom: 25px;
     }
 }
 
 @media all and (max-width: 600px) {
-    .line-comapany {
-        font-size: 20px;
-        letter-spacing: 0.05px;
+    .your-application-line {
+        padding-bottom: 50px;
+        padding-top: 35px;
+        padding-left: 25px;
     }
-    .applied-user-info img {
-        margin-right: 10px;
+
+    .your-application-line h3 {
+        font-size: 28px;
+    }
+
+    .your-application-line p {
+        font-size: 14px;
+        margin-top: 3px;
+        margin-left: 3px;
+    }
+
+    .your-application-line hr {
+        height: 4px;
     }
 }

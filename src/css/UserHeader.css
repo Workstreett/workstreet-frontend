@@ -12,7 +12,7 @@
 }
 .userheader-logo {
     height: 30px;
-    margin-left: 4%;
+    margin-left: 3%;
 }
 
 .userheader-innerflex {
@@ -21,7 +21,6 @@
     padding: 0 10px;
     justify-content: flex-end;
     column-gap: 15px;
-    width: 40%;
 }
 
 .userheader-innerflex img {
@@ -40,7 +39,7 @@
 }
 
 .userheader-innerflex button {
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px;
     border: 2px solid #071e3d;
     font-family: Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
     font-weight: 600;
@@ -56,12 +55,49 @@
 }
 
 @media all and (max-width: 600px) {
-    .userheader img {
-        height: 20px;
+    .userheader-logo {
+        height: 24px;
     }
-    .userheader button {
+
+    .userheader-innerflex {
+        justify-content: flex-end;
+        width: 80%;
+        column-gap: 10px;
+    }
+
+    .userheader-innerflex button {
         padding: 6px 10px;
         font-size: 12px;
+    }
+
+    .userheader-innerflex p {
+        font-size: 24px;
+    }
+
+    .userheader-innerflex img {
+        display: none;
+    }
+}
+
+@media all and (max-width: 450px) {
+    .userheader {
+        padding: 20px 0;
+    }
+
+    .userheader-logo {
+        height: 18px;
+    }
+
+    .userheader-innerflex p {
+        font-size: 20px;
+    }
+    .userheader-innerflex {
+        column-gap: 7px;
+        padding: 0 3px;
+    }
+
+    .userheader-innerflex button {
+        margin-right: 0;
     }
 }
 
