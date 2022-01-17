@@ -4,21 +4,40 @@ import logo from '../images/logo.svg'
 import { withRouter } from 'react-router'
 import { toast, ToastContainer } from 'react-toastify'
 import queryString from 'query-string'
+import axios from 'axios'
+import { GoogleAuthContext } from '../contexts/GoogleAuthContext'
 
 class GoogleLogin extends React.Component {
+    static contextType = GoogleAuthContext
+    signInFailed = (error) => {
+        toast.error(error, {
+            position: 'bottom-right',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined
+        })
+        this.props.history.push('/googleauth')
+    }
+
     handleClick = async () => {
-        const oAuthURI = 'https://accounts.google.com/o/oauth2/v2/auth'
+        const oAuthURI = 'https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount'
         const form = document.createElement('form')
         form.setAttribute('method', 'GET')
         form.setAttribute('action', oAuthURI)
 
         const reqParams = {
             client_id: '280638292794-0tr4s9h193pcqejq3i97e205ahjpdpv1.apps.googleusercontent.com',
-            scope: 'profile email',
+            scope: 'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/consumersurveys.readonly',
             redirect_uri: window.location.href,
             response_type: 'token',
+            // access_type: 'offline',
+            flowName: 'GeneralOAuthFlow',
             state: 'IAmNoob',
-            prompt: 'consent'
+            prompt: 'select_account'
+            // include_granted_scopes: false
         }
 
         for (const p in reqParams) {
@@ -33,26 +52,38 @@ class GoogleLogin extends React.Component {
         form.submit()
     }
 
-    componentDidMount() {
-        // console.log(this.props.location.hash)
+    async componentDidMount() {
+        // console.log('Called!!')
+        // console.log(this.props.location)
+        // If User token exist then directly login...
+        if (localStorage.getItem('token')) {
+            this.props.history.push('/appliedCompany')
+        }
 
+        // If it is a redirect from google oAuth
         if (this.props.location.hash !== '') {
             const processedHash = queryString.parse(this.props.location.hash)
             // console.log(processedHash)
             if (processedHash.error) {
-                toast.error(processedHash.error, {
-                    position: 'bottom-right',
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined
-                })
+                // Processing Error
+                this.signInFailed(processedHash.error)
             } else {
                 if (processedHash.state === 'IAmNoob') {
-                    // Add code for calling api and transfering acess_token
-                    this.props.history.push('/appliedCompany')
+                    // Processing Successfull Google Auth Results
+                    try {
+                        // console.log(processedHash)
+                        const res = await axios.post('http://localhost:3000/auth/google/callback', {
+                            access_token: processedHash.access_token
+                        })
+                        localStorage.setItem('token', res.data.token)
+                        this.context.setDetails(res.data.user_data)
+                        this.props.history.push('/appliedCompany')
+                    } catch (err) {
+                        // console.log(err)
+                        this.signInFailed('Srry Connection to Server Failed')
+                    }
+                } else {
+                    this.signInFailed("You can't hack this webPage ;) ;)")
                 }
             }
         }
