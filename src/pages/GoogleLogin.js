@@ -72,9 +72,12 @@ class GoogleLogin extends React.Component {
                     // Processing Successfull Google Auth Results
                     try {
                         // console.log(processedHash)
-                        const res = await axios.post('http://localhost:3000/auth/google/callback', {
-                            access_token: processedHash.access_token
-                        })
+                        const res = await axios.post(
+                            'https://workstreet-mirrors.herokuapp.com/auth/google/callback',
+                            {
+                                access_token: processedHash.access_token
+                            }
+                        )
                         localStorage.setItem('token', res.data.token)
                         this.context.setDetails(res.data.user_data)
                         this.props.history.push('/appliedCompany')
