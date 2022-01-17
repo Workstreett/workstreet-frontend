@@ -11,7 +11,8 @@ class GoogleAuthContextProvider extends Component {
         email: null,
         userImg:
             'https://cdn5.vectorstock.com/i/thumb-large/82/59/anonymous-user-flat-icon-vector-18958259.jpg',
-        appliedFor: []
+        appliedFor: [],
+        isLoading: true
     }
 
     setDetails = (details) => {
@@ -26,7 +27,7 @@ class GoogleAuthContextProvider extends Component {
 
     async componentDidMount() {
         if (localStorage.getItem('token')) {
-            const res = await axios.post('http://localhost:3000/user/get/byId', {
+            const res = await axios.post('https://workstreet-mirrors.herokuapp.com/user/get/byId', {
                 token: localStorage.getItem('token')
             })
             if (res.data === 'Unauthorised') {
@@ -36,6 +37,8 @@ class GoogleAuthContextProvider extends Component {
                 this.setDetails(res.data)
             }
         }
+        this.setState({ isLoading: false })
+        // console.log('Finised')
     }
 
     render() {
@@ -46,7 +49,7 @@ class GoogleAuthContextProvider extends Component {
                     setDetails: this.setDetails
                 }}
             >
-                {this.props.children}
+                {!this.state.isLoading && this.props.children}
             </GoogleAuthContext.Provider>
         )
     }
