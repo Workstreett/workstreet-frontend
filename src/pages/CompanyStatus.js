@@ -69,7 +69,7 @@ class CompanyStatus extends React.Component {
                         style={{
                             height: '1px',
                             borderWidth: '0px',
-                            backgroundColor: '#000000'
+                            backgroundColor: '#071e3d'
                         }}
                     />
                     <div className="roundtstatus-portion">
@@ -84,17 +84,17 @@ class CompanyStatus extends React.Component {
                                     >
                                         <i
                                             className={round.icon}
-                                            style={{ color: round.status ? 'green' : '#bababa' }}
+                                            style={{ color: round.status ? '#ffa45c' : '#bababa' }}
                                         ></i>
                                     </div>
-                                    <div className="roundstatus-text">
-                                        {round.name}
-                                        <div style={{ fontSize: '12px', color: '#6e6d76' }}>
-                                            {new Date(round.date).toDateString()}
+                                    <div className="roundstatus">
+                                        <div className="text">
+                                            {round.name}
+                                            <div style={{ fontSize: '12px', color: '#6e6d76' }}>
+                                                {new Date(round.date).toDateString()}
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="roundstatus-review">
-                                        &quot;{round.remark}&quot;
+                                        <div className="review">&quot;{round.remark}&quot;</div>
                                     </div>
                                 </>
                             ))}

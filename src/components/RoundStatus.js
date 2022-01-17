@@ -6,42 +6,42 @@ export const Rounds = [
         icon: 'fas fa-file',
         name: 'Resume Round',
         date: '12/10/2021',
-        review: 'Good Resume, you may develop on your python, js and React Skills. Forwarded for next Round blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah ',
+        review: 'We have went through your resume. We judged you on several skills in technologies across development. Like Reactjs, Django. We found your ReactJs skills weak. We want you judge you by giving you a task in next round',
         status: true
     },
     {
         icon: 'far fa-check-circle',
         name: 'Task Round',
         date: '12/10/2021',
-        review: 'Good Resume, you may develop on your python, js and React Skills. Forwarded for next Round',
+        review: 'You have submitted your task in this round. We are happy with your submission. It was awesome in Reactjs and Django. You have proved your self. Qualified for next rounds',
         status: true
     },
     {
         icon: 'far fa-check-circle',
         name: 'Task Round-2',
         date: '12/10/2021',
-        review: 'Good Resume, you may develop on your python, js and React Skills. Forwarded for next Round',
+        review: 'Here you improvised your previous submission and we have to say you have really worked hard.',
         status: true
     },
     {
         icon: 'far fa-check-circle',
         name: 'Task-3 round',
         date: '12/10/2021',
-        review: 'Good Resume, you may develop on your python, js and React Skills. Forwarded for next Round',
+        review: 'Good submission! Keep It Up',
         status: false
     },
     {
         icon: 'fas fa-user-friends',
         name: 'Interview Round',
         date: '12/10/2021',
-        review: 'Good Resume, you may develop on your python, js and React Skills. Forwarded for next Round',
+        review: 'Your communication skills and pressure handling skills are great. We are happy to have you as a potential conadidate',
         status: false
     },
     {
         icon: 'fas fa-user-friends',
         name: 'Interview-2 Round',
         date: '12/10/2021',
-        review: 'Good Resume, you may develop on your python, js and React Skills. Forwarded for next Round',
+        review: 'SELECTED',
         status: false
     }
 ]
