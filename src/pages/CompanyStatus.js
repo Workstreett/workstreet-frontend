@@ -46,7 +46,7 @@ class CompanyStatus extends React.Component {
                         style={{
                             height: '1px',
                             borderWidth: '0px',
-                            backgroundColor: '#000000'
+                            backgroundColor: '#071e3d'
                         }}
                     />
                     <div className="roundtstatus-portion">
@@ -60,16 +60,21 @@ class CompanyStatus extends React.Component {
                                 >
                                     <i
                                         className={round.icon}
-                                        style={{ color: round.status ? 'green' : '#bababa' }}
+                                        style={{
+                                            color: round.status ? '#ffa45c' : '#bababa',
+                                            zIndex: '3'
+                                        }}
                                     ></i>
                                 </div>
-                                <div className="roundstatus-text">
-                                    {round.name}
-                                    <div style={{ fontSize: '12px', color: '#6e6d76' }}>
-                                        {round.date}
+                                <div className="roundstatus">
+                                    <div className="text">
+                                        {round.name}
+                                        <div style={{ fontSize: '12px', color: '#6e6d76' }}>
+                                            {round.date}
+                                        </div>
                                     </div>
+                                    <div className="review">&quot;{round.review}&quot;</div>
                                 </div>
-                                <div className="roundstatus-review">&quot;{round.review}&quot;</div>
                             </>
                         ))}
                     </div>
