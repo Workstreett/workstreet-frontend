@@ -84,7 +84,7 @@ class CompanyStatus extends React.Component {
                                     >
                                         <i
                                             className={round.icon}
-                                            // style={{ color: round.status ? 'green' : '#bababa' }}
+                                            style={{ color: round.status ? 'green' : '#bababa' }}
                                         ></i>
                                     </div>
                                     <div className="roundstatus-text">

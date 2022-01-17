@@ -61,16 +61,17 @@ class AppliedCompany extends React.Component {
                     {message}
                 </div>
                 <div className="applied-list">
-                    {userInfo.appliedFor.map((opp, ind) => (
-                        <Company
-                            key={ind}
-                            id={opp.companyId}
-                            status={opp.status}
-                            date={opp.round[0].date}
-                            track={true}
-                            ind={ind}
-                        />
-                    ))}
+                    {userInfo &&
+                        userInfo.appliedFor.map((opp, ind) => (
+                            <Company
+                                key={ind}
+                                id={opp.companyId}
+                                status={opp.status}
+                                date={opp.round[0].date}
+                                track={true}
+                                ind={ind}
+                            />
+                        ))}
                 </div>
             </div>
         )
