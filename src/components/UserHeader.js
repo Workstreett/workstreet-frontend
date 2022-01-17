@@ -2,22 +2,24 @@ import React from 'react'
 import { withRouter } from 'react-router-dom'
 import '../css/UserHeader.css'
 import logo from '../images/logo.svg'
+import { GoogleAuthContext } from '../contexts/GoogleAuthContext'
 
 class UserHeader extends React.Component {
+    static contextType = GoogleAuthContext
+
     render() {
         return (
             <div className="userheader">
                 <img className="userheader-logo" src={logo} alt="Logo" />
                 <div className="userheader-innerflex">
-                    <img
-                        src="https://lh3.googleusercontent.com/a/AATXAJy3xWOki6DHu_Kh1Ripe8bJQ5f6-70QcKxKMffl=s288-p-rw-no-mo"
-                        alt="user-dp"
-                    />
+                    <img src={this.context.userImg} alt="user-dp" />
 
-                    <p>Jhon Doe</p>
+                    <p>{this.context.name}</p>
 
                     <button
                         onClick={() => {
+                            this.context.setDetails({})
+                            localStorage.removeItem('token')
                             this.props.history.push('/googleauth')
                         }}
                     >
