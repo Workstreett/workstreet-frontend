@@ -1,5 +1,5 @@
-import React from 'react'
-import '../css/RoundStatus.css'
+// import React from 'react'
+// import '../css/RoundStatus.css'
 
 export const Rounds = [
     {
