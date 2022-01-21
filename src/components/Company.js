@@ -16,7 +16,7 @@ class Company extends React.Component {
     }
 
     async componentDidMount() {
-        const res = await axios.post('https://workstreet-mirrors.herokuapp.com/company/get/byId', {
+        const res = await axios.post('http://www.api.workstreet.tech/company/get/byId', {
             id: this.props.id,
             token: localStorage.getItem('token')
         })

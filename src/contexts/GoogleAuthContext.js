@@ -27,7 +27,7 @@ class GoogleAuthContextProvider extends Component {
 
     async componentDidMount() {
         if (localStorage.getItem('token')) {
-            const res = await axios.post('https://workstreet-mirrors.herokuapp.com/user/get/byId', {
+            const res = await axios.post('http://www.api.workstreet.tech/user/get/byId', {
                 token: localStorage.getItem('token')
             })
             if (res.data === 'Unauthorised') {
@@ -49,7 +49,7 @@ class GoogleAuthContextProvider extends Component {
                     setDetails: this.setDetails
                 }}
             >
-                {!this.state.isLoading && this.props.children}
+                {this.state.isLoading ? <></> : this.props.children}
             </GoogleAuthContext.Provider>
         )
     }
