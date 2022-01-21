@@ -6,25 +6,34 @@ import Landing4 from '../components/Landing4'
 import '../css/CompanyStatus.css'
 import { GoogleAuthContext } from '../contexts/GoogleAuthContext'
 import { withRouter } from 'react-router-dom'
+import axios from 'axios'
 
 class CompanyStatus extends React.Component {
     static contextType = GoogleAuthContext
     state = {
-        companyDetails: null
+        companyDetails: null,
+        companyName: ''
     }
 
-    componentDidMount() {
+    async componentDidMount() {
         if (this.context.appliedFor.length === 0) {
             this.props.history.push('/appliedCompany')
         }
         const { id } = this.props.match.params
         // console.log('Id', id)
         if (!id || id >= this.context.appliedFor.length) {
-            this.props.history.push('/companystatus/0')
+            this.props.history.push('/appliedCompany')
+            return
         }
         // console.log('Context', this.context)
+        const res = await axios.post('http://www.api.workstreet.tech/company/get/byid', {
+            token: localStorage.getItem('token'),
+            id: this.context.appliedFor[id].companyId
+        })
+
         this.setState({
-            companyDetails: this.context.appliedFor[id]
+            companyDetails: this.context.appliedFor[id],
+            companyName: res.data.name
         })
     }
 
@@ -38,7 +47,7 @@ class CompanyStatus extends React.Component {
                     <div className="your-status-line">
                         <div className="your-status-heading">
                             <h3>Track Your Status </h3>
-                            <h3>For Nblik</h3>
+                            <h3>For {this.state.companyName}</h3>
                         </div>
                         <div className="your-status-message">
                             <p>
