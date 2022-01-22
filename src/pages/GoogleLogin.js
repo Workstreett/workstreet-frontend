@@ -73,7 +73,7 @@ class GoogleLogin extends React.Component {
                     try {
                         // console.log(processedHash)
                         const res = await axios.post(
-                            'http://www.api.workstreet.tech/auth/google/callback',
+                            'https://api.workstreet.tech/auth/google/callback',
                             {
                                 access_token: processedHash.access_token
                             }

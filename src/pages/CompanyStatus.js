@@ -26,7 +26,7 @@ class CompanyStatus extends React.Component {
             return
         }
         // console.log('Context', this.context)
-        const res = await axios.post('http://www.api.workstreet.tech/company/get/byid', {
+        const res = await axios.post('https://api.workstreet.tech/company/get/byid', {
             token: localStorage.getItem('token'),
             id: this.context.appliedFor[id].companyId
         })

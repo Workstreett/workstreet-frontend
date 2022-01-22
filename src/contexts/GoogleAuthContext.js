@@ -27,7 +27,7 @@ class GoogleAuthContextProvider extends Component {
 
     async componentDidMount() {
         if (localStorage.getItem('token')) {
-            const res = await axios.post('http://www.api.workstreet.tech/user/get/byId', {
+            const res = await axios.post('https://api.workstreet.tech/user/get/byId', {
                 token: localStorage.getItem('token')
             })
             if (res.data === 'Unauthorised') {
