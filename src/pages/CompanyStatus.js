@@ -50,16 +50,22 @@ class CompanyStatus extends React.Component {
                             <h3>For {this.state.companyName}</h3>
                         </div>
                         <div className="your-status-message">
-                            <p>
-                                Till now you have successfuly completed resume round and interview
-                                round. Wait for final round.
-                            </p>
-                            <p>
-                                {' '}
-                                We have got a tracker for you just check our current status and
-                                track it as well. We make sure to make you feel conacted to us and
-                                company.
-                            </p>
+                            {companyDetails && companyDetails.status === 'Accepted' ? (
+                                <>
+                                    <p>
+                                        Congratulations!! on your Intern-crack🎉🎉. Your efforts
+                                        have been recognized.
+                                    </p>
+                                    <p>If you like us, please tell your friends about us.✨✨</p>
+                                </>
+                            ) : (
+                                <p>
+                                    Workstreet appreciates your devotion and dedication,
+                                    unfortunately, the skill requirements were higher. Don&apos;t
+                                    worry there are many more opportunities to come✌️ which we will
+                                    deliver immediately to your mailbox.🙌
+                                </p>
+                            )}
                         </div>
                     </div>
 
@@ -100,7 +106,10 @@ class CompanyStatus extends React.Component {
                                         <div className="text">
                                             {round.name}
                                             <div style={{ fontSize: '12px', color: '#6e6d76' }}>
-                                                {new Date(round.date).toDateString()}
+                                                {new Date(round.date).toDateString() ===
+                                                'Invalid Date'
+                                                    ? round.date
+                                                    : new Date(round.date).toDateString()}
                                             </div>
                                         </div>
                                         <div className="review">&quot;{round.remark}&quot;</div>

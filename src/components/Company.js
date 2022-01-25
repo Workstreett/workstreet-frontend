@@ -47,7 +47,8 @@ class Company extends React.Component {
     render() {
         // console.log(this.props.key, this.state)
         // console.log(this.state.name, this.props.date, typeof this.props.date)
-        const date = new Date(this.props.date).toDateString()
+        let date = new Date(this.props.date).toDateString()
+        if (date === 'Invalid Date') date = this.props.date
         return (
             <div className="company-card">
                 <img src={this.state.logo} alt="comapny-logo" />
