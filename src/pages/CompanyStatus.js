@@ -7,6 +7,7 @@ import '../css/CompanyStatus.css'
 import { GoogleAuthContext } from '../contexts/GoogleAuthContext'
 import { withRouter } from 'react-router-dom'
 import axios from 'axios'
+import { config } from '../env'
 
 class CompanyStatus extends React.Component {
     static contextType = GoogleAuthContext
@@ -26,7 +27,7 @@ class CompanyStatus extends React.Component {
             return
         }
         // console.log('Context', this.context)
-        const res = await axios.post('https://api.workstreet.tech/company/get/byid', {
+        const res = await axios.post(config.apiDomain + 'company/get/byid', {
             token: localStorage.getItem('token'),
             id: this.context.appliedFor[id].companyId
         })

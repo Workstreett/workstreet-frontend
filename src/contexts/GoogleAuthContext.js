@@ -1,6 +1,7 @@
 import React, { Component, createContext } from 'react'
 import { withRouter } from 'react-router-dom'
 import axios from 'axios'
+import { config } from '../env'
 
 export const GoogleAuthContext = createContext()
 
@@ -27,7 +28,7 @@ class GoogleAuthContextProvider extends Component {
 
     async componentDidMount() {
         if (localStorage.getItem('token')) {
-            const res = await axios.post('https://api.workstreet.tech/user/get/byId', {
+            const res = await axios.post(config.apiDomain + 'user/get/byId', {
                 token: localStorage.getItem('token')
             })
             if (res.data === 'Unauthorised') {
