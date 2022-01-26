@@ -4,9 +4,34 @@ import Company from '../components/Company'
 import UserHeader from '../components/UserHeader'
 import ApplySection from '../images/apply.svg'
 import { GoogleAuthContext } from '../contexts/GoogleAuthContext'
+import axios from 'axios'
+import CompanyOppor from '../components/CompanyOppor'
+import { config } from '../env'
 
 class AppliedCompany extends React.Component {
     static contextType = GoogleAuthContext
+    state = {
+        companies: null
+    }
+
+    async componentDidMount() {
+        if (this.context.name) {
+            const companies = await axios.post(config.apiDomain + 'company/get/all', {
+                token: localStorage.getItem('token')
+            })
+            this.setState({
+                companies: companies.data.filter((x) => {
+                    let ans = true
+                    this.context.appliedFor.forEach((element) => {
+                        if (element.companyId === x._id) {
+                            ans = false
+                        }
+                    })
+                    return ans
+                })
+            })
+        }
+    }
 
     render() {
         const userInfo = this.context
@@ -70,6 +95,23 @@ class AppliedCompany extends React.Component {
                                 date={opp.round[0].date}
                                 track={true}
                                 ind={ind}
+                            />
+                        ))}
+                </div>
+                <div>
+                    <h1 style={{ padding: '0 40px', fontSize: '40px' }}>Other Oppurtunities</h1>
+                </div>
+                <div className="applied-list">
+                    {this.state.companies &&
+                        this.state.companies.map((comp, ind) => (
+                            <CompanyOppor
+                                key={ind}
+                                img={comp.logo}
+                                desc={comp.desc}
+                                role={comp.role}
+                                loc={comp.location}
+                                stipend={comp.stipend}
+                                duration={comp.duration}
                             />
                         ))}
                 </div>

@@ -3,6 +3,7 @@ import '../css/Company.css'
 import { withRouter } from 'react-router-dom'
 import Img from '../images/logo.svg'
 import axios from 'axios'
+import { config } from '../env'
 
 // It requires id(companyId),status("Accepted"||"Process"||"Rejected"),date(Round date), track(true || false)
 class Company extends React.Component {
@@ -16,7 +17,7 @@ class Company extends React.Component {
     }
 
     async componentDidMount() {
-        const res = await axios.post('https://api.workstreet.tech/company/get/byId', {
+        const res = await axios.post(config.apiDomain + 'company/get/byId', {
             id: this.props.id,
             token: localStorage.getItem('token')
         })

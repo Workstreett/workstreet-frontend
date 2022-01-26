@@ -6,6 +6,7 @@ import { toast, ToastContainer } from 'react-toastify'
 import queryString from 'query-string'
 import axios from 'axios'
 import { GoogleAuthContext } from '../contexts/GoogleAuthContext'
+import { config } from '../env'
 
 class GoogleLogin extends React.Component {
     static contextType = GoogleAuthContext
@@ -72,12 +73,9 @@ class GoogleLogin extends React.Component {
                     // Processing Successfull Google Auth Results
                     try {
                         // console.log(processedHash)
-                        const res = await axios.post(
-                            'https://api.workstreet.tech/auth/google/callback',
-                            {
-                                access_token: processedHash.access_token
-                            }
-                        )
+                        const res = await axios.post(config.apiDomain + 'auth/google/callback', {
+                            access_token: processedHash.access_token
+                        })
                         localStorage.setItem('token', res.data.token)
                         this.context.setDetails(res.data.user_data)
                         this.props.history.push('/appliedCompany')
