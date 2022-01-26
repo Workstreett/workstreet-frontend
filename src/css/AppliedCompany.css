@@ -65,7 +65,6 @@
     margin-right: 3%;
     display: flex;
     width: 94%;
-    /* float: right; */
     flex-flow: row wrap;
     justify-content: space-around;
     gap: 80px;
@@ -84,6 +83,15 @@
     color: #515151;
     margin: 15px 0;
 }
+.otheroppor-head {
+    font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    word-break: break-word;
+    font-weight: 600;
+    font-size: 40px;
+    color: #212121;
+    padding-left: 30px;
+    margin-top: 50px;
+}
 
 @media all and (max-width: 800px) {
     .applied-side-container {
@@ -101,6 +109,11 @@
         background-size: 65%;
     }
     .your-application-line h3 {
+        font-size: 32px;
+    }
+
+    .otheroppor-head {
+        padding-left: 32px;
         font-size: 32px;
     }
 
@@ -127,6 +140,11 @@
     }
 
     .your-application-line h3 {
+        font-size: 28px;
+    }
+
+    .otheroppor-head {
+        padding-left: 25px;
         font-size: 28px;
     }
 

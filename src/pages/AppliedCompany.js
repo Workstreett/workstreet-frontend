@@ -98,9 +98,7 @@ class AppliedCompany extends React.Component {
                             />
                         ))}
                 </div>
-                <div>
-                    <h1 style={{ padding: '0 40px', fontSize: '40px' }}>Other Oppurtunities</h1>
-                </div>
+                <div className="otheroppor-head">Other Oppurtunities</div>
                 <div className="applied-list">
                     {this.state.companies &&
                         this.state.companies.map((comp, ind) => (
