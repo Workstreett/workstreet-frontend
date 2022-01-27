@@ -5,7 +5,9 @@ class CompanyOppor extends React.Component {
     render() {
         return (
             <div className="companyoppor-card">
-                <img src={this.props.img} alt="comapny-logo" />
+                <a href={this.props.jd}>
+                    <img src={this.props.img} alt="comapny-logo" />
+                </a>
                 <hr />
                 <div className="companyoppor-info">{this.props.desc}</div>
                 <div className="companyoppor-shortdetails">
@@ -26,7 +28,9 @@ class CompanyOppor extends React.Component {
                         {this.props.duration}
                     </div>
                 </div>
-                <button className="company-applybutton">Apply</button>
+                <a href={this.props.apply}>
+                    <button className="company-applybutton">Apply</button>
+                </a>
             </div>
         )
     }

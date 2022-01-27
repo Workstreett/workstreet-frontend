@@ -27,7 +27,7 @@ class AppliedCompany extends React.Component {
                             ans = false
                         }
                     })
-                    return ans
+                    return ans && !x.unavailable
                 })
             })
         }
@@ -110,6 +110,8 @@ class AppliedCompany extends React.Component {
                                 loc={comp.location}
                                 stipend={comp.stipend}
                                 duration={comp.duration}
+                                jd={comp.jd}
+                                apply={comp.apply}
                             />
                         ))}
                 </div>
