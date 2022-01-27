@@ -10,7 +10,9 @@ class UserHeader extends React.Component {
     render() {
         return (
             <div className="userheader">
-                <img className="userheader-logo" src={logo} alt="Logo" />
+                <a href="/">
+                    <img className="userheader-logo" src={logo} alt="Logo" />
+                </a>
                 <div className="userheader-innerflex">
                     <img src={this.context.userImg} alt="user-dp" />
 
