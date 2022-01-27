@@ -10,9 +10,12 @@
     background-color: white;
     box-shadow: 0px 1px 35px -10px rgba(255, 164, 92);
 }
+
+.userheader a {
+    margin-left: 3%;
+}
 .userheader-logo {
     height: 30px;
-    margin-left: 3%;
 }
 
 .userheader-innerflex {

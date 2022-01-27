@@ -41,8 +41,9 @@ class AppliedCompany extends React.Component {
                 {!userInfo.appliedFor.length ? (
                     <>
                         <p>
-                            Hello, user, you have&apos;t applied to any companies yet. Subscribe to
-                            our newsletter and receive amazing opportunities straight to your email.
+                            Hello, {this.context.name}, you have&apos;t applied to any companies
+                            yet. Subscribe to our newsletter and receive amazing opportunities
+                            straight to your email.
                         </p>
                         <p>
                             Why Workstreet ? Workstreet help you locate the finest opportunity, one
@@ -57,8 +58,8 @@ class AppliedCompany extends React.Component {
                 ) : (
                     <>
                         <p>
-                            Hello, user, you&apos;ve applied to {userInfo.appliedFor.length}{' '}
-                            companies thus far.
+                            Hello, {this.context.name}, you&apos;ve applied to{' '}
+                            {userInfo.appliedFor.length} companies thus far.
                         </p>
                         <p>
                             You now have Workstreet to help you locate the finest opportunity, one
