@@ -7,6 +7,7 @@ import { GoogleAuthContext } from '../contexts/GoogleAuthContext'
 import axios from 'axios'
 import CompanyOppor from '../components/CompanyOppor'
 import { config } from '../env'
+import Landing4 from '../components/Landing4'
 
 class AppliedCompany extends React.Component {
     static contextType = GoogleAuthContext
@@ -116,6 +117,7 @@ class AppliedCompany extends React.Component {
                             />
                         ))}
                 </div>
+                <Landing4 />
             </div>
         )
     }
