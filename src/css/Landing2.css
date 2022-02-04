@@ -6,6 +6,7 @@
     column-gap: 50px;
     justify-content: space-around;
     align-items: stretch;
+    margin-bottom: 30px;
 }
 .landing2-1 {
     color: #343d48cc;
@@ -132,7 +133,7 @@
         font-size: 16px;
     }
     .landing2-1 h1 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .landing2-2 h1 {
