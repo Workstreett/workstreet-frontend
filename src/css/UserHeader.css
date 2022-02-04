@@ -74,12 +74,18 @@
     }
 
     .userheader-innerflex p {
-        font-size: 24px;
+        display: none;
     }
 
     .userheader-innerflex img {
-        display: none;
+        width: 9%;
+        min-width: 40px;
+        margin-right: 10px;
     }
+
+    /* .userheader-innerflex img {
+        display: none;
+    }  */
 }
 
 @media all and (max-width: 450px) {
@@ -91,9 +97,9 @@
         height: 18px;
     }
 
-    .userheader-innerflex p {
+    /* .userheader-innerflex p {
         font-size: 20px;
-    }
+    } */
     .userheader-innerflex {
         column-gap: 7px;
         padding: 0 3px;

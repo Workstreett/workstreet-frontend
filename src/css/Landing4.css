@@ -4,6 +4,7 @@
     justify-content: center;
     gap: 12%;
     margin-top: 4%;
+    margin-bottom: 30px;
 }
 .l4-subs {
     width: 90%;
@@ -204,5 +205,12 @@
     }
     .l4-handle-item i {
         font-size: 1.7rem;
+    }
+
+    .l4-subs h1 {
+        font-size: 26px;
+    }
+    .l4-contact h1 {
+        font-size: 26px;
     }
 }

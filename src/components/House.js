@@ -13,11 +13,23 @@ class House extends React.Component {
             <Router>
                 <Switch>
                     <Route path="/" exact component={Landing} />
-                    <GoogleAuthContextProvider>
-                        <Route path="/googleauth" exact component={GoogleLogin} />
-                        <Route path="/appliedcompany" exact component={AppliedCompany} />
-                        <Route path="/companystatus/:id" exact component={CompanyStatus} />
-                    </GoogleAuthContextProvider>
+
+                    <Route path="/googleauth" exact>
+                        <GoogleAuthContextProvider>
+                            <GoogleLogin />
+                        </GoogleAuthContextProvider>
+                    </Route>
+                    <Route path="/appliedcompany" exact>
+                        <GoogleAuthContextProvider>
+                            <AppliedCompany />
+                        </GoogleAuthContextProvider>
+                    </Route>
+                    <Route path="/companystatus/:id" exact>
+                        <GoogleAuthContextProvider>
+                            <CompanyStatus />
+                        </GoogleAuthContextProvider>
+                    </Route>
+
                     <Route path="*" exact component={NotFoundPage} />
                 </Switch>
             </Router>

@@ -2,6 +2,7 @@
     display: flex;
     flex-flow: column wrap;
     gap: 3%;
+    margin-bottom: 30px;
 }
 .l3-r1 {
     display: block;
@@ -78,10 +79,10 @@
 
 @media all and (max-width: 500px) {
     .l3-r1 h1 {
-        font-size: 30px;
+        font-size: 26px;
     }
     .l3-title {
-        font-size: 24px;
+        font-size: 22px;
     }
     .l3-r1 {
         margin-top: 0%;
