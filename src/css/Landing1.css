@@ -53,6 +53,24 @@
     cursor: not-allowed;
 }
 
+.landing1-text {
+    font-size: 25px;
+    color: #071e3d;
+    line-height: 30px;
+    font-weight: 800;
+    font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* height: 100%; */
+}
+.landing1-signIn {
+    /* height: 100%; */
+    color: #ffa45c;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px;
+    background-color: rgb(255 164 92 / 37%);
+    box-shadow: 3px 10px 42px 1px rgb(255 164 92 / 37%);
+}
+
 @media all and (max-width: 800px) {
     .landing1-form {
         display: none;
@@ -60,5 +78,9 @@
     .landing1 {
         display: flex;
         justify-content: center;
+    }
+
+    .landing1-text {
+        display: none;
     }
 }

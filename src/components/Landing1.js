@@ -3,6 +3,7 @@ import logo from '../images/logo.svg'
 import '../css/Landing1.css'
 import axios from 'axios'
 import { toast } from 'react-toastify'
+import { Link } from 'react-router-dom'
 
 class Landing1 extends React.Component {
     state = { email: '', isLoading: false }
@@ -42,6 +43,7 @@ class Landing1 extends React.Component {
                 })
             })
             .catch((err) => {
+                // eslint-disable-next-line no-console
                 console.log(err.message)
                 toast.error("Sorry, Can't add your email right now, Please try again Later", {
                     position: 'bottom-right',
@@ -60,7 +62,7 @@ class Landing1 extends React.Component {
         return (
             <div className="landing1">
                 <img src={logo} alt="logo" />
-                <form className="landing1-form" onSubmit={this.handleSubmit}>
+                {/* <form className="landing1-form" onSubmit={this.handleSubmit}>
                     <input
                         className="input_mail"
                         placeholder="Enter Your Email Address"
@@ -77,7 +79,13 @@ class Landing1 extends React.Component {
                     >
                         Subscribe
                     </button>
-                </form>
+                </form> */}
+                <p className="landing1-text">
+                    Get An Intern{' '}
+                    <Link className="landing1-signIn" to="/googleauth">
+                        Sign In!!
+                    </Link>
+                </p>
             </div>
         )
     }
