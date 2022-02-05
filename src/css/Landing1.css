@@ -2,11 +2,18 @@
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: auto auto;
+    padding-left: 4%;
+    padding-right: 4%;
     text-align: right;
-    height: 50px;
     align-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: white;
+    box-shadow: 0px 1px 35px -10px rgba(255, 164, 92);
 }
 .landing1 img {
     height: 30px;
@@ -65,14 +72,21 @@
 }
 .landing1-signIn {
     /* height: 100%; */
-    color: #ffa45c;
     cursor: pointer;
     text-decoration: none;
-    padding: 5px;
+    color: #ffa45c;
+    font-weight: 550;
+    border-radius: 10px;
+    border: 2px solid;
+    padding: 8px 15px;
+    transition: all 0.2s ease-in-out;
 }
 .landing1-signIn:hover {
-    text-shadow: 10px 6px 50px rgba(255, 164, 92, 1);
+    color: white;
+    background-color: rgba(255, 164, 92, 0.9);
+    /* text-shadow: 10px 6px 50px rgba(255, 164, 92, 1); */
 }
+
 @media all and (max-width: 800px) {
     /* .landing1-form {
         display: none;
@@ -97,8 +111,7 @@
 
 @media all and (max-width: 500px) {
     .landing1 {
-        margin-top: 7px;
-        margin-bottom: 50px;
+        padding: 15px 3% 15px 3%;
     }
     .landing1 img {
         height: 16px;
@@ -108,10 +121,10 @@
         padding: 2px;
     }
 
-    .landing1-text a {
+    .landing1-signIn {
         font-size: 16px;
-        padding: 2px;
-        /* border: 1px solid;
-        border-radius: 5px; */
+        padding: 4px 6px;
+        border: 1px solid;
+        border-radius: 5px;
     }
 }

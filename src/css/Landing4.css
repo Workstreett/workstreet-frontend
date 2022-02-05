@@ -5,6 +5,8 @@
     gap: 12%;
     margin-top: 4%;
     margin-bottom: 30px;
+    padding-left: 4%;
+    padding-right: 4%;
 }
 .l4-subs {
     width: 90%;
@@ -200,6 +202,11 @@
 }
 
 @media all and (max-width: 500px) {
+    .l4-flex {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
     .l4-handle-item div {
         font-size: 0.8rem;
     }
