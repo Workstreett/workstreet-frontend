@@ -83,7 +83,7 @@ class Landing1 extends React.Component {
                 <p className="landing1-text">
                     Get An Intern{' '}
                     <Link className="landing1-signIn" to="/googleauth">
-                        Sign In!!
+                        Sign In!
                     </Link>
                 </p>
             </div>

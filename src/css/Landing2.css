@@ -7,6 +7,9 @@
     justify-content: space-around;
     align-items: stretch;
     margin-bottom: 30px;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-top: 130px;
 }
 .landing2-1 {
     color: #343d48cc;
@@ -111,6 +114,9 @@
     .landing2 {
         flex-wrap: wrap;
         margin-bottom: 100px;
+        padding-left: 3%;
+        padding-right: 3%;
+        margin-top: 100px;
     }
     .landing2-1 {
         font-size: 16px;
