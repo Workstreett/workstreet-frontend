@@ -46,8 +46,8 @@ class Landing4 extends React.Component {
                     isLoading: false
                 })
             })
-            .catch((err) => {
-                console.log(err.message)
+            .catch(() => {
+                // console.log(err.message)
                 toast.error("Sorry, Can't add your email right now, Please try again Later", {
                     position: 'bottom-right',
                     autoClose: 5000,
