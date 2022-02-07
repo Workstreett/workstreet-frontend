@@ -114,6 +114,7 @@ class AppliedCompany extends React.Component {
                                 duration={comp.duration}
                                 jd={comp.jd}
                                 apply={comp.apply}
+                                site={comp.site}
                             />
                         ))}
                 </div>
