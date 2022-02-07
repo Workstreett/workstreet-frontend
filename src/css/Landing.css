@@ -1,13 +1,6 @@
 .landing-grid {
     display: grid;
-    margin: 0% 4%;
     grid-auto-flow: row;
     grid-template-rows: auto auto auto auto;
     grid-column-gap: 50px;
-}
-
-@media all and (max-width: 500px) {
-    .landing-grid {
-        margin: 0% 3%;
-    }
 }
