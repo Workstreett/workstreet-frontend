@@ -37,7 +37,7 @@ class GoogleAuthContextProvider extends Component {
             } else {
                 this.setDetails(res.data)
             }
-        } else if (window.location.pathname === '/appliedcompany') {
+        } else if (window.location.pathname.toLowerCase() === '/appliedcompany') {
             window.location.pathname = '/googleauth'
         }
         this.setState({ isLoading: false })
