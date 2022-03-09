@@ -28,6 +28,13 @@ class GoogleAuthContextProvider extends Component {
         })
     }
 
+    setTaskSubmission = (ind, sub) => {
+        this.setState((prevState) => {
+            prevState.tasks[ind].submission = sub
+            return prevState
+        })
+    }
+
     async componentDidMount() {
         if (localStorage.getItem('token')) {
             const res = await axios.post(config.apiDomain + 'user/get/byId', {
