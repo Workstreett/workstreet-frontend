@@ -8,6 +8,7 @@ import axios from 'axios'
 import CompanyOppor from '../components/CompanyOppor'
 import { config } from '../env'
 import Landing4 from '../components/Landing4'
+import Tasks from '../components/Tasks'
 
 class AppliedCompany extends React.Component {
     static contextType = GoogleAuthContext
@@ -100,6 +101,7 @@ class AppliedCompany extends React.Component {
                             />
                         ))}
                 </div>
+                <Tasks />
                 <div className="otheroppor-head">Other Oppurtunities</div>
                 <div className="applied-list">
                     {this.state.companies &&

@@ -49,7 +49,6 @@ class Tasks extends React.Component {
                 prevState.isEditing[ind] = false
                 return prevState
             })
-            this.context.setTaskSubmission(ind, this.state[ind])
         } catch (err) {
             if (err.response) {
                 toast.error(err.response.data, {
@@ -84,7 +83,7 @@ class Tasks extends React.Component {
                                                     {task.title || 'Task'}:
                                                 </a>
                                             </h3>
-                                            {task.submission === '' || this.state.isEditing[i] ? (
+                                            {this.state[i] === '' || this.state.isEditing[i] ? (
                                                 <>
                                                     <input
                                                         type="text"
@@ -103,7 +102,7 @@ class Tasks extends React.Component {
                                                 <>
                                                     <a
                                                         className="submission-link"
-                                                        href={task.submission}
+                                                        href={this.state[i]}
                                                     >
                                                         Your Submission
                                                     </a>

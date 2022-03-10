@@ -1,3 +1,3 @@
 export const config = {
-    apiDomain: 'https://api-workstreet.tech/'
+    apiDomain: 'http://localhost:3000/'
 }
