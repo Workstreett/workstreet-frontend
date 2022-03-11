@@ -3,6 +3,7 @@ import '../css/Landing.css'
 import Landing1 from '../components/Landing1'
 import Landing2 from '../components/Landing2'
 import Landing3 from '../components/Landing3'
+import TestimonialCrouser from '../components/TestimonialCrouser'
 import Landing4 from '../components/Landing4'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -25,6 +26,7 @@ class Landing extends React.Component {
                 <Landing1 />
                 <Landing2 />
                 <Landing3 />
+                <TestimonialCrouser />
                 <Landing4 />
             </div>
         )
