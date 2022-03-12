@@ -1,0 +1,53 @@
+.Tasks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+        'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.Tasks-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.Tasks-h1 {
+    font-size: 50px;
+    line-height: 80px;
+    margin-bottom: 20px;
+}
+.Tasks-heading a {
+    text-decoration: none;
+    color: #515151;
+    font-size: 25px;
+    line-height: 25px;
+}
+.Tasks-list button {
+    height: 28px;
+    font-size: 15px;
+    padding: 0.3em 0.8em;
+    background: #ffa45c;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.Tasks-list button:disabled {
+    cursor: not-allowed;
+}
+.Tasks-list input {
+    outline: none;
+    height: 30px;
+    width: 270px;
+    margin-left: 10px;
+    border: #ffa45c 2px solid;
+    border-radius: 5px;
+    padding: 0 5px;
+    font-weight: 700;
+    font-size: 13px;
+}
+.Tasks-container .submission-link {
+    text-decoration: none;
+    font-size: 25px;
+}
