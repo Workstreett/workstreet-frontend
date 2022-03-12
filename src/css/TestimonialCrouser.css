@@ -1,0 +1,124 @@
+.testimonial-title {
+    margin-bottom: 3%;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
+    word-break: break-word;
+    color: #343d48;
+}
+
+.testimonial-crouser {
+    height: 100%;
+    position: relative;
+}
+
+.crouser-button {
+    font-size: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffa45c;
+    background-color: white;
+    z-index: 2;
+}
+
+.testimonial-crouser .crouser-left {
+    left: 7px;
+    z-index: 1;
+}
+
+.testimonial-crouser .crouser-right {
+    right: 7px;
+}
+
+.testimonial-cards-container {
+    position: relative;
+    width: 90%;
+    aspect-ratio: 3 / 1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.testimonial-cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all 250ms ease-in;
+}
+
+.testimonial-card-container {
+    position: absolute;
+    top: 0;
+    width: 33%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 250ms ease-in;
+}
+
+.testimonial-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 15px;
+    transition: all 2s ease-in;
+}
+
+.testimonial-dots i {
+    font-size: 20px;
+    color: rgba(255, 164, 92, 0.2);
+    cursor: pointer;
+    transition: all 250ms ease-in;
+}
+
+.testimonial-dots .active {
+    color: #ffa45c;
+}
+
+.testimonial-crouser .button-hidden {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .testimonial-cards-container {
+        aspect-ratio: 1 / 1;
+    }
+
+    .testimonial-card-container {
+        width: 100%;
+    }
+    .crouser-button {
+        font-size: 40px;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #ffa45c;
+        background-color: white;
+        z-index: 2;
+    }
+}
+
+@media (max-width: 500px) {
+    .testimonial-title {
+        margin-top: 1%;
+        margin-bottom: 6%;
+        text-align: left;
+        font-size: 1.6rem;
+        margin-left: 3%;
+        color: #343d48;
+    }
+
+    .crouser-button {
+        font-size: 30px;
+    }
+
+    .testimonial-dots i {
+        font-size: 15px;
+    }
+}
