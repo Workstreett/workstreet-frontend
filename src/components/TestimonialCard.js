@@ -25,7 +25,7 @@ class TestimonialCard extends React.Component {
 
                     <div className="testimonial-card-review">
                         <span>&quot;</span>
-                        {this.props.active && this.props.review.length > maxReviewSize
+                        {!this.props.active && this.props.review.length > maxReviewSize
                             ? this.props.review.substring(0, maxReviewSize) + '...'
                             : this.props.review}
                         <span>&quot;</span>
