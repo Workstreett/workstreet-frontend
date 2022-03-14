@@ -9,9 +9,9 @@ class TestimonialCrouser extends React.Component {
         const cardArray = Array.from(cards.children)
         const currentCard = cardArray[currentInd]
         const targetCard = cardArray[targetInd]
-        var amountToMove = targetCard.style.left
+        const amountToMove = targetCard.style.left
         const windowWidth = window.innerWidth
-        var amount = 23
+        let amount = 23
         if (windowWidth > 850)
             amount =
                 parseFloat(amountToMove.substring(0, amountToMove.length - 2)) -
