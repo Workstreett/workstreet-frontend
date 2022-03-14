@@ -65,7 +65,7 @@ class Tasks extends React.Component {
     }
 
     render() {
-        const condn = this.context.tasks && this.context.tasks.length
+        const condn = Boolean(this.context.tasks && this.context.tasks.length)
         return (
             <div className="Tasks-container">
                 <ToastContainer />

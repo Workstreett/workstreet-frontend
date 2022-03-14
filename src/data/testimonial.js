@@ -2,6 +2,7 @@ import img1 from '../images/shagun_testimonial.jpg'
 import img2 from '../images/ankit_testimonial.jpg'
 import img3 from '../images/vishal_testimonial.jpg'
 import img4 from '../images/baibhav_testimonial.jpeg'
+import img5 from '../images/venkatesh_testimonial.jpg'
 
 export const CarouselData = [
     {
@@ -31,9 +32,17 @@ export const CarouselData = [
     {
         userImg: img4,
         name: 'Baibhav',
-        domain: 'React Developer',
+        domain: 'BackEnd Developer',
         company: 'Signo',
         LinkedIn: 'https://www.linkedin.com/in/baibhav-mishra-90211a197/',
         review: "Workstreet helped me a lot in finding the best company for my internship. The people from workstreet always updates regarding the next stage in the application process.In Signo, I get the best workplace to work and I gained and improved my skills and contributed to the company's project with the best that I can give."
+    },
+    {
+        userImg: img5,
+        name: 'Venkatesh Patnala',
+        domain: 'React Developer',
+        company: 'Aspiro',
+        LinkedIn: '',
+        review: 'My experience with WorkStreet was really nice, as they tested my skills beforehand and helped me to find a company which suited me the best. My experience with Aspiro has been fantastic until now, I have great team which helps me to learn and grow'
     }
 ]
