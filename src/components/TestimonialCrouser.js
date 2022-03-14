@@ -4,6 +4,10 @@ import { CarouselData } from '../data/testimonial'
 import TestimonialCard from './TestimonialCard'
 
 class TestimonialCrouser extends React.Component {
+    state = {
+        actInd: 0
+    }
+
     moveToSlide = (currentInd, targetInd) => {
         const cards = document.querySelector('.testimonial-cards')
         const cardArray = Array.from(cards.children)
@@ -43,45 +47,51 @@ class TestimonialCrouser extends React.Component {
     }
 
     leftClicked = () => {
-        const cards = document.querySelector('.testimonial-cards')
-        const cardArray = Array.from(cards.children)
-        const currentCard = cards.querySelector('.active')
-        const activeInd = cardArray.findIndex((card) => card === currentCard)
-        const targetInd = (activeInd - 1 + cardArray.length) % cardArray.length
-        this.moveToSlide(activeInd, targetInd)
+        this.setState((prevState) => ({ actInd: prevState.actInd - 1 }))
+
+        // const cards = document.querySelector('.testimonial-cards')
+        // const cardArray = Array.from(cards.children)
+        // const currentCard = cards.querySelector('.active')
+        // const activeInd = cardArray.findIndex((card) => card === currentCard)
+        // const targetInd = (activeInd - 1 + cardArray.length) % cardArray.length
+        // this.moveToSlide(activeInd, targetInd)
     }
 
     rightClicked = () => {
-        const cards = document.querySelector('.testimonial-cards')
-        const cardArray = Array.from(cards.children)
-        const currentCard = cards.querySelector('.active')
-        const activeInd = cardArray.findIndex((card) => card === currentCard)
-        const targetInd = (activeInd + 1) % cardArray.length
-        this.moveToSlide(activeInd, targetInd)
+        this.setState((prevState) => ({ actInd: prevState.actInd + 1 }))
+        // const cards = document.querySelector('.testimonial-cards')
+        // const cardArray = Array.from(cards.children)
+        // const currentCard = cards.querySelector('.active')
+        // const activeInd = cardArray.findIndex((card) => card === currentCard)
+        // const targetInd = (activeInd + 1) % cardArray.length
+        // this.moveToSlide(activeInd, targetInd)
     }
 
     dotClicked = (e) => {
         const dots = document.querySelector('.testimonial-dots')
         const dotArray = Array.from(dots.children)
-        const activeDot = dots.querySelector('.active')
+        // const activeDot = dots.querySelector('.active')
         const clickedInd = dotArray.findIndex((dot) => dot === e.target)
-        const activeInd = dotArray.findIndex((dot) => dot === activeDot)
-        this.moveToSlide(activeInd, clickedInd)
+        this.setState({ actInd: parseInt(clickedInd) })
+
+        // const activeInd = dotArray.findIndex((dot) => dot === activeDot)
+        // this.moveToSlide(activeInd, clickedInd)
     }
 
     componentDidMount() {
         const cardParent = document.querySelector('.testimonial-crouser')
         const cards = document.querySelector('.testimonial-cards')
         const card = Array.from(cards.children)
-        card[0].classList.add('active')
+        console.log(card)
+        // card[0].classList.add('active')
 
-        const dots = document.querySelector('.testimonial-dots')
-        const dotArray = Array.from(dots.children)
-        dotArray[0].classList.add('active')
+        // const dots = document.querySelector('.testimonial-dots')
+        // const dotArray = Array.from(dots.children)
+        // dotArray[0].classList.add('active')
 
         const cardWidth = card[0].getBoundingClientRect().width
         const cardHeight = card[0].getBoundingClientRect().height
-
+        console.log(cardWidth)
         cardParent.style.height = cardHeight + 'px'
         // cardsContainer.style.width = cardWidth * 3 + 'px'
 
@@ -100,42 +110,78 @@ class TestimonialCrouser extends React.Component {
             <div>
                 <div className="testimonial-title">Here From Interns</div>
                 <div className="testimonial-crouser">
-                    <i
-                        onClick={this.leftClicked}
-                        className="fal fa-chevron-circle-left  crouser-button crouser-left button-hidden"
-                    ></i>
+                    {(() => {
+                        if (this.state.actInd > 0)
+                            return (
+                                <i
+                                    onClick={this.rightClicked}
+                                    className="fal fa-chevron-circle-right  crouser-button crouser-left"
+                                ></i>
+                            )
+                    })()}
 
                     <div className="testimonial-cards-container">
                         <div className="testimonial-cards">
                             {CarouselData.map((obj, ind) => {
-                                return (
-                                    <div className="testimonial-card-container" key={ind}>
-                                        <TestimonialCard
-                                            userImg={obj.userImg}
-                                            name={obj.name}
-                                            domain={obj.domain}
-                                            company={obj.company}
-                                            review={obj.review}
-                                        />
-                                    </div>
-                                )
+                                return (() => {
+                                    if (this.state.actInd === ind)
+                                        return (
+                                            <div className="testimonial-card-container active">
+                                                <TestimonialCard
+                                                    userImg={obj.userImg}
+                                                    name={obj.name}
+                                                    domain={obj.domain}
+                                                    company={obj.company}
+                                                    review={obj.review}
+                                                    active={1}
+                                                />
+                                            </div>
+                                        )
+                                    else
+                                        return (
+                                            <div className="testimonial-card-container">
+                                                <TestimonialCard
+                                                    userImg={obj.userImg}
+                                                    name={obj.name}
+                                                    domain={obj.domain}
+                                                    company={obj.company}
+                                                    review={obj.review}
+                                                    active={0}
+                                                />
+                                            </div>
+                                        )
+                                })()
                             })}
                         </div>
                     </div>
-                    <i
-                        onClick={this.rightClicked}
-                        className="fal fa-chevron-circle-right  crouser-button crouser-right"
-                    ></i>
+                    {(() => {
+                        if (this.state.actInd < 5)
+                            return (
+                                <i
+                                    onClick={this.rightClicked}
+                                    className="fal fa-chevron-circle-right  crouser-button crouser-right"
+                                ></i>
+                            )
+                    })()}
                 </div>
                 <div className="testimonial-dots">
                     {CarouselData.map((obj, ind) => {
-                        return (
-                            <i
-                                className="fa fa-solid fa-circle"
-                                key={ind}
-                                onClick={this.dotClicked}
-                            ></i>
-                        )
+                        return (() => {
+                            if (this.state.actInd === ind)
+                                return (
+                                    <i
+                                        className="fa fa-solid fa-circle active"
+                                        onClick={this.dotClicked}
+                                    ></i>
+                                )
+                            else
+                                return (
+                                    <i
+                                        className="fa fa-solid fa-circle"
+                                        onClick={this.dotClicked}
+                                    ></i>
+                                )
+                        })()
                     })}
                 </div>
             </div>
