@@ -5,14 +5,19 @@ import TestimonialCard from './TestimonialCard'
 
 class TestimonialCrouser extends React.Component {
     state = {
-        actInd: 1
+        actInd: 0
     }
 
     moveToSlide = (id) => {
         const carousel = document.getElementById('testimonial-carousel')
-        const cardWidth = 0.9 * 0.33 * window.innerWidth
+        let cardWidth
+        if (window.innerWidth > 800) {
+            cardWidth = (id - 1) * 0.9 * window.innerWidth * 0.33
+        } else {
+            cardWidth = id * 0.87 * window.innerWidth
+        }
         carousel.scrollTo({
-            left: (id - 1) * cardWidth,
+            left: cardWidth,
             behavior: 'smooth'
         })
     }
@@ -44,6 +49,10 @@ class TestimonialCrouser extends React.Component {
                                         ind === this.state.actInd ? 'active' : ''
                                     }`}
                                     key={ind}
+                                    onClick={() => {
+                                        this.moveToSlide(ind)
+                                        this.setState({ actInd: ind })
+                                    }}
                                 >
                                     <TestimonialCard
                                         userImg={obj.userImg}
