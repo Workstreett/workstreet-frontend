@@ -18,7 +18,6 @@ class TestimonialCrouser extends React.Component {
                 parseFloat(currentCard.getBoundingClientRect().width)
         else amount = parseFloat(amountToMove.substring(0, amountToMove.length - 2))
 
-        console.log(amountToMove, amount)
         amount = Math.abs(amount)
 
         cards.style.transform = 'translateX(-' + amount.toString() + 'px )'
@@ -71,9 +70,7 @@ class TestimonialCrouser extends React.Component {
     }
 
     componentDidMount() {
-        console.log('componentDidMount')
         const cardParent = document.querySelector('.testimonial-crouser')
-        const cardsContainer = document.querySelector('.testimonial-cards-container')
         const cards = document.querySelector('.testimonial-cards')
         const card = Array.from(cards.children)
         card[0].classList.add('active')
@@ -123,51 +120,6 @@ class TestimonialCrouser extends React.Component {
                                     </div>
                                 )
                             })}
-                            {/* <div className="testimonial-card-container">
-                                <TestimonialCard
-                                    userImg={img1}
-                                    name="Shagun Mittal"
-                                    domain="Business Development"
-                                    company="NbliK"
-                                    review="Workstreet really helped me find NbliK, they were aware of my CV hence got me the right interview. Very helpful and supportive throughout the process. NbliK being my first intern really helped me learn about the work-culture"
-                                />
-                            </div>
-                            <div className="testimonial-card-container">
-                                <TestimonialCard
-                                    userImg={img1}
-                                    name="Shagun Mittal"
-                                    domain="Business Development"
-                                    company="NbliK"
-                                    review="Workstreet really helped me find NbliK, they were aware of my CV hence got me the right interview. Very helpful and supportive throughout the process. NbliK being my first intern really helped me learn about the work-culture"
-                                />
-                            </div>
-                            <div className="testimonial-card-container">
-                                <TestimonialCard
-                                    userImg={img1}
-                                    name="Shagun Mittal"
-                                    domain="Business Development"
-                                    company="NbliK"
-                                    review="Workstreet really helped me find NbliK, they were aware of my CV hence got me the right interview. Very helpful and supportive throughout the process. NbliK being my first intern really helped me learn about the work-culture"
-                                />
-                            </div>
-                            <div className="testimonial-card-container">
-                                <TestimonialCard
-                                    userImg={img1}
-                                    name="Shagun Mittal"
-                                    domain="Business Development"
-                                    company="NbliK"
-                                    review="Workstreet really helped me find NbliK, they were aware of my CV hence got me the right interview. Very helpful and supportive throughout the process. NbliK being my first intern really helped me learn about the work-culture"
-                                />
-                            </div>
-                            <div className="testimonial-card-container">
-                                <TestimonialCard
-                                    userImg={img1}
-                                    name="Shagun Mittal"
-                                    domain="Business Development"
-                                    company="NbliK"
-                                    review="Workstreet really helped me find NbliK, they were aware of my CV hence got me the right interview. Very helpful and supportive throughout the process. NbliK being my first intern really helped me learn about the work-culture"
-                                />
-                            </div> */}
                         </div>
                     </div>
                     <i
@@ -185,11 +137,6 @@ class TestimonialCrouser extends React.Component {
                             ></i>
                         )
                     })}
-                    {/* <i className="fa fa-solid fa-circle" onClick={this.dotClicked}></i>
-                    <i className="fa fa-solid fa-circle" onClick={this.dotClicked}></i>
-                    <i className="fa fa-solid fa-circle" onClick={this.dotClicked}></i>
-                    <i className="fa fa-solid fa-circle" onClick={this.dotClicked}></i>
-                    <i className="fa fa-solid fa-circle" onClick={this.dotClicked}></i> */}
                 </div>
             </div>
         )

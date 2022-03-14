@@ -13,6 +13,7 @@ class GoogleAuthContextProvider extends Component {
         userImg:
             'https://cdn5.vectorstock.com/i/thumb-large/82/59/anonymous-user-flat-icon-vector-18958259.jpg',
         appliedFor: [],
+        tasks: null,
         isLoading: true
     }
 
@@ -22,7 +23,8 @@ class GoogleAuthContextProvider extends Component {
             name: details.name,
             email: details.email,
             userImg: details.userImg,
-            appliedFor: details.appliedFor
+            appliedFor: details.appliedFor,
+            tasks: details.tasks
         })
     }
 
