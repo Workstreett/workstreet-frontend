@@ -5,7 +5,7 @@ import TestimonialCard from './TestimonialCard'
 
 class TestimonialCrouser extends React.Component {
     state = {
-        actInd: 0
+        actInd: 1
     }
 
     moveToSlide = (id) => {
