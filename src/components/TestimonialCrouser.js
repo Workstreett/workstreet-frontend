@@ -5,7 +5,7 @@ import TestimonialCard from './TestimonialCard'
 
 class TestimonialCrouser extends React.Component {
     state = {
-        actInd: 1
+        actInd: window.innerWidth > 800 ? 1 : 0
     }
 
     moveToSlide = (id) => {
@@ -14,7 +14,7 @@ class TestimonialCrouser extends React.Component {
         if (window.innerWidth > 800) {
             cardWidth = (id - 1) * 0.9 * window.innerWidth * 0.33
         } else {
-            cardWidth = id * 0.87 * window.innerWidth
+            cardWidth = id * 0.9 * window.innerWidth
         }
         carousel.scrollTo({
             left: cardWidth,

@@ -205,7 +205,7 @@
     .active .testimonial-card-review {
         line-height: 1.4;
         padding: 4%;
-        font-size: 22px;
+        font-size: 20px;
     }
 }
 
@@ -235,6 +235,7 @@
         line-height: 1.2;
         padding: 3%;
         font-size: 15px;
+        top: 33%;
     }
 }
 
@@ -260,5 +261,6 @@
         line-height: 1.1;
         padding: 2%;
         font-size: 13px;
+        top: 35%;
     }
 }
