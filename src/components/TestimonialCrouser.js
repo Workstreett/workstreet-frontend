@@ -1,14 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../css/TestimonialCrouser.css'
 import { CarouselData } from '../data/testimonial'
 import TestimonialCard from './TestimonialCard'
+import { useSwipeable } from 'react-swipeable'
 
-class TestimonialCrouser extends React.Component {
-    state = {
-        actInd: window.innerWidth > 800 ? 1 : 0
-    }
+const TestimonialCrouser = () => {
+    const [actInd, setActInd] = useState(window.innerWidth > 800 ? 1 : 0)
 
-    moveToSlide = (id) => {
+    const moveToSlide = (id) => {
         const carousel = document.getElementById('testimonial-carousel')
         let cardWidth
         if (window.innerWidth > 800) {
@@ -20,81 +19,78 @@ class TestimonialCrouser extends React.Component {
             left: cardWidth,
             behavior: 'smooth'
         })
+        setActInd(Math.min(Math.max(id, 0), CarouselData.length - 1))
     }
 
-    changeActInd = (change) => {
-        this.setState((prevState) => ({ actInd: prevState.actInd + change }))
-    }
+    const handlers = useSwipeable({
+        onSwipedLeft: () => {
+            moveToSlide(actInd + 1)
+        },
+        onSwipedRight: () => {
+            moveToSlide(actInd - 1)
+        }
+    })
+    console.log(handlers)
+    return (
+        <div>
+            <div className="testimonial-title">Hear From Your Peers</div>
+            <div className="testimonial-crouser">
+                {actInd > 0 && (
+                    <i
+                        onClick={() => {
+                            moveToSlide(actInd - 1)
+                        }}
+                        className="fal fa-chevron-circle-left  crouser-button crouser-left"
+                    ></i>
+                )}
 
-    render() {
-        return (
-            <div>
-                <div className="testimonial-title">Hear From Your Peers</div>
-                <div className="testimonial-crouser">
-                    {this.state.actInd > 0 && (
-                        <i
-                            onClick={() => {
-                                this.moveToSlide(this.state.actInd - 1)
-                                this.changeActInd(-1)
-                            }}
-                            className="fal fa-chevron-circle-left  crouser-button crouser-left"
-                        ></i>
-                    )}
-
-                    <div className="testimonial-cards-container">
-                        <div className="testimonial-cards" id="testimonial-carousel">
-                            {CarouselData.map((obj, ind) => (
-                                <div
-                                    className={`testimonial-card-container ${
-                                        ind === this.state.actInd ? 'active' : ''
-                                    }`}
-                                    key={ind}
-                                    onClick={() => {
-                                        this.moveToSlide(ind)
-                                        this.setState({ actInd: ind })
-                                    }}
-                                >
-                                    <TestimonialCard
-                                        userImg={obj.userImg}
-                                        name={obj.name}
-                                        domain={obj.domain}
-                                        company={obj.company}
-                                        review={obj.review}
-                                        active={this.state.actInd === ind}
-                                        linkedIn={obj.LinkedIn}
-                                    />
-                                </div>
-                            ))}
-                        </div>
+                <div className="testimonial-cards-container">
+                    <div className="testimonial-cards" id="testimonial-carousel" {...handlers}>
+                        {CarouselData.map((obj, ind) => (
+                            <div
+                                className={`testimonial-card-container ${
+                                    ind === actInd ? 'active' : ''
+                                }`}
+                                key={ind}
+                                onClick={() => {
+                                    moveToSlide(ind)
+                                }}
+                            >
+                                <TestimonialCard
+                                    userImg={obj.userImg}
+                                    name={obj.name}
+                                    domain={obj.domain}
+                                    company={obj.company}
+                                    review={obj.review}
+                                    active={actInd === ind}
+                                    linkedIn={obj.LinkedIn}
+                                />
+                            </div>
+                        ))}
                     </div>
-                    {this.state.actInd < CarouselData.length - 1 && (
-                        <i
-                            onClick={() => {
-                                this.moveToSlide(this.state.actInd + 1)
-                                this.changeActInd(1)
-                            }}
-                            className="fal fa-chevron-circle-right  crouser-button crouser-right"
-                        ></i>
-                    )}
                 </div>
-                <div className="testimonial-dots">
-                    {CarouselData.map((_, ind) => (
-                        <i
-                            className={
-                                'fa fa-solid fa-circle ' +
-                                (this.state.actInd === ind ? 'active' : '')
-                            }
-                            key={ind}
-                            onClick={() => {
-                                this.moveToSlide(ind)
-                                this.setState({ actInd: ind })
-                            }}
-                        ></i>
-                    ))}
-                </div>
+                {actInd < CarouselData.length - 1 && (
+                    <i
+                        onClick={() => {
+                            moveToSlide(actInd + 1)
+                        }}
+                        className="fal fa-chevron-circle-right  crouser-button crouser-right"
+                    ></i>
+                )}
             </div>
-        )
-    }
+            <div className="testimonial-dots">
+                {CarouselData.map((_, ind) => (
+                    <i
+                        className={'fa fa-solid fa-circle ' + (actInd === ind ? 'active' : '')}
+                        key={ind}
+                        onClick={() => {
+                            moveToSlide(ind)
+                        }}
+                    ></i>
+                ))}
+            </div>
+        </div>
+    )
 }
 
 export default TestimonialCrouser
