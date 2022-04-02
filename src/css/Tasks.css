@@ -5,49 +5,82 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
         'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+.Tasks-h1 {
+    font-size: 40px;
+    line-height: 80px;
+    margin-bottom: 20px;
+    font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.Tasks-list-container {
+    width: 60%;
+    padding: 40px 20px;
+    border-radius: 10px;
+    background: #ffe4ce;
+}
+
+.Task-complete {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
 .Tasks-list {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+    gap: 15px;
 }
-.Tasks-h1 {
-    font-size: 50px;
-    line-height: 80px;
-    margin-bottom: 20px;
-}
-.Tasks-heading a {
+
+.Tasks-list a {
+    width: 100%;
+    font-size: 18px;
+    margin: 5px 0;
+    padding: 5px 5px;
+    font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-decoration: none;
-    color: #515151;
-    font-size: 25px;
-    line-height: 25px;
+    color: black;
+    font-weight: 500;
+    border: 1px dashed black;
 }
-.Tasks-list button {
-    height: 28px;
-    font-size: 15px;
-    padding: 0.3em 0.8em;
-    background: #ffa45c;
-    color: #fff;
+
+.Tasks-list i {
     cursor: pointer;
-    border: none;
-    outline: none;
-    border-radius: 5px;
 }
-.Tasks-list button:disabled {
-    cursor: not-allowed;
+
+.Tasks-list.disabled i {
+    cursor: no-drop;
 }
-.Tasks-list input {
-    outline: none;
-    height: 30px;
-    width: 270px;
-    margin-left: 10px;
-    border: #ffa45c 2px solid;
-    border-radius: 5px;
-    padding: 0 5px;
-    font-weight: 700;
-    font-size: 13px;
+
+.Tasks-Editing {
+    display: flex;
+    gap:15px;
+    align-items: baseline;
 }
-.Tasks-container .submission-link {
-    text-decoration: none;
-    font-size: 25px;
+
+.Tasks-Editing input[type="radio"]{
+    transform: scale(1.3);
+}
+
+.Tasks-Upper-Portion{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.Tasks-Upper-Portion button.deadline{
+    align-self: flex-end;
+}
+
+.Tasks-Editing button{
+    font-size:15px;
+    font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding: 2px;
+}
+
+.Tasks-Editing input[type="text"]{
+    width:80%;
+    aspect-ratio: 20 / 1;
 }
