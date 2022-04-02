@@ -1,129 +1,130 @@
-import axios from 'axios'
 import React from 'react'
-import { toast, ToastContainer } from 'react-toastify'
+import { ToastContainer } from 'react-toastify'
 import { GoogleAuthContext } from '../contexts/GoogleAuthContext'
 import '../css/Tasks.css'
-import { config } from '../env'
+import AssignedTasks from './AssignedTasks'
 
 class Tasks extends React.Component {
     static contextType = GoogleAuthContext
     state = {
-        isEditing: []
+        isEditing: [],
+        submitted: [],
+        showSubmitted: false
     }
     // a task object can will have a title, describe(link to the pdf), deadline, submission(link of the user submission)
 
     componentDidMount = () => {
-        const obj = {}
-        const arr = []
-        this.context.tasks.forEach((task, i) => {
-            obj[i] = task.submission
-            arr.push(false)
+        const editing = []
+        const sub = []
+        this.context.tasks.forEach((task, ind) => {
+            if (task.submission === '') editing.push({ ...task, ind: ind })
+            else sub.push({ ...task, ind: ind })
         })
-        this.setState({ ...obj, isEditing: arr })
-    }
-
-    handleChange = (event) => {
-        const { name, value } = event.target
         this.setState({
-            [name]: value
+            isEditing: editing,
+            submitted: sub
         })
     }
 
-    handleSubmit = async (ind) => {
-        try {
-            const res = await axios.post(config.apiDomain + 'user/tasks/edit', {
-                email: this.context.email,
-                ind: ind,
-                submission: this.state[ind]
-            })
-            toast.success(res.data, {
-                position: 'bottom-right',
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined
-            })
-            this.setState((prevState) => {
-                prevState.isEditing[ind] = false
-                return prevState
-            })
-        } catch (err) {
-            if (err.response) {
-                toast.error(err.response.data, {
-                    position: 'bottom-right',
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined
-                })
-            }
-        }
+    enableEditing = (ind) => {
+        const edit = this.state.isEditing
+        const sub = this.state.submitted
+
+        edit.push(sub[ind])
+        sub.splice(ind, 1)
+
+        this.setState({
+            isEditing: edit,
+            submitted: sub
+        })
+    }
+
+    disableEditing = (ind, submission) => {
+        const edit = this.state.isEditing
+        const sub = this.state.submitted
+        edit[ind].submission = submission
+
+        sub.push(edit[ind])
+        edit.splice(ind, 1)
+
+        this.setState({
+            isEditing: edit,
+            submitted: sub
+        })
     }
 
     render() {
         const condn = Boolean(this.context.tasks && this.context.tasks.length)
         return (
             <div className="Tasks-container">
+                <hr
+                    style={{ width: '80%', border: '1px solid black', margin: '20px 0 40px 0' }}
+                ></hr>
                 <ToastContainer />
-                {condn && (
+                {condn ? (
                     <>
                         <h1 className="Tasks-h1">Assigned Tasks</h1>
-                        <ol>
-                            {this.context.tasks.map((task, i) => {
-                                const disableSubmission = new Date() > new Date(task.deadline)
+                        <div className="Tasks-list-container">
+                            <h3>To Do</h3>
+                            {this.state.isEditing.map((task, ind) => {
                                 return (
-                                    <li key={i} style={{ fontSize: '20px' }}>
-                                        <div className="Tasks-list">
-                                            <h3 className="Tasks-heading">
-                                                <a href={task.desc} target="blank">
-                                                    {task.title || 'Task'}:
-                                                </a>
-                                            </h3>
-                                            {this.state[i] === '' || this.state.isEditing[i] ? (
-                                                <>
-                                                    <input
-                                                        type="text"
-                                                        value={this.state[i]}
-                                                        name={i}
-                                                        onChange={this.handleChange}
-                                                    />
-                                                    <button
-                                                        onClick={() => this.handleSubmit(i)}
-                                                        disabled={disableSubmission}
-                                                    >
-                                                        Submit
-                                                    </button>
-                                                </>
-                                            ) : (
-                                                <>
-                                                    <a
-                                                        className="submission-link"
-                                                        href={this.state[i]}
-                                                    >
-                                                        Your Submission
-                                                    </a>
-                                                    <button
-                                                        onClick={() => {
-                                                            this.setState((prevState) => {
-                                                                prevState.isEditing[i] = true
-                                                                return prevState
-                                                            })
-                                                        }}
-                                                    >
-                                                        <i className="far fa-edit"></i>Edit
-                                                    </button>
-                                                </>
-                                            )}
-                                        </div>
-                                    </li>
+                                    <AssignedTasks
+                                        change={this.disableEditing}
+                                        ind={ind}
+                                        key={ind}
+                                        task={task}
+                                        email={this.context.email}
+                                    />
                                 )
                             })}
-                        </ol>
+
+                            <div
+                                className="Task-complete"
+                                onClick={() =>
+                                    this.setState((prev) => ({
+                                        showSubmitted: !prev.showSubmitted
+                                    }))
+                                }
+                            >
+                                <h3>Completed</h3>
+                                {this.state.showSubmitted ? (
+                                    <i className="fas fa-caret-down"></i>
+                                ) : (
+                                    <i className="fas fa-caret-left"></i>
+                                )}
+                            </div>
+                            {this.state.showSubmitted &&
+                                this.state.submitted.map((task, ind) => {
+                                    const disableEditing = new Date() > new Date(task.deadline)
+                                    return (
+                                        <div
+                                            className={
+                                                disableEditing
+                                                    ? 'Tasks-list disabled'
+                                                    : 'Tasks-list'
+                                            }
+                                            key={ind}
+                                        >
+                                            <i
+                                                className={'fas fa-check '}
+                                                onClick={() => {
+                                                    if (!disableEditing) this.enableEditing(ind)
+                                                }}
+                                            ></i>
+                                            <a
+                                                href={task.submission}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                            >
+                                                {task.title}
+                                            </a>
+                                        </div>
+                                    )
+                                })}
+                        </div>
                     </>
+                ) : (
+                    <h3> All the tasks assigned to you are going to appear here</h3>
                 )}
             </div>
         )

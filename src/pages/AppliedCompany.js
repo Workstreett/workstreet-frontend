@@ -101,7 +101,6 @@ class AppliedCompany extends React.Component {
                             />
                         ))}
                 </div>
-                <Tasks />
                 <div className="otheroppor-head">Other Oppurtunities</div>
                 <div className="applied-list">
                     {this.state.companies &&
@@ -120,6 +119,7 @@ class AppliedCompany extends React.Component {
                             />
                         ))}
                 </div>
+                <Tasks />
                 <Landing4 />
             </div>
         )
