@@ -10,7 +10,7 @@
 
 .testimonial-crouser {
     position: relative;
-    width: 100vw;
+    /* width: 100vw; */
 }
 
 .crouser-button {
@@ -83,6 +83,9 @@
 @media (max-width: 800px) {
     .testimonial-cards-container {
         aspect-ratio: 1 / 1;
+    }
+    .testimonial-crouser {
+        width: 100vw;
     }
 
     .testimonial-card-container {

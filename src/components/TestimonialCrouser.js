@@ -30,7 +30,7 @@ const TestimonialCrouser = () => {
             moveToSlide(actInd - 1)
         }
     })
-    console.log(handlers)
+    // console.log(handlers)
     return (
         <div>
             <div className="testimonial-title">Hear From Your Peers</div>
