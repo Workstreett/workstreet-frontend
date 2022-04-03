@@ -3,6 +3,7 @@ import axios from 'axios'
 import { config } from '../env'
 import { toast } from 'react-toastify'
 import { GoogleAuthContext } from '../contexts/GoogleAuthContext'
+import '../css/AssignedTasks.css'
 
 const AssignedTasks = ({ task, email, ind, change }) => {
     const [sub, setSub] = useState(task.submission)
@@ -27,19 +28,40 @@ const AssignedTasks = ({ task, email, ind, change }) => {
                     }
                 }}
             />
-            <div style={{ width: '100%' }}>
+            <div className="right-side" style={{ width: '100%' }}>
                 <div className="Tasks-Upper-Portion">
-                    <a href={task.submission} target="_blank" rel="noreferrer">
-                        <button className="Task-Title">{task.title}</button>
-                    </a>
-                    <button className="Deadline">{`${finDay.getDate()}/${finDay.getMonth()}, ${finDay.getHours()}:${finDay.getMinutes()}`}</button>
+                    <div>
+                        <a
+                            className="Task-Title"
+                            href={task.submission}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            {task.title}
+                        </a>
+                        <input
+                            type="text"
+                            placeholder="Submit your Task link here"
+                            value={sub}
+                            onChange={(e) => setSub(e.target.value)}
+                            name={task.title}
+                        />
+                    </div>
+                    <div className="Task-Deadline">
+                        <p className="danger">Deadline</p>
+                        <p>
+                            {finDay.toLocaleString('en-US', {
+                                year: 'numeric',
+                                month: 'short',
+                                day: 'numeric'
+                            })}{' '}
+                            {finDay.toLocaleString('en-Us', {
+                                hour: 'numeric',
+                                minute: '2-digit'
+                            })}
+                        </p>
+                    </div>
                 </div>
-                <input
-                    type="text"
-                    value={sub}
-                    onChange={(e) => setSub(e.target.value)}
-                    name={task.title}
-                />
             </div>
         </div>
     )

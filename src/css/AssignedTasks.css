@@ -1,0 +1,55 @@
+
+.Tasks-Editing {
+    display: flex;
+    gap:15px;
+    align-items: baseline;
+}
+
+.Tasks-Editing .right-side{
+    width: 100%;
+    padding: 15px;
+    margin:10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.Tasks-Editing input[type="radio"]{
+    transform: scale(1.3);
+}
+
+.Tasks-Upper-Portion{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.Tasks-Editing .Task-Title{
+    font-size:20px;
+    font-weight:800;
+    font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* padding: 2px; */
+    color:#000000;
+    text-decoration: none;
+}
+
+.Tasks-Editing input[type="text"]{
+    margin-top: 20px;
+    width:100%;
+    aspect-ratio: 20 / 1;
+    outline: none;
+    padding:5px 10px;
+    border:none;
+    border-bottom: 1px solid;
+}
+
+.Tasks-Editing .Task-Deadline{
+    /* font-size:12px; */
+    transform: scale(1.1);
+}
+
+/* .Tasks-Editing .Task-Deadline .danger{
+    font-size:18px;
+    font-weight: 600;
+} */
