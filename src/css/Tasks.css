@@ -1,3 +1,10 @@
+.Tasks-container{
+    --m:5px 0;
+    --p-tb:5px;
+    --p-lr:15px;
+    --bor-rad:15px;
+}
+
 .Tasks-container {
     display: flex;
     flex-direction: column;
@@ -28,28 +35,67 @@
 
 .Tasks-list {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 15px;
+    background:#ffffff;
+    margin: var(--m);
+    border-radius: var(--bor-rad);
+    overflow:hidden;
+}
+
+.Tasks-list .left-bar{
+    width: 8%;
+    min-width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#00ff00;
+    cursor: pointer;
+}
+.Tasks-list.disabled .left-bar{
+    background-color: #cccccc;
+    cursor: no-drop;
+}
+
+.Tasks-list i {
+    color: #ffffff;
+}
+
+.Tasks-list .inner-flexbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    padding: 0 var(--p-lr) 0 0;
 }
 
 .Tasks-list a {
-    width: 100%;
     font-size: 18px;
     margin: 5px 0;
     padding: 5px 5px;
     font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-decoration: none;
     color: black;
+    font-weight: 800;
+}
+
+.Task-Deadline{
+    background:#ffa45c;
+    font-size:10px;
     font-weight: 500;
-    border: 1px dashed black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1px 8px;
+    border-radius: 5px;
+    min-width: 120px;
 }
 
-.Tasks-list i {
-    cursor: pointer;
-}
-
-.Tasks-list.disabled i {
-    cursor: no-drop;
+.Task-Deadline .danger{
+    color:#ff0000;
+    font-weight: 900;
+    font-size:12px
 }
 
 .Tasks-Editing {

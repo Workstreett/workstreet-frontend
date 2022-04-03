@@ -95,7 +95,8 @@ class Tasks extends React.Component {
                             </div>
                             {this.state.showSubmitted &&
                                 this.state.submitted.map((task, ind) => {
-                                    const disableEditing = new Date() > new Date(task.deadline)
+                                    const Deadline = new Date(task.deadline)
+                                    const disableEditing = new Date() > Deadline
                                     return (
                                         <div
                                             className={
@@ -105,19 +106,37 @@ class Tasks extends React.Component {
                                             }
                                             key={ind}
                                         >
-                                            <i
-                                                className={'fas fa-check '}
+                                            <div
+                                                className="left-bar"
                                                 onClick={() => {
                                                     if (!disableEditing) this.enableEditing(ind)
                                                 }}
-                                            ></i>
-                                            <a
-                                                href={task.submission}
-                                                target="_blank"
-                                                rel="noreferrer"
                                             >
-                                                {task.title}
-                                            </a>
+                                                <i className={'fas fa-check '}></i>
+                                            </div>
+                                            <div className="inner-flexbox">
+                                                <a
+                                                    href={task.submission}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    {task.title}
+                                                </a>
+                                                <div className="Task-Deadline">
+                                                    <p className="danger">Deadline</p>
+                                                    <p>
+                                                        {Deadline.toLocaleString('en-US', {
+                                                            year: 'numeric',
+                                                            month: 'short',
+                                                            day: 'numeric'
+                                                        })}{' '}
+                                                        {Deadline.toLocaleString('en-Us', {
+                                                            hour: 'numeric',
+                                                            minute: '2-digit'
+                                                        })}
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
                                     )
                                 })}
