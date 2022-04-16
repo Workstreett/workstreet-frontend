@@ -24,9 +24,10 @@
     width: 100%;
     border-radius: 10px;
     display:grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto ;
+    grid-template-columns: repeat(8,minmax(0,1fr));
+    padding: 0 60px;
+    column-gap: 40px;
     justify-content: space-around;
-    background: #ffe4ce;
 }
 
 .Tasks-card-container{

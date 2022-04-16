@@ -18,18 +18,13 @@ class Tasks extends React.Component {
         const today = new Date()
         this.context.tasks.forEach((task, ind) => {
             const deadline = new Date(task.deadline)
-            if (today <= deadline)
-                ongoing.push(
-                    { ...task, ind: ind, company: 'Signo' },
-                    { ...task, ind: ind, company: 'Signo' }
-                )
+            if (today <= deadline) ongoing.push({ ...task, ind: ind, company: 'Signo' })
             else expired.push({ ...task, ind: ind, company: 'Signo' })
         })
         this.setState({
             expired: expired,
             ongoing: ongoing
         })
-        console.log(this.state)
     }
 
     render() {

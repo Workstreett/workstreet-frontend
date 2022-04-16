@@ -3,20 +3,26 @@
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
+    font-family: 'Ubuntu';
+    padding: 16px 24px;
 }
 .Task-title{
-    font-size: 24;
+    font-size: 24px;
     color:#444444;
     font-weight: bold;
+    line-height: 28px;
 }
 .Task-company{
     font-size:18;
     color:#8C8B93;
-    font-weight: lighter;
+    font-weight: 300;
+    line-height: 21px;
     margin-bottom: 24px;
 }
 .Task-desc{
+    font-size: 16px;
+    line-height: 18px;
     width:max-content;
     padding: 8px;
     display: flex;
@@ -26,15 +32,49 @@
     text-decoration: none;
     background: #FFA45C33;
     border-radius:4px;
-
+    margin-bottom: 16px;
 }
 .Task-deadline{
-
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
 }
 
 .vertical-line{
     border-left: 1px solid #353434;
     opacity: 10%;
-    height: 90%;
+    height: 100%;
     /* width: 1px; */
+}
+
+.Task-focus{
+    font-size :14px;
+    color: #8C8B93;
+    font-weight: 500;
+    line-height: 16px;
+    margin-bottom: 8px;
+}
+.Task-button{
+    display: block;
+    width: 250px;
+    padding:16px 9px;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border : 2px #FFA45C solid;
+    box-sizing: border-box;
+    border-radius:4px;
+    margin-bottom:16px;
+    color:#FFA45C;
+    font-size:18px;
+    font-weight: 500;
+    cursor:pointer;
+    background-color: #ffffff;
+}
+.Task-button.focus{
+    background-color: #FFA45C;
+    color:#ffffff;
 }
