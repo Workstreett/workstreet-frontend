@@ -5,6 +5,7 @@ import { toast } from 'react-toastify'
 import { GoogleAuthContext } from '../contexts/GoogleAuthContext'
 import '../css/AssignedTasks.css'
 import uploadIcon from '../icons/upload-icon.svg'
+import addIcon from '../icons/add-icon.svg'
 
 const AssignedTasks = ({ task, email, ind, change }) => {
     const [sub, setSub] = useState(task.submission)
@@ -112,21 +113,23 @@ export const OngoingTask = ({ task }) => {
                     <img src={uploadIcon} alt="Upload Icon" />
                 </a>
                 <h4 className="Task-deadline">
-                    Deadline:{' '}
+                    Deadline{' - '}
+                    {deadline.toLocaleString('en-Us', { hour: 'numeric', minute: '2-digit' })}
+                    {', '}
                     {deadline.toLocaleDateString('en-Us', {
-                        year: '2-digit',
-                        month: 'short',
+                        month: 'long',
                         day: '2-digit'
                     })}
-                    {', '}
-                    {deadline.toLocaleString('en-Us', { hour: 'numeric', minute: '2-digit' })}
                 </h4>
             </div>
             <div className="vertical-line"></div>
             <div className="">
-                <p>Input your submission here</p>
-                <button>Submit the Link</button>
-                <button>Submit Assignment</button>
+                <p className="Task-focus">Input your submission here</p>
+                <button className="Task-button">
+                    <img src={addIcon} alt="Add Icon" />
+                    <p> Submit the Link </p>
+                </button>
+                <button className="Task-button focus">Submit Assignment</button>
             </div>
         </div>
     )
