@@ -1,0 +1,40 @@
+.OngoingTask-container{
+    grid-column: span 4;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+}
+.Task-title{
+    font-size: 24;
+    color:#444444;
+    font-weight: bold;
+}
+.Task-company{
+    font-size:18;
+    color:#8C8B93;
+    font-weight: lighter;
+    margin-bottom: 24px;
+}
+.Task-desc{
+    width:max-content;
+    padding: 8px;
+    display: flex;
+    column-gap: 8px;
+    border: 1px #FF9A4A33 solid;
+    color: #FF9A4A;
+    text-decoration: none;
+    background: #FFA45C33;
+    border-radius:4px;
+
+}
+.Task-deadline{
+
+}
+
+.vertical-line{
+    border-left: 1px solid #353434;
+    opacity: 10%;
+    height: 90%;
+    /* width: 1px; */
+}

@@ -2,55 +2,34 @@ import React from 'react'
 import { ToastContainer } from 'react-toastify'
 import { GoogleAuthContext } from '../contexts/GoogleAuthContext'
 import '../css/Tasks.css'
-import AssignedTasks from './AssignedTasks'
+import { OngoingTask } from './AssignedTasks'
 
 class Tasks extends React.Component {
     static contextType = GoogleAuthContext
     state = {
-        isEditing: [],
-        submitted: [],
-        showSubmitted: false
+        expired: [],
+        ongoing: []
     }
     // a task object can will have a title, describe(link to the pdf), deadline, submission(link of the user submission)
 
     componentDidMount = () => {
-        const editing = []
-        const sub = []
+        const expired = []
+        const ongoing = []
+        const today = new Date()
         this.context.tasks.forEach((task, ind) => {
-            if (task.submission === '') editing.push({ ...task, ind: ind })
-            else sub.push({ ...task, ind: ind })
+            const deadline = new Date(task.deadline)
+            if (today <= deadline)
+                ongoing.push(
+                    { ...task, ind: ind, company: 'Signo' },
+                    { ...task, ind: ind, company: 'Signo' }
+                )
+            else expired.push({ ...task, ind: ind, company: 'Signo' })
         })
         this.setState({
-            isEditing: editing,
-            submitted: sub
+            expired: expired,
+            ongoing: ongoing
         })
-    }
-
-    enableEditing = (ind) => {
-        const edit = this.state.isEditing
-        const sub = this.state.submitted
-
-        edit.push(sub[ind])
-        sub.splice(ind, 1)
-
-        this.setState({
-            isEditing: edit,
-            submitted: sub
-        })
-    }
-
-    disableEditing = (ind, submission) => {
-        const edit = this.state.isEditing
-        const sub = this.state.submitted
-        edit[ind].submission = submission
-
-        sub.push(edit[ind])
-        edit.splice(ind, 1)
-
-        this.setState({
-            isEditing: edit,
-            submitted: sub
-        })
+        console.log(this.state)
     }
 
     render() {
@@ -65,62 +44,15 @@ class Tasks extends React.Component {
                     <>
                         <h1 className="Tasks-h1">Assigned Tasks</h1>
                         <div className="Tasks-list-container">
-                            <h3>To Do</h3>
-                            {this.state.isEditing.map((task, ind) => {
-                                return (
-                                    <AssignedTasks
-                                        change={this.disableEditing}
-                                        ind={ind}
-                                        key={ind}
-                                        task={task}
-                                        email={this.context.email}
-                                    />
-                                )
-                            })}
-
-                            <div
-                                className="Task-complete"
-                                onClick={() =>
-                                    this.setState((prev) => ({
-                                        showSubmitted: !prev.showSubmitted
-                                    }))
-                                }
-                            >
-                                <h3>Completed</h3>
-                                {this.state.showSubmitted ? (
-                                    <i className="fas fa-caret-down"></i>
-                                ) : (
-                                    <i className="fas fa-caret-left"></i>
-                                )}
+                            <div className="Tasks-card-container">
+                                <h2>Current Task</h2>
                             </div>
-                            {this.state.showSubmitted &&
-                                this.state.submitted.map((task, ind) => {
-                                    const disableEditing = new Date() > new Date(task.deadline)
-                                    return (
-                                        <div
-                                            className={
-                                                disableEditing
-                                                    ? 'Tasks-list disabled'
-                                                    : 'Tasks-list'
-                                            }
-                                            key={ind}
-                                        >
-                                            <i
-                                                className={'fas fa-check '}
-                                                onClick={() => {
-                                                    if (!disableEditing) this.enableEditing(ind)
-                                                }}
-                                            ></i>
-                                            <a
-                                                href={task.submission}
-                                                target="_blank"
-                                                rel="noreferrer"
-                                            >
-                                                {task.title}
-                                            </a>
-                                        </div>
-                                    )
-                                })}
+                            {this.state.ongoing.map((task, ind) => {
+                                return <OngoingTask key={ind} task={task} />
+                            })}
+                            <div className="Tasks-card-container">
+                                <h2>Completed Task</h2>
+                            </div>
                         </div>
                     </>
                 ) : (

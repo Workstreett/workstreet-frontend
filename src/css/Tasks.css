@@ -1,3 +1,10 @@
+.Tasks-container{
+    --m:10px 0;
+    --p-tb:5px;
+    --p-lr:15px;
+    --bor-rad:15px;
+}
+
 .Tasks-container {
     display: flex;
     flex-direction: column;
@@ -14,73 +21,15 @@
 }
 
 .Tasks-list-container {
-    width: 60%;
-    padding: 40px 20px;
+    width: 100%;
     border-radius: 10px;
+    display:grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto ;
+    justify-content: space-around;
     background: #ffe4ce;
 }
 
-.Task-complete {
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-.Tasks-list {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.Tasks-list a {
-    width: 100%;
-    font-size: 18px;
-    margin: 5px 0;
-    padding: 5px 5px;
-    font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-    border: 1px dashed black;
-}
-
-.Tasks-list i {
-    cursor: pointer;
-}
-
-.Tasks-list.disabled i {
-    cursor: no-drop;
-}
-
-.Tasks-Editing {
-    display: flex;
-    gap:15px;
-    align-items: baseline;
-}
-
-.Tasks-Editing input[type="radio"]{
-    transform: scale(1.3);
-}
-
-.Tasks-Upper-Portion{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-between;
-    margin-bottom: 5px;
-}
-
-.Tasks-Upper-Portion button.deadline{
-    align-self: flex-end;
-}
-
-.Tasks-Editing button{
-    font-size:15px;
-    font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    padding: 2px;
-}
-
-.Tasks-Editing input[type="text"]{
-    width:80%;
-    aspect-ratio: 20 / 1;
+.Tasks-card-container{
+    grid-column: 1 / 9;
+    margin: 30px 0;
 }
