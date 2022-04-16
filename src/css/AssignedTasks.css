@@ -1,55 +1,40 @@
-
-.Tasks-Editing {
+.OngoingTask-container{
+    grid-column: span 4;
     display: flex;
-    gap:15px;
-    align-items: baseline;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
 }
-
-.Tasks-Editing .right-side{
-    width: 100%;
-    padding: 15px;
-    margin:10px;
-    border-radius: 10px;
-    background-color: #ffffff;
+.Task-title{
+    font-size: 24;
+    color:#444444;
+    font-weight: bold;
 }
-
-.Tasks-Editing input[type="radio"]{
-    transform: scale(1.3);
+.Task-company{
+    font-size:18;
+    color:#8C8B93;
+    font-weight: lighter;
+    margin-bottom: 24px;
 }
-
-.Tasks-Upper-Portion{
+.Task-desc{
+    width:max-content;
+    padding: 8px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-between;
-    margin-bottom: 5px;
-}
-
-.Tasks-Editing .Task-Title{
-    font-size:20px;
-    font-weight:800;
-    font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    /* padding: 2px; */
-    color:#000000;
+    column-gap: 8px;
+    border: 1px #FF9A4A33 solid;
+    color: #FF9A4A;
     text-decoration: none;
+    background: #FFA45C33;
+    border-radius:4px;
+
+}
+.Task-deadline{
+
 }
 
-.Tasks-Editing input[type="text"]{
-    margin-top: 20px;
-    width:100%;
-    aspect-ratio: 20 / 1;
-    outline: none;
-    padding:5px 10px;
-    border:none;
-    border-bottom: 1px solid;
+.vertical-line{
+    border-left: 1px solid #353434;
+    opacity: 10%;
+    height: 90%;
+    /* width: 1px; */
 }
-
-.Tasks-Editing .Task-Deadline{
-    /* font-size:12px; */
-    transform: scale(1.1);
-}
-
-/* .Tasks-Editing .Task-Deadline .danger{
-    font-size:18px;
-    font-weight: 600;
-} */

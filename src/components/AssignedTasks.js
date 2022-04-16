@@ -4,6 +4,7 @@ import { config } from '../env'
 import { toast } from 'react-toastify'
 import { GoogleAuthContext } from '../contexts/GoogleAuthContext'
 import '../css/AssignedTasks.css'
+import uploadIcon from '../icons/upload-icon.svg'
 
 const AssignedTasks = ({ task, email, ind, change }) => {
     const [sub, setSub] = useState(task.submission)
@@ -97,6 +98,38 @@ const handleSubmit = async (task, email, submission) => {
             })
         }
     }
+}
+
+export const OngoingTask = ({ task }) => {
+    const deadline = new Date(task.deadline)
+    return (
+        <div className="OngoingTask-container">
+            <div className="">
+                <h3 className="Task-title">{task.title}</h3>
+                <h5 className="Task-company">{task.company}</h5>
+                <a className="Task-desc" href={task.desc}>
+                    <p>Veiw the Assignment</p>
+                    <img src={uploadIcon} alt="Upload Icon" />
+                </a>
+                <h4 className="Task-deadline">
+                    Deadline:{' '}
+                    {deadline.toLocaleDateString('en-Us', {
+                        year: '2-digit',
+                        month: 'short',
+                        day: '2-digit'
+                    })}
+                    {', '}
+                    {deadline.toLocaleString('en-Us', { hour: 'numeric', minute: '2-digit' })}
+                </h4>
+            </div>
+            <div className="vertical-line"></div>
+            <div className="">
+                <p>Input your submission here</p>
+                <button>Submit the Link</button>
+                <button>Submit Assignment</button>
+            </div>
+        </div>
+    )
 }
 
 export default AssignedTasks
